@@ -4,10 +4,9 @@ import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
 
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.Reader;
+import java.io.*;
 import java.lang.reflect.InvocationTargetException;
+import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -102,84 +101,80 @@ public class HelperMySQL {
     }
 
     public void insertFactura() throws IOException {
-        try(Reader reader = new InputStreamReader(getClass().getClassLoader().getResourceAsStream("CSV/facturas.csv"));
-            CSVParser parser = CSVFormat.DEFAULT.withHeader().parse(reader)) {
-            for (CSVRecord row : parser) {
-                String query = "INSERT INTO factura (idFactura, idCliente) VALUES (?,?)";
-                PreparedStatement ps = null;
+    File csvFactura = new File("src/main/resources/CSV/facturas.csv");
+    CSVParser parser = CSVFormat.DEFAULT.withHeader().parse(new FileReader(csvFactura));
+        for (CSVRecord row : parser) {
+            String query = "INSERT INTO factura (idFactura, idCliente) VALUES (?,?)";
+            PreparedStatement ps = null;
 
-                try {
-                    ps = conn.prepareStatement(query);
-                    ps.setInt(1, Integer.parseInt((row.get("idFactura"))));
-                    ps.setInt(2, Integer.parseInt((row.get("idCliente"))));
-                    ps.executeUpdate();
-                    conn.commit();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
+            try {
+                ps = conn.prepareStatement(query);
+                ps.setInt(1, Integer.parseInt((row.get("idFactura"))));
+                ps.setInt(2, Integer.parseInt((row.get("idCliente"))));
+                ps.executeUpdate();
+                conn.commit();
+            } catch (SQLException e) {
+                e.printStackTrace();
             }
         }
     }
 
     public void insertProducto() throws IOException {
-        try (Reader reader = new InputStreamReader(getClass().getClassLoader().getResourceAsStream("CSV/productos.csv"));
-             CSVParser parser = CSVFormat.DEFAULT.withHeader().parse(reader)){
-            for (CSVRecord row : parser) {
-                String query = "INSERT INTO producto (idProducto, nombre, valor) VALUES (?,?,?)";
-                PreparedStatement ps = null;
+        File csvProducto = new File("src/main/resources/CSV/productos.csv");
+        CSVParser parser = CSVFormat.DEFAULT.withHeader().parse(new FileReader(csvProducto));
+        for (CSVRecord row : parser) {
+            String query = "INSERT INTO producto (idProducto, nombre, valor) VALUES (?,?,?)";
+            PreparedStatement ps = null;
 
-                try {
-                    ps = conn.prepareStatement(query);
-                    ps.setInt(1, Integer.parseInt((row.get("idProducto"))));
-                    ps.setString(2, (row.get("nombre")));
-                    ps.setFloat(3, Float.parseFloat((row.get("valor"))));
-                    ps.executeUpdate();
-                    conn.commit();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
+            try {
+                ps = conn.prepareStatement(query);
+                ps.setInt(1, Integer.parseInt((row.get("idProducto"))));
+                ps.setString(2, (row.get("nombre")));
+                ps.setFloat(3, Float.parseFloat((row.get("valor"))));
+                ps.executeUpdate();
+                conn.commit();
+            } catch (SQLException e) {
+                e.printStackTrace();
             }
         }
     }
 
     public void insertFacturaProducto() throws IOException {
-        try(Reader reader = new InputStreamReader(getClass().getClassLoader().getResourceAsStream("CSV/facturas-productos.csv"));
-            CSVParser parser = CSVFormat.DEFAULT.withHeader().parse(reader)) {
-            for (CSVRecord row : parser) {
-                String query = "INSERT INTO factura_producto (idFactura, idProducto, cantidad) VALUES (?,?,?)";
-                PreparedStatement ps = null;
+        File csvFacturaProducto = new File("src/main/resources/CSV/facturas-productos.csv");
+        CSVParser parser = CSVFormat.DEFAULT.withHeader().parse(new FileReader(csvFacturaProducto));
+        for (CSVRecord row : parser) {
+            String query = "INSERT INTO factura_producto (idFactura, idProducto, cantidad) VALUES (?,?,?)";
+            PreparedStatement ps = null;
 
-                try {
-                    ps = conn.prepareStatement(query);
-                    ps.setInt(1, Integer.parseInt((row.get("idFactura"))));
-                    ps.setInt(2, Integer.parseInt((row.get("idProducto"))));
-                    ps.setInt(3, Integer.parseInt((row.get("cantidad"))));
-                    ps.executeUpdate();
-                    conn.commit();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
+            try {
+                ps = conn.prepareStatement(query);
+                ps.setInt(1, Integer.parseInt((row.get("idFactura"))));
+                ps.setInt(2, Integer.parseInt((row.get("idProducto"))));
+                ps.setInt(3, Integer.parseInt((row.get("cantidad"))));
+                ps.executeUpdate();
+                conn.commit();
+            } catch (SQLException e) {
+                e.printStackTrace();
             }
         }
     }
 
     public void insertCliente() throws IOException {
-        try(Reader reader = new InputStreamReader(getClass().getClassLoader().getResourceAsStream("CSV/clientes.csv"));
-            CSVParser parser = CSVFormat.DEFAULT.withHeader().parse(reader)) {
-            for (CSVRecord row : parser) {
-                String query = "INSERT INTO cliente (idCliente, nombre, email) VALUES (?,?,?)";
-                PreparedStatement ps = null;
+        File csvCliente = new File("src/main/resources/CSV/clientes.csv");
+        CSVParser parser = CSVFormat.DEFAULT.withHeader().parse(new FileReader(csvCliente));
+        for (CSVRecord row : parser) {
+            String query = "INSERT INTO cliente (idCliente, nombre, email) VALUES (?,?,?)";
+            PreparedStatement ps = null;
 
-                try {
-                    ps = conn.prepareStatement(query);
-                    ps.setInt(1, Integer.parseInt((row.get("idCliente"))));
-                    ps.setString(2, (row.get("nombre")));
-                    ps.setString(3, (row.get("email")));
-                    ps.executeUpdate();
-                    conn.commit();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
+            try {
+                ps = conn.prepareStatement(query);
+                ps.setInt(1, Integer.parseInt((row.get("idCliente"))));
+                ps.setString(2, (row.get("nombre")));
+                ps.setString(3, (row.get("email")));
+                ps.executeUpdate();
+                conn.commit();
+            } catch (SQLException e) {
+                e.printStackTrace();
             }
         }
     }
