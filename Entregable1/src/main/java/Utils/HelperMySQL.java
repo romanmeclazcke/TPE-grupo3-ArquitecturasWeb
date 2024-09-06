@@ -112,7 +112,7 @@ public class HelperMySQL {
     }
 
     public void insertFactura() throws IOException {
-        String path = "src\\main\\resources\\CSV\\facturas.csv";
+        String path = "Entregable1\\src\\main\\resources\\CSV\\facturas.csv";
 
         try (Reader in = new FileReader(path);
              CSVParser csvParser = CSVFormat.EXCEL.withHeader().parse(in)) {
@@ -131,7 +131,7 @@ public class HelperMySQL {
     }
 
     public void insertProducto() throws IOException {
-        String path = "src\\main\\resources\\CSV\\productos.csv";
+        String path = "Entregable1\\src\\main\\resources\\CSV\\productos.csv";
 
         try (Reader in = new FileReader(path);
              CSVParser csvParser = CSVFormat.EXCEL.withHeader().parse(in)) {
@@ -151,7 +151,7 @@ public class HelperMySQL {
     }
 
     public void insertFacturaProducto() throws IOException {
-        String path = "src\\main\\resources\\CSV\\facturas-productos.csv";
+        String path = "Entregable1\\src\\main\\resources\\CSV\\facturas-productos.csv";
 
         try (Reader in = new FileReader(path);
              CSVParser csvParser = CSVFormat.EXCEL.withHeader().parse(in)) {
@@ -171,7 +171,7 @@ public class HelperMySQL {
     }
 
     public void insertCliente() throws IOException {
-        String path = "src\\main\\resources\\CSV\\clientes.csv";
+        String path = "Entregable1\\src\\main\\resources\\CSV\\clientes.csv";
 
         try (Reader in = new FileReader(path);
              CSVParser csvParser = CSVFormat.EXCEL.withHeader().parse(in)) {
