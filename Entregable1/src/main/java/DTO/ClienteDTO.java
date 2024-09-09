@@ -29,7 +29,7 @@ public class ClienteDTO {
         return "Cliente{" +
                 "idCliente=" + idCliente +
                 ", nombre='" + nombre + '\'' +
-                ", cantidad de facturas='" + email + '\'' +
+                ", cantidad de facturas='" + cantidadFacturas + '\'' +
                 '}';
     }
 }

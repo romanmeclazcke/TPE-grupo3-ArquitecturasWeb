@@ -28,8 +28,9 @@ public class ClienteDAO {
     public ArrayList<ClienteDTO> getClientes() {
         ArrayList<ClienteDTO> list = new ArrayList<>();
         try {
-            PreparedStatement ps = conn.prepareStatement("SELECT idCliente, nombre, email, count(*) AS cantidadFacturas FROM cliente c" +
-                                                                "JOIN factura f USING (idCliente) GROUP BY idCliente, nombre, email ORDER BY cantidadFacturas DESC");
+            PreparedStatement ps = conn.prepareStatement("SELECT idCliente, nombre, email, count(*) AS cantidadFacturas FROM cliente c " +
+                    "JOIN factura f USING (idCliente) GROUP BY idCliente, nombre, email ORDER BY cantidadFacturas DESC");
+
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 int id = rs.getInt("idCliente");
