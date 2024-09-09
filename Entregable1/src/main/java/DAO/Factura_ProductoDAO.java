@@ -27,14 +27,15 @@ public class Factura_ProductoDAO {
     public ProductoDTO getProductoMayorRecaudacion() throws IOException {
         ProductoDTO producto = null;
         try {
-            PreparedStatement ps = conn.prepareStatement("SELECT p.id_producto, p.nombre, SUM(cantidad * valor) AS recaudacion FROM producto p " +
-                    "JOIN factura_producto fp USING (id_producto) " +
-                    "GROUP BY p.id_producto, p.nombre ORDER BY recaudacion DESC LIMIT 1");
+            PreparedStatement ps = conn.prepareStatement(
+                    "SELECT fp.idProducto, p.nombre, SUM(cantidad * valor) AS recaudacion FROM factura_producto fp " +
+                    "JOIN producto p USING (idProducto) " +
+                    "GROUP BY p.idProducto, p.nombre ORDER BY recaudacion DESC LIMIT 1");
 
 
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                int id = rs.getInt("id_producto");
+                int id = rs.getInt("idProducto");
                 String nombre = rs.getString("nombre");
                 int recaudacion = rs.getInt("recaudacion");
                 producto = new ProductoDTO(id, nombre, recaudacion);

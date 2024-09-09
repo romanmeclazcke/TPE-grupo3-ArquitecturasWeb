@@ -28,16 +28,21 @@ public class ClienteDAO {
     public ArrayList<ClienteDTO> getClientes() {
         ArrayList<ClienteDTO> list = new ArrayList<>();
         try {
-            PreparedStatement ps = conn.prepareStatement("SELECT idCliente, nombre, email, count(*) AS cantidadFacturas FROM cliente c " +
-                    "JOIN factura f USING (idCliente) GROUP BY idCliente, nombre, email ORDER BY cantidadFacturas DESC");
+            PreparedStatement ps = conn.prepareStatement(
+                    "SELECT c.idCliente, c.nombre, c.email, sum(fp.cantidad*p.valor) AS totalFacturado FROM cliente c " +
+                    "JOIN factura f USING (idCliente) " +
+                            "JOIN factura_producto fp  USING (idFactura)" +
+                            "JOIN producto p USING (idProducto) " +
+                            "GROUP BY c.idCliente, c.nombre, c.email " +
+                            "ORDER BY totalFacturado DESC");
 
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 int id = rs.getInt("idCliente");
                 String nombre = rs.getString("nombre");
                 String email = rs.getString("email");
-                int cantidadFacturas = rs.getInt("cantidadFacturas");
-                ClienteDTO cliente = new ClienteDTO(id, nombre, email, cantidadFacturas);
+                int totalFacturado = rs.getInt("totalFacturado");
+                ClienteDTO cliente = new ClienteDTO(id, nombre, email, totalFacturado);
                 list.add(cliente);
             }
         } catch (SQLException e) {
