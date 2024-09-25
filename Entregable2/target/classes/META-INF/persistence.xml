@@ -13,9 +13,9 @@
 
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
-			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://umzvtys5h3kr0kg1:Fp1G1MMWCWKQUwdYpvg2@bn4mgoaxto2svk9tknnh-mysql.services.clever-cloud.com:3306/bn4mgoaxto2svk9tknnh" />
-			<property name="javax.persistence.jdbc.user" value="umzvtys5h3kr0kg1" />
-			<property name="javax.persistence.jdbc.password" value="Fp1G1MMWCWKQUwdYpvg2" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/entregable2" />
+			<property name="javax.persistence.jdbc.user" value="root" />
+			<property name="javax.persistence.jdbc.password" value="" />
 
 			<!-- Propiedad para la generación automática del esquema de base de datos -->
 			<property name="hibernate.hbm2ddl.auto" value="update" />
@@ -23,8 +23,8 @@
 			<!-- Dialecto de MySQL -->
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
 
-			<property name="hibernate.show_sql" value="true"/>
-			<property name="hibernate.format_sql" value="true"/>
+			<!-- <property name="hibernate.show_sql" value="true"/>
+			<property name="hibernate.format_sql" value="true"/> -->
 		</properties>
 	</persistence-unit>
 

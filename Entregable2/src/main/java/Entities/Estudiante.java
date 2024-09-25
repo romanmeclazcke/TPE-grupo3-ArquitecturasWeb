@@ -85,4 +85,16 @@ public class Estudiante {
     public void setCiudad_residencia(String ciudad_residencia) {
         this.ciudad_residencia = ciudad_residencia;
     }
+
+    @Override
+    public String toString() {
+        return "num_libreta=" + num_libreta +
+                ", nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", edad=" + edad +
+                ", genero=" + genero +
+                ", documento=" + documento +
+                ", ciudad_residencia='" + ciudad_residencia + '\'' +
+                ", inscripciones=" + inscripciones + '\n';
+    }
 }

@@ -1,5 +1,6 @@
 package Repository;
 
+import DTO.EstudianteDTO;
 import Entities.Estudiante;
 
 import javax.persistence.EntityManager;
@@ -14,33 +15,36 @@ public class EstudianteRepositoryImpl implements EstudianteRepository {
     }
 
     @Override
-    public Estudiante createEstudiante(Estudiante estudiante) {
-        if (estudiante.getNum_libreta() == null) {
-            // Si el estudiante no tiene un ID, es un nuevo estudiante
-            em.persist(estudiante);
-        } else {
-            // Si el estudiante ya tiene un ID, utiliza merge para actualizar o adjuntar
-            estudiante = em.merge(estudiante);
+    public EstudianteDTO createEstudiante(Estudiante e) {
+        this.em.getTransaction().begin();
+        if (e == null) { //Si el estudiante no tiene ID, es un nuevo estudiante
+            this.em.persist(e);
+        } else { //Si el estudiante ya tiene ID, actualiza los datos con merge
+            e = this.em.merge(e);
         }
-        return estudiante;
+        this.em.getTransaction().commit();
+
+        return new EstudianteDTO(e.getNum_libreta(), e.getNombre(), e.getApellido(), e.getEdad(), e.getGenero(), e.getGenero(), e.getCiudad_residencia());
     }
 
     @Override
-    public List<Estudiante> getEstudiantesByEdad() {
-        String query = "SELECT e FROM Estudiante e ORDER BY edad";
-        List<Estudiante> estudiantes = em.createQuery(query, Estudiante.class).getResultList();
+    public List<EstudianteDTO> getEstudiantesByEdad() { //CONSULTARRRRRRRRRRRRRRRRRRRRRRRRR
+        List<EstudianteDTO> estudiantes = em.createQuery(
+                "SELECT new DTO.EstudianteDTO(e.num_libreta, e.nombre, e.apellido, e.edad) FROM Estudiante e ORDER BY e.edad"
+                    , EstudianteDTO.class).getResultList();
         return estudiantes;
     }
 
     @Override
-    public Estudiante getEstudianteByLibreta(int numero_libreta) {
-        return em.find(Estudiante.class, numero_libreta);
+    public EstudianteDTO getEstudianteByLibreta(int numero_libreta) {
+        return em.find(EstudianteDTO.class, numero_libreta);
     }
 
     @Override
-    public List<Estudiante> getEstudianteByGenero(char genero) {
-        String query = "SELECT e FROM Estudiante e WHERE e.genero = :genero";
-        List<Estudiante> estudiantes = em.createQuery(query, Estudiante.class).setParameter("genero", genero).getResultList();
+
+    public List<EstudianteDTO> getEstudianteByGenero(char genero) {
+        String query = "SELECT new DTO.EstudianteDTO(e.num_libreta, e.nombre, e.apellido, e.genero) FROM Estudiante e WHERE e.genero = :genero";
+        List<EstudianteDTO> estudiantes = em.createQuery(query, EstudianteDTO.class).setParameter("genero", genero).getResultList();
         return estudiantes;
     }
 }

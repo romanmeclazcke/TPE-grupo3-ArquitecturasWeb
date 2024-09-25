@@ -25,11 +25,6 @@ public class Inscripcion {
 
     public Inscripcion() {}
 
-    public Inscripcion(Estudiante estudiante, Carrera carrera) {
-        this.estudiante = estudiante;
-        this.carrera = carrera;
-    }
-
     public Inscripcion(Estudiante estudiante, Carrera carrera, Date antiguedad, boolean graduado) {
         this.estudiante = estudiante;
         this.carrera = carrera;

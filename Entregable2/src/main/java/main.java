@@ -14,7 +14,13 @@ public class main {
         EstudianteRepositoryImpl es = new EstudianteRepositoryImpl(em);
 
         Estudiante e = new Estudiante("roman","meclazcke",22,'m',46094663,"tandil");
-        System.out.println("User Creaated " + es.createEstudiante(e));
-        System.out.println(es.getEstudiantesByEdad());
+        Estudiante mai = new Estudiante("Maia","Manze",19,'F',46364081,"Tandil");
+        Estudiante t = new Estudiante("Tincho","Acosta",20,'F',46364081,"Tandil");
+        //es.createEstudiante(t);
+        //System.out.println("User Created " + es.createEstudiante(e));
+        //System.out.println(es.getEstudiantesByEdad());
+        System.out.println(es.getEstudianteByGenero('f'));
+
+        //System.out.println(es.getEstudianteByLibreta(4));
     }
 }
