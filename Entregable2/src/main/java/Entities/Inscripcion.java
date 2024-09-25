@@ -8,6 +8,7 @@ public class Inscripcion {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+
     @MapsId
     @ManyToOne
     @JoinColumn
@@ -17,6 +18,7 @@ public class Inscripcion {
     @ManyToOne
     @JoinColumn
     private Carrera carrera;
+
     @Column
     private Date antiguedad;
     private boolean graduado;

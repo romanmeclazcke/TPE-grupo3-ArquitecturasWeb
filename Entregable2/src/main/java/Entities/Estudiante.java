@@ -16,7 +16,8 @@ public class Estudiante {
     private char genero;
     private int documento;
     private String ciudad_residencia;
-    @OneToMany
+
+    @OneToMany(mappedBy = "estudiante")
     private List<Inscripcion> inscripciones;
 
     public Estudiante() {
@@ -24,8 +25,7 @@ public class Estudiante {
         this.inscripciones = new ArrayList<Inscripcion>();
     }
 
-    public Estudiante(Integer num_libreta, String nombre, String apellido, int edad, char genero, int documento, String ciudad_residencia) {
-        this.num_libreta = num_libreta;
+    public Estudiante( String nombre, String apellido, int edad, char genero, int documento, String ciudad_residencia) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;

@@ -18,7 +18,9 @@ public class InscripcionRepositoryImpl implements InscripcionRepository {
     public Inscripcion createInscripcion(Estudiante estudiante, Carrera carrera) {
         if (estudiante == null && carrera == null) {
             Inscripcion inscripcion = new Inscripcion();
+            return null; //acomodar
         }
+        return null; //acomodar
     }
 
     @Override

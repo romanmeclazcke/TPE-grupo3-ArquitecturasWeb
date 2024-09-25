@@ -16,11 +16,12 @@ public class EstudianteRepositoryImpl implements EstudianteRepository {
     @Override
     public Estudiante createEstudiante(Estudiante estudiante) {
         if (estudiante.getNum_libreta() == null) {
+            // Si el estudiante no tiene un ID, es un nuevo estudiante
             em.persist(estudiante);
         } else {
+            // Si el estudiante ya tiene un ID, utiliza merge para actualizar o adjuntar
             estudiante = em.merge(estudiante);
         }
-
         return estudiante;
     }
 
