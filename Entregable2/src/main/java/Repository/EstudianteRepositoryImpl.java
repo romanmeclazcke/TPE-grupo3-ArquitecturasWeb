@@ -9,8 +9,9 @@ import java.util.List;
 
 public class EstudianteRepositoryImpl implements EstudianteRepository {
     private EntityManager em;
+    private static  EstudianteRepositoryImpl instancia;
 
-    public EstudianteRepositoryImpl(EntityManager em) {
+    private EstudianteRepositoryImpl(EntityManager em) {
         this.em = em;
     }
 
@@ -46,5 +47,12 @@ public class EstudianteRepositoryImpl implements EstudianteRepository {
         String query = "SELECT new DTO.EstudianteDTO(e.num_libreta, e.nombre, e.apellido, e.genero) FROM Estudiante e WHERE e.genero = :genero";
         List<EstudianteDTO> estudiantes = em.createQuery(query, EstudianteDTO.class).setParameter("genero", genero).getResultList();
         return estudiantes;
+    }
+
+    public static EstudianteRepositoryImpl getInstancia(EntityManager em){
+        if(instancia == null){
+            instancia = new EstudianteRepositoryImpl(em);
+        }
+        return instancia;
     }
 }

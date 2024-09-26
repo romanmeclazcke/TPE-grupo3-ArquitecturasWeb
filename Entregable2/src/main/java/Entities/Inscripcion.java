@@ -51,4 +51,12 @@ public class Inscripcion {
     public void setEstudiante(Estudiante estudiante) {
         this.estudiante = estudiante;
     }
+
+    public Date getAntiguedad() {
+        return antiguedad;
+    }
+
+    public  boolean getGraduado() {
+        return graduado;
+    }
 }

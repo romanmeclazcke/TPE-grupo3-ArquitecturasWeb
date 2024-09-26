@@ -8,10 +8,12 @@ import Entities.Estudiante;
 import Entities.Inscripcion;
 
 import javax.persistence.EntityManager;
+import java.util.Date;
 import java.util.List;
 
 public class InscripcionRepositoryImpl implements InscripcionRepository {
     private EntityManager em;
+    private static InscripcionRepositoryImpl instancia;
 
     public InscripcionRepositoryImpl(EntityManager em) {
         this.em = em;
@@ -19,9 +21,23 @@ public class InscripcionRepositoryImpl implements InscripcionRepository {
 
     @Override
     public InscripcionDTO createInscripcion(Estudiante estudiante, Carrera carrera) {
-        //COMPLETAR
+        this.em.getTransaction().begin();
+
+        Inscripcion inscripcion = null;
+
+        if(estudiante != null && carrera != null) {
+            inscripcion = new Inscripcion(estudiante, carrera, new Date(), false);
+
+            this.em.persist(inscripcion);
+        }
+        this.em.getTransaction().commit();
+
+        if (inscripcion != null) {
+            return new InscripcionDTO(inscripcion.getId(), estudiante, carrera,inscripcion.getAntiguedad(),inscripcion.getGraduado());
+        }
         return null;
     }
+
 
     @Override
     public List<EstudianteDTO> getEstudiantesByCarreraAndCiudad(String ciudad, Carrera carrera) {
@@ -37,5 +53,12 @@ public class InscripcionRepositoryImpl implements InscripcionRepository {
         List<CarreraDTO> carreras = em.createQuery(query, CarreraDTO.class).getResultList();
 
         return carreras;
+    }
+
+    public static InscripcionRepositoryImpl getInstancia(EntityManager em) {
+        if (instancia == null) {
+            instancia = new InscripcionRepositoryImpl(em);
+        }
+        return instancia;
     }
 }
