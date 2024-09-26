@@ -11,13 +11,13 @@ public class CarreraRepositoryImpl implements CarreraRepository {
     private EntityManager em;
     private static CarreraRepositoryImpl instance;
 
-    private CarreraRepositoryImpl() {
-
+    private CarreraRepositoryImpl(EntityManager em) {
+        this.em = em;
     }
 
     public static Repository.CarreraRepositoryImpl getInstancia(EntityManager em) {
         if (instance == null) {
-            instance = new CarreraRepositoryImpl();
+            instance = new CarreraRepositoryImpl(em);
         }
         return instance;
     }

@@ -9,7 +9,7 @@ public class Inscripcion {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
-    @MapsId
+    @MapsId  //revisar mapsId , creo que es lo que da error
     @ManyToOne
     @JoinColumn
     private Estudiante estudiante;
