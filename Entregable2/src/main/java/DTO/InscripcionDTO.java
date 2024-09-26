@@ -8,15 +8,14 @@ public class InscripcionDTO {
     private int id;
     private Estudiante estudiante;
     private Carrera carrera;
-    private Date antiguedad;
-    private boolean graduado;
+    private Date fecha_inscripcion;
+    private Date fecha_graduacion;
 
-    public InscripcionDTO(int id, Estudiante estudiante, Carrera carrera, Date antiguedad, boolean graduado) {
-        this.id = id;
+    public InscripcionDTO(Estudiante estudiante, Carrera carrera, Date fecha_graduacion) {
         this.estudiante = estudiante;
         this.carrera = carrera;
-        this.antiguedad = antiguedad;
-        this.graduado = graduado;
+        this.fecha_inscripcion = new Date();
+        this.fecha_graduacion = fecha_graduacion;
     }
 
     public int getId() {
@@ -39,20 +38,28 @@ public class InscripcionDTO {
         this.carrera = carrera;
     }
 
-    public Date getAntiguedad() {
-        return antiguedad;
+    public Date getFecha_inscripcion() {
+        return fecha_inscripcion;
     }
 
-    public void setAntiguedad(Date antiguedad) {
-        this.antiguedad = antiguedad;
+    public void setFecha_inscripcion(Date fecha_inscripcion) {
+        this.fecha_inscripcion = fecha_inscripcion;
+    }
+
+    public Date getFecha_graduacion() {
+        return fecha_graduacion;
+    }
+
+    public void setFecha_graduacion(Date fecha_graduacion) {
+        this.fecha_graduacion = fecha_graduacion;
     }
 
     public boolean isGraduado() {
-        return graduado;
-    }
+        if (this.fecha_graduacion == null) {
+            return false;
+        }
 
-    public void setGraduado(boolean graduado) {
-        this.graduado = graduado;
+        return true;
     }
 
     @Override
@@ -60,7 +67,7 @@ public class InscripcionDTO {
         return "id=" + id +
                 ", estudiante=" + estudiante +
                 ", carrera=" + carrera +
-                ", antiguedad=" + antiguedad +
-                ", graduado=" + graduado + '\n';
+                ", fecha_inscripcion=" + fecha_inscripcion +
+                ", fecha_graduacion=" + fecha_graduacion + '\n';
     }
 }

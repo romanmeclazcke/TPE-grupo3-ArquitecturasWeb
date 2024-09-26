@@ -1,4 +1,6 @@
+import Entities.Carrera;
 import Entities.Estudiante;
+import Entities.Inscripcion;
 import Repository.EstudianteRepositoryImpl;
 
 import javax.persistence.EntityManager;
@@ -11,9 +13,13 @@ public class main {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("Example");
         EntityManager em = emf.createEntityManager();
 
-       Factory.abstractFactory repository = Factory.abstractFactory.getInstance(1,em);
+        Factory.abstractFactory repository = Factory.abstractFactory.getInstance(1,em);
 
-       //repository.getEstudianteRepository().createEstudiante(new Estudiante());
+        Carrera c = new Carrera("TUDAI");
+        repository.getCarreraRepository().createCarrera(c);
+        //System.out.println(repository.getEstudianteRepository().getEstudiantesByEdad());
+
+
 
     }
 }

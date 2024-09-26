@@ -20,16 +20,17 @@ public class Inscripcion {
     private Carrera carrera;
 
     @Column
-    private Date antiguedad;
-    private boolean graduado;
+    private Date fecha_inscripcion;
+    @Column(nullable = true)
+    private Date fecha_graduacion;
 
     public Inscripcion() {}
 
-    public Inscripcion(Estudiante estudiante, Carrera carrera, Date antiguedad, boolean graduado) {
+    public Inscripcion(Estudiante estudiante, Carrera carrera, Date fecha_graduacion) {
         this.estudiante = estudiante;
         this.carrera = carrera;
-        this.antiguedad = antiguedad;
-        this.graduado = graduado;
+        this.fecha_inscripcion = new Date();
+        this.fecha_graduacion = fecha_graduacion;
     }
 
     public int getId() {
@@ -52,11 +53,23 @@ public class Inscripcion {
         this.estudiante = estudiante;
     }
 
-    public Date getAntiguedad() {
-        return antiguedad;
+    public Date getFecha_graduacion() {
+        return fecha_graduacion;
     }
 
-    public  boolean getGraduado() {
-        return graduado;
+    public void setFecha_graduacion(Date fecha_graduacion) {
+        this.fecha_graduacion = fecha_graduacion;
+    }
+
+    public Date getFecha_inscripcion() {
+        return fecha_inscripcion;
+    }
+
+    public boolean isGraduado() {
+        if (this.fecha_graduacion == null) {
+            return false;
+        }
+
+        return true;
     }
 }

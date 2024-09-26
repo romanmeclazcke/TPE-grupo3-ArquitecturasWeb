@@ -6,5 +6,5 @@ import Entities.Carrera;
 public interface CarreraRepository {
     //AL PEDO? PREGUNTAR
 
-    CarreraDTO crearCarrera(Carrera c);
+    CarreraDTO createCarrera(Carrera c);
 }

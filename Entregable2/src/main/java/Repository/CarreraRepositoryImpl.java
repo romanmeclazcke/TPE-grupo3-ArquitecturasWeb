@@ -23,11 +23,11 @@ public class CarreraRepositoryImpl implements CarreraRepository {
     }
 
     @Override
-    public CarreraDTO crearCarrera(Carrera c) {
+    public CarreraDTO createCarrera(Carrera c) {
         this.em.getTransaction().begin();
-        if (c == null) { //Si el estudiante no tiene ID, es un nuevo estudiante
+        if (c == null) {
             this.em.persist(c);
-        } else { //Si el estudiante ya tiene ID, actualiza los datos con merge
+        } else {
             c = this.em.merge(c);
         }
         this.em.getTransaction().commit();

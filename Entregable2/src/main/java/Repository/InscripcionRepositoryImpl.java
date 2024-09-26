@@ -22,18 +22,16 @@ public class InscripcionRepositoryImpl implements InscripcionRepository {
     @Override
     public InscripcionDTO createInscripcion(Estudiante estudiante, Carrera carrera) {
         this.em.getTransaction().begin();
-
         Inscripcion inscripcion = null;
 
         if(estudiante != null && carrera != null) {
-            inscripcion = new Inscripcion(estudiante, carrera, new Date(), false);
-
+            inscripcion = new Inscripcion(estudiante, carrera, null); //Fecha de graduación nula porque recién se creó
             this.em.persist(inscripcion);
         }
         this.em.getTransaction().commit();
 
         if (inscripcion != null) {
-            return new InscripcionDTO(inscripcion.getId(), estudiante, carrera,inscripcion.getAntiguedad(),inscripcion.getGraduado());
+            return new InscripcionDTO(estudiante, carrera, null);
         }
         return null;
     }
