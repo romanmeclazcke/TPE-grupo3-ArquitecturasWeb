@@ -32,7 +32,7 @@ public class main {
         repository.getInscripcionRepository().createInscripcion(e,d);
         repository.getInscripcionRepository().createInscripcion(e2,d);
 
-        //System.out.println(repository.getInscripcionRepository().getCarrerasOrderByInscriptos());
+        System.out.println(repository.getInscripcionRepository().getCarrerasOrderByInscriptos());
 
 
         //System.out.println(repository.getInscripcionRepository().getEstudiantesByCarreraAndCiudad("AZUL",d));

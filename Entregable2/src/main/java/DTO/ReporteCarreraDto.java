@@ -1,12 +1,13 @@
 package DTO;
-public class CarreraConNumeroInscriptosDTO {
+
+public class ReporteCarreraDto {
     private String nombre;
     private Long numeroInscriptos;
     private Integer anioInscripciones;
     private Long egresadosPorAnio;
     private Integer anioEgresados;
 
-    public CarreraConNumeroInscriptosDTO(String nombre, Long numeroInscriptos, Integer anioInscripciones , Long egresadosPorAnio, Integer anioEgresados) {
+    public ReporteCarreraDto(String nombre, Long numeroInscriptos, Integer anioInscripciones , Long egresadosPorAnio, Integer anioEgresados) {
         this.nombre = nombre;
         this.numeroInscriptos = numeroInscriptos;
         this.anioInscripciones = anioInscripciones;

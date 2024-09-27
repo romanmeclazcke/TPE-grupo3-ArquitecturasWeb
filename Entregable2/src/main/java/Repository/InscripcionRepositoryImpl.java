@@ -1,9 +1,6 @@
 package Repository;
 
-import DTO.CarreraConNumeroInscriptosDTO;
-import DTO.CarreraDTO;
-import DTO.EstudianteDTO;
-import DTO.InscripcionDTO;
+import DTO.*;
 import Entities.Carrera;
 import Entities.Estudiante;
 import Entities.Inscripcion;
@@ -54,12 +51,12 @@ public class InscripcionRepositoryImpl implements InscripcionRepository {
     }
 
     @Override
-    public List<CarreraConNumeroInscriptosDTO> getCarrerasOrderByInscriptos() {
-        String query = "SELECT new DTO.CarreraConNumeroInscriptosDTO(c.idCarrera, c.nombre, count(i)) " +
+    public List<CarreraConNumInscriptosDto> getCarrerasOrderByInscriptos() {
+        String query = "SELECT new DTO.CarreraConNumInscriptosDto(c.idCarrera, c.nombre, count(i)) " +
                 "FROM Carrera c LEFT JOIN c.inscriptos i " +
                 "GROUP BY c.idCarrera, c.nombre " +
                 "ORDER BY count(i) DESC";
-        return em.createQuery(query, CarreraConNumeroInscriptosDTO.class).getResultList();
+        return em.createQuery(query, CarreraConNumInscriptosDto.class).getResultList();
     }
 
     public static InscripcionRepositoryImpl getInstancia(EntityManager em) {

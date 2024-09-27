@@ -1,8 +1,9 @@
 package Repository;
 
-import DTO.CarreraConNumeroInscriptosDTO;
+import DTO.ReporteCarreraDto;
 import DTO.CarreraDTO;
 import DTO.EstudianteDTO;
+import DTO.ReporteCarreraDto;
 import Entities.Carrera;
 import Repository.CarreraRepository;
 
@@ -38,8 +39,8 @@ public class CarreraRepositoryImpl implements CarreraRepository {
     }
 
     @Override
-    public List<CarreraConNumeroInscriptosDTO> getReporteCarreras() {
-        String query = "SELECT new DTO.CarreraConNumeroInscriptosDTO( " +
+    public List<ReporteCarreraDto> getReporteCarreras() {
+        String query = "SELECT new DTO.ReporteCarreraDto( " +
                 "c.nombre, " +
                 "COUNT(i.fecha_inscripcion), " +
                 "EXTRACT(YEAR FROM i.fecha_inscripcion), " +
@@ -49,8 +50,8 @@ public class CarreraRepositoryImpl implements CarreraRepository {
                 "LEFT JOIN c.inscriptos i " +
                 "GROUP BY c.nombre, EXTRACT(YEAR FROM i.fecha_inscripcion), EXTRACT(YEAR FROM i.fecha_graduacion) " +
                 "ORDER BY c.nombre, EXTRACT(YEAR FROM i.fecha_inscripcion), EXTRACT(YEAR FROM i.fecha_graduacion)";
-        List<CarreraConNumeroInscriptosDTO> reporte =
-                em.createQuery(query , CarreraConNumeroInscriptosDTO.class).getResultList();
+        List<ReporteCarreraDto> reporte =
+                em.createQuery(query , ReporteCarreraDto.class).getResultList();
 
         return reporte;
     }
