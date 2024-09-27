@@ -16,17 +16,26 @@ public class main {
 
         Factory.abstractFactory repository = Factory.abstractFactory.getInstance(1,em);
 
-        Carrera c = new Carrera("TUDAI");
+        Carrera d = new Carrera("peperoni");
         //repository.getCarreraRepository().createCarrera(c);
-        Estudiante e = new Estudiante("roman","meclazcke",22,'m',46094666,"TANDIL");
+        Estudiante e = new Estudiante("agostina","asdad",22,'m',45094432,"AZUL");
+        Estudiante e2 = new Estudiante("mateo","asdad",22,'m',45094432,"AZUL");
         repository.getEstudianteRepository().createEstudiante(e);
-       // System.out.println(repository.getEstudianteRepository().getEstudiantesByEdad());
-       // System.out.println(repository.getEstudianteRepository().getEstudianteByGenero('f'));
+        repository.getEstudianteRepository().createEstudiante(e2);
+        //System.out.println(repository.getEstudianteRepository().getEstudiantesByEdad());
+        //System.out.println(repository.getEstudianteRepository().getEstudianteByGenero('f'));
 
-        //repository.getCarreraRepository().createCarrera(c);
+        repository.getCarreraRepository().createCarrera(d);
 
-        repository.getInscripcionRepository().createInscripcion(e,c);
 
+
+        repository.getInscripcionRepository().createInscripcion(e,d);
+        repository.getInscripcionRepository().createInscripcion(e2,d);
+
+        //System.out.println(repository.getInscripcionRepository().getCarrerasOrderByInscriptos());
+
+
+        System.out.println(repository.getInscripcionRepository().getEstudiantesByCarreraAndCiudad("AZUL",d));
 
 
     }

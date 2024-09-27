@@ -9,15 +9,14 @@ public class Inscripcion {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
-    @MapsId  //revisar mapsId , creo que es lo que da error
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn
     private Estudiante estudiante;
 
-    @MapsId
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn
-    private Carrera carrera;
+    private Carrera carrera;;
+
 
     @Column
     private Date fecha_inscripcion;

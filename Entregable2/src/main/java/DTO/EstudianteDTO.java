@@ -96,12 +96,12 @@ public class EstudianteDTO implements Serializable { //PARA QUÉ?
 
     @Override
     public String toString() {
-        return "num_libreta=" + num_libreta +
-                ", nombre='" + nombre + '\'' +
-                ", apellido='" + apellido + '\'' +
-                ", edad=" + edad +
-                ", genero=" + genero +
-                ", documento=" + documento +
-                ", ciudad_residencia='" + ciudad_residencia + '\n';
+        return "num_libreta=" + this.num_libreta +
+                ", nombre='" + this.nombre + '\'' +
+                ", apellido='" + this.apellido + '\'' +
+                ", edad=" + this.edad +
+                ", genero=" + this.genero +
+                ", documento=" + this.documento +
+                ", ciudad_residencia='" + this.ciudad_residencia + '\n';
     }
 }

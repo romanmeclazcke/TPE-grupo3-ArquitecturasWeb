@@ -1,5 +1,6 @@
 package Repository;
 
+import DTO.CarreraConNumeroInscriptosDTO;
 import DTO.CarreraDTO;
 import DTO.EstudianteDTO;
 import DTO.InscripcionDTO;
@@ -12,7 +13,7 @@ import java.util.Date;
 import java.util.List;
 
 public class InscripcionRepositoryImpl implements InscripcionRepository {
-    private EntityManager em;
+    private final EntityManager em;
     private static InscripcionRepositoryImpl instancia;
 
     public InscripcionRepositoryImpl(EntityManager em) {
@@ -23,11 +24,11 @@ public class InscripcionRepositoryImpl implements InscripcionRepository {
     public InscripcionDTO createInscripcion(Estudiante estudiante, Carrera carrera) {
         this.em.getTransaction().begin();
         Inscripcion inscripcion = null;
-
         if(estudiante != null && carrera != null) {
-            inscripcion = new Inscripcion(estudiante, carrera, null); //Fecha de graduación nula porque recién se creó
+            inscripcion = new Inscripcion(estudiante, carrera, null);
             this.em.persist(inscripcion);
         }
+
         this.em.getTransaction().commit();
 
         if (inscripcion != null) {
@@ -37,20 +38,28 @@ public class InscripcionRepositoryImpl implements InscripcionRepository {
     }
 
 
+
     @Override
     public List<EstudianteDTO> getEstudiantesByCarreraAndCiudad(String ciudad, Carrera carrera) {
-        String query = "SELECT new DTO.EstudianteDTO(e.num_libreta, e.nombre, e.apellido, e.ciudad_residencia) FROM Carrera c JOIN c.inscriptos i JOIN i.estudiante e WHERE i.carrera = :carrera AND e.ciudad_residencia = :ciudad";
-        List<EstudianteDTO> estudiantes = em.createQuery(query, EstudianteDTO.class).setParameter("carrera", carrera).setParameter("ciudad", ciudad).getResultList();
+        String query = "SELECT new DTO.EstudianteDTO(e.num_libreta, e.nombre, e.apellido, e.edad, e.genero, e.documento, e.ciudad_residencia) " +
+                "FROM Carrera c " +
+                "JOIN c.inscriptos i " +
+                "JOIN i.estudiante e " +
+                "WHERE i.carrera = :carrera AND e.ciudad_residencia = :ciudad";
 
-        return estudiantes;
+        return em.createQuery(query, EstudianteDTO.class)
+                .setParameter("carrera", carrera)
+                .setParameter("ciudad", ciudad)
+                .getResultList();
     }
 
     @Override
-    public List<CarreraDTO> getCarrerasOrderByInscriptos() { //VERIFICAR CONSULTA
-        String query = "SELECT new DTO.CarreraDTO(c.idCarrera, c.nombre), count(*) AS cantidad_inscriptos FROM Carrera c JOIN c.inscriptos i GROUP BY i.carrera HAVING count(*) > 0 ORDER BY count(*)";
-        List<CarreraDTO> carreras = em.createQuery(query, CarreraDTO.class).getResultList();
-
-        return carreras;
+    public List<CarreraConNumeroInscriptosDTO> getCarrerasOrderByInscriptos() {
+        String query = "SELECT new DTO.CarreraConNumeroInscriptosDTO(c.idCarrera, c.nombre, count(i)) " +
+                "FROM Carrera c LEFT JOIN c.inscriptos i " +
+                "GROUP BY c.idCarrera, c.nombre " +
+                "ORDER BY count(i) DESC";
+        return em.createQuery(query, CarreraConNumeroInscriptosDTO.class).getResultList();
     }
 
     public static InscripcionRepositoryImpl getInstancia(EntityManager em) {

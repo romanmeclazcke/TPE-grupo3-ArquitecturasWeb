@@ -1,5 +1,6 @@
 package Repository;
 
+import DTO.CarreraConNumeroInscriptosDTO;
 import DTO.CarreraDTO;
 import DTO.EstudianteDTO;
 import DTO.InscripcionDTO;
@@ -11,5 +12,5 @@ import java.util.List;
 public interface InscripcionRepository {
     InscripcionDTO createInscripcion(Estudiante estudiante, Carrera carrera);
     List<EstudianteDTO> getEstudiantesByCarreraAndCiudad(String ciudad, Carrera carrera);
-    List<CarreraDTO> getCarrerasOrderByInscriptos();
+    List<CarreraConNumeroInscriptosDTO> getCarrerasOrderByInscriptos();
 }

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EstudianteRepositoryImpl implements EstudianteRepository {
-    private EntityManager em;
+    private final EntityManager em;
     private static  EstudianteRepositoryImpl instancia;
 
     private EstudianteRepositoryImpl(EntityManager em) {
@@ -18,9 +18,9 @@ public class EstudianteRepositoryImpl implements EstudianteRepository {
     @Override
     public EstudianteDTO createEstudiante(Estudiante e) {
         this.em.getTransaction().begin();
-        if (e == null) { //Si el estudiante no tiene ID, es un nuevo estudiante
+        if (e == null) {
             this.em.persist(e);
-        } else { //Si el estudiante ya tiene ID, actualiza los datos con merge
+        } else {
             e = this.em.merge(e);
         }
         this.em.getTransaction().commit();
