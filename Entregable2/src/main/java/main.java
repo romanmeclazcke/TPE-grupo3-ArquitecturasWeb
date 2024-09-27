@@ -35,7 +35,9 @@ public class main {
         //System.out.println(repository.getInscripcionRepository().getCarrerasOrderByInscriptos());
 
 
-        System.out.println(repository.getInscripcionRepository().getEstudiantesByCarreraAndCiudad("AZUL",d));
+        //System.out.println(repository.getInscripcionRepository().getEstudiantesByCarreraAndCiudad("AZUL",d));
+
+        System.out.println(repository.getCarreraRepository().getReporteCarreras());
 
 
     }

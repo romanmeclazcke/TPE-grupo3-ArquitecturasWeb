@@ -13,7 +13,7 @@
 
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
-			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://uzmmf8cvnbavz5tc:L5kKnvKzzCHJmYsHN37T@bkwtpkq19kvae52kp4qw-mysql.services.clever-cloud.com:3306/bkwtpkq19kvae52kp4qw" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/entregable2" />
 			<property name="javax.persistence.jdbc.user" value="root" />
 			<property name="javax.persistence.jdbc.password" value="" />
 
