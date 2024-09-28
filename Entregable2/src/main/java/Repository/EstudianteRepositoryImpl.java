@@ -18,7 +18,7 @@ public class EstudianteRepositoryImpl implements EstudianteRepository {
     @Override
     public EstudianteDTO createEstudiante(Estudiante e) {
         this.em.getTransaction().begin();
-        if (e == null) {
+        if (e.getNum_libreta() == null) {
             this.em.persist(e);
         } else {
             e = this.em.merge(e);

@@ -29,7 +29,7 @@ public class InscripcionRepositoryImpl implements InscripcionRepository {
         this.em.getTransaction().commit();
 
         if (inscripcion != null) {
-            return new InscripcionDTO(estudiante, carrera, null);
+            return new InscripcionDTO(estudiante,carrera,inscripcion.getFecha_inscripcion(), inscripcion.getFecha_graduacion());
         }
         return null;
     }
@@ -58,6 +58,27 @@ public class InscripcionRepositoryImpl implements InscripcionRepository {
                 "ORDER BY count(i) DESC";
         return em.createQuery(query, CarreraConNumInscriptosDto.class).getResultList();
     }
+
+    @Override
+    public InscripcionDTO graduarEstudiante(Estudiante estudiante, Carrera carrera) {
+
+        this.em.getTransaction().begin();
+
+        String query = "SELECT i FROM Inscripcion i WHERE i.estudiante = :estudiante AND i.carrera = :carrera";
+        Inscripcion inscripcion = em.createQuery(query, Inscripcion.class)
+                .setParameter("estudiante", estudiante)
+                .setParameter("carrera", carrera)
+                .getSingleResult();
+
+        if(inscripcion != null) {
+            inscripcion.setFecha_graduacion(new Date());
+            this.em.persist(inscripcion);
+            this.em.getTransaction().commit();
+            return new InscripcionDTO(estudiante, carrera, inscripcion.getFecha_inscripcion(), inscripcion.getFecha_graduacion());
+        }
+        return null;
+    }
+
 
     public static InscripcionRepositoryImpl getInstancia(EntityManager em) {
         if (instancia == null) {

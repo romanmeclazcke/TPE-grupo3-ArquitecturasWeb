@@ -11,10 +11,10 @@ public class InscripcionDTO {
     private Date fecha_inscripcion;
     private Date fecha_graduacion;
 
-    public InscripcionDTO(Estudiante estudiante, Carrera carrera, Date fecha_graduacion) {
+    public InscripcionDTO(Estudiante estudiante, Carrera carrera, Date fecha_inscripcion, Date fecha_graduacion) {
         this.estudiante = estudiante;
         this.carrera = carrera;
-        this.fecha_inscripcion = new Date();
+        this.fecha_inscripcion = fecha_inscripcion;
         this.fecha_graduacion = fecha_graduacion;
     }
 

@@ -14,4 +14,5 @@ public interface InscripcionRepository {
     InscripcionDTO createInscripcion(Estudiante estudiante, Carrera carrera);
     List<EstudianteDTO> getEstudiantesByCarreraAndCiudad(String ciudad, Carrera carrera);
     List<CarreraConNumInscriptosDto> getCarrerasOrderByInscriptos();
+    InscripcionDTO graduarEstudiante(Estudiante estudiante, Carrera carrera);
 }
