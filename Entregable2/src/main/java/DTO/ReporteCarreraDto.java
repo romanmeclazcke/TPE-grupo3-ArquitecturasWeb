@@ -26,12 +26,10 @@ public class ReporteCarreraDto {
 
     @Override
     public String toString() {
-        return "CarreraConNumeroInscriptosDTO{" +
-                ", nombre='" + nombre + '\'' +
-                ", numeroInscriptos=" + numeroInscriptos +
-                ", anioInscripciones=" + anioInscripciones +
-                ", egresadosPorAnio=" + egresadosPorAnio +
-                ", anioEgresados=" + anioEgresados +
-                '}';
+        return "Nombre: " + nombre +
+                ", #inscriptos: " + numeroInscriptos +
+                ", año inscripciones: " + anioInscripciones +
+                ", egresados del año: " + egresadosPorAnio +
+                ", año egresados: " + anioEgresados + '\n';
     }
 }

@@ -16,22 +16,20 @@ public class main {
 
         Factory.abstractFactory repository = Factory.abstractFactory.getInstance(1,em);
 
-        Carrera c = new Carrera("Prueba actualizar inscripcion");
-        //repository.getCarreraRepository().createCarrera(c);
-        Estudiante e = new Estudiante("nazareno2","meclazcke",44,'m',45094432,"TANDIL");
-        Estudiante e2 = new Estudiante("mateo","asdad",22,'m',45094432,"AZUL");
-        repository.getEstudianteRepository().createEstudiante(e);
+        Carrera c1 = new Carrera("TUDAI");
+        repository.getCarreraRepository().createCarrera(c1);
+
+        Estudiante e = new Estudiante("Maia2", "Manze", 20, 'f', 46291832, "Olavarría");
+        Estudiante e2 = new Estudiante("María", "Lopez", 18, 'f', 46364081, "Rauch");
+        //repository.getEstudianteRepository().createEstudiante(e2);
         //System.out.println(repository.getEstudianteRepository().getEstudiantesByEdad());
         //System.out.println(repository.getEstudianteRepository().getEstudianteByGenero('f'));
 
-        repository.getCarreraRepository().createCarrera(c);
-        repository.getInscripcionRepository().createInscripcion(e,c);
-        repository.getInscripcionRepository().createInscripcion(e2,c);
-
+        //repository.getInscripcionRepository().createInscripcion(e2,c1);
 
         //metodo para graduar estudiante
-        repository.getInscripcionRepository().graduarEstudiante(e,c);
-        repository.getInscripcionRepository().graduarEstudiante(e2,c);
+        repository.getInscripcionRepository().graduarEstudiante(e,c1);
+
         //System.out.println(repository.getInscripcionRepository().getCarrerasOrderByInscriptos());
         //System.out.println(repository.getInscripcionRepository().getEstudiantesByCarreraAndCiudad("AZUL",d));
 
