@@ -28,7 +28,7 @@ public class CarreraRepositoryImpl implements CarreraRepository {
     @Override
     public CarreraDTO createCarrera(Carrera c) {
         this.em.getTransaction().begin();
-        if (c == null) {
+        if (c.getIdCarrera() == null) {
             this.em.persist(c);
         } else {
             c = this.em.merge(c);
@@ -43,13 +43,12 @@ public class CarreraRepositoryImpl implements CarreraRepository {
         String query = "SELECT new DTO.ReporteCarreraDto( " +
                 "c.nombre, " +
                 "COUNT(i.fecha_inscripcion), " +
-                "EXTRACT(YEAR FROM i.fecha_inscripcion), " +
                 "COUNT(i.fecha_graduacion), " +
-                "EXTRACT(YEAR FROM i.fecha_graduacion) ) " +
+                "EXTRACT(YEAR FROM i.fecha_inscripcion) ) " +
                 "FROM Carrera c " +
                 "LEFT JOIN c.inscriptos i " +
-                "GROUP BY c.nombre, EXTRACT(YEAR FROM i.fecha_inscripcion), EXTRACT(YEAR FROM i.fecha_graduacion) " +
-                "ORDER BY c.nombre, EXTRACT(YEAR FROM i.fecha_inscripcion), EXTRACT(YEAR FROM i.fecha_graduacion)";
+                "GROUP BY c.idCarrera, EXTRACT(YEAR FROM i.fecha_inscripcion) " +
+                "ORDER BY c.nombre , EXTRACT(YEAR FROM i.fecha_inscripcion)  ";
         List<ReporteCarreraDto> reporte =
                 em.createQuery(query , ReporteCarreraDto.class).getResultList();
 

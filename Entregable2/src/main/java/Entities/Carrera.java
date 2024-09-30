@@ -8,7 +8,7 @@ import java.util.List;
 public class Carrera {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int idCarrera;
+    private Integer idCarrera;
     @Column
     private String nombre;
     @OneToMany(mappedBy = "carrera")
@@ -23,7 +23,7 @@ public class Carrera {
         this.nombre = nombre;
     }
 
-    public int getIdCarrera() {
+    public Integer getIdCarrera() {
         return idCarrera;
     }
 
