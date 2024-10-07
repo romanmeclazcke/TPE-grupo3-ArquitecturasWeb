@@ -1,10 +1,14 @@
 package com.example.entregable3.Model;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@Data
+@AllArgsConstructor
 public class Estudiante {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -34,67 +38,6 @@ public class Estudiante {
         this.ciudad_residencia = ciudad_residencia;
     }
 
-    public Integer getNum_libreta() {
-        return num_libreta;
-    }
 
-    public String getNombre() {
-        return nombre;
-    }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
-
-    public int getEdad() {
-        return edad;
-    }
-
-    public void setEdad(int edad) {
-        this.edad = edad;
-    }
-
-    public char getGenero() {
-        return genero;
-    }
-
-    public void setGenero(char genero) {
-        this.genero = genero;
-    }
-
-    public int getDocumento() {
-        return documento;
-    }
-
-    public void setDocumento(int documento) {
-        this.documento = documento;
-    }
-
-    public String getCiudad_residencia() {
-        return ciudad_residencia;
-    }
-
-    public void setCiudad_residencia(String ciudad_residencia) {
-        this.ciudad_residencia = ciudad_residencia;
-    }
-
-    @Override
-    public String toString() {
-        return "num_libreta=" + num_libreta +
-                ", nombre='" + nombre + '\'' +
-                ", apellido='" + apellido + '\'' +
-                ", edad=" + edad +
-                ", genero=" + genero +
-                ", documento=" + documento +
-                ", ciudad_residencia='" + ciudad_residencia + '\'' +
-                ", inscripciones=" + inscripciones + '\n';
-    }
 }

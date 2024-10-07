@@ -1,9 +1,14 @@
 package com.example.entregable3.Model;
 
-import javax.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.*;
+import lombok.Data;
+
 import java.util.Date;
 
 @Entity
+@Data
 public class Inscripcion {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -32,43 +37,5 @@ public class Inscripcion {
         this.fecha_graduacion = fecha_graduacion;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public Carrera getCarrera() {
-        return carrera;
-    }
-
-    public void setCarrera(Carrera carrera) {
-        this.carrera = carrera;
-    }
-
-    public Estudiante getEstudiante() {
-        return estudiante;
-    }
-
-    public void setEstudiante(Estudiante estudiante) {
-        this.estudiante = estudiante;
-    }
-
-    public Date getFecha_graduacion() {
-        return fecha_graduacion;
-    }
-
-    public void setFecha_graduacion(Date fecha_graduacion) {
-        this.fecha_graduacion = fecha_graduacion;
-    }
-
-    public Date getFecha_inscripcion() {
-        return fecha_inscripcion;
-    }
-
-    public boolean isGraduado() {
-        if (this.fecha_graduacion == null) {
-            return false;
-        }
-
-        return true;
-    }
+   
 }
