@@ -1,7 +1,9 @@
 package com.example.entregable3.DTO;
 
-import Entities.Carrera;
-import Entities.Estudiante;
+
+
+import com.example.entregable3.Model.Carrera;
+import com.example.entregable3.Model.Estudiante;
 
 import java.util.Date;
 

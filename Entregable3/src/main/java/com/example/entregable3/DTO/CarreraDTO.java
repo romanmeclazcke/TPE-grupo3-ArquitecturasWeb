@@ -1,6 +1,5 @@
 package com.example.entregable3.DTO;
-
-import Entities.Inscripcion;
+import com.example.entregable3.Model.Inscripcion;
 
 import java.util.ArrayList;
 import java.util.List;

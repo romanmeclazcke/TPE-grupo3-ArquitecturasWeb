@@ -3,16 +3,14 @@ package com.example.entregable3.DTO;
 public class ReporteCarreraDto {
     private String nombre;
     private Long numeroInscriptos;
-    private Integer anioInscripciones;
     private Long egresadosPorAnio;
-    private Integer anioEgresados;
+    private Integer anioLectivo;
 
-    public ReporteCarreraDto(String nombre, Long numeroInscriptos, Integer anioInscripciones , Long egresadosPorAnio, Integer anioEgresados) {
+    public ReporteCarreraDto(String nombre, Long numeroInscriptos , Long egresadosPorAnio, Integer anioLectivo) {
         this.nombre = nombre;
         this.numeroInscriptos = numeroInscriptos;
-        this.anioInscripciones = anioInscripciones;
         this.egresadosPorAnio = egresadosPorAnio;
-        this.anioEgresados = anioEgresados;
+        this.anioLectivo = anioLectivo;
     }
 
 
@@ -24,14 +22,12 @@ public class ReporteCarreraDto {
         this.nombre = nombre;
     }
 
+
     @Override
     public String toString() {
-        return "CarreraConNumeroInscriptosDTO{" +
-                ", nombre='" + nombre + '\'' +
-                ", numeroInscriptos=" + numeroInscriptos +
-                ", anioInscripciones=" + anioInscripciones +
-                ", egresadosPorAnio=" + egresadosPorAnio +
-                ", anioEgresados=" + anioEgresados +
-                '}';
+        return "Nombre: " + nombre +
+                ", #inscriptos: " + numeroInscriptos +
+                ", egresados del año: " + egresadosPorAnio +
+                ", año lectivo: " + anioLectivo + '\n';
     }
 }
