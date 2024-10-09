@@ -1,6 +1,7 @@
 package com.example.entregable3.Services;
 import com.example.entregable3.DTO.CarreraConNumInscriptosDto;
 import com.example.entregable3.DTO.EstudianteDTO;
+import com.example.entregable3.Model.Carrera;
 import com.example.entregable3.Model.Inscripcion;
 import com.example.entregable3.Repository.InscripcionRepository;
 import org.springframework.stereotype.Service;
@@ -63,10 +64,10 @@ public class InscripcionServices implements BaseServices<Inscripcion>{
 
 
     public List<CarreraConNumInscriptosDto> getCarreraConNumInscriptosDto() {
-        return this.getCarreraConNumInscriptosDto();
+        return this.inscripcionRepository.getCarrerasOrderByInscriptos();
     }
 
-    public List<CarreraConNumInscriptosDto> getEstudiantesByCarreraAndCiudad(){
-        return this.inscripcionRepository.getCarrerasOrderByInscriptos();
+    public List<EstudianteDTO> getEstudiantesByCarreraAndCiudad(String ciudad, Carrera carrera){
+        return this.inscripcionRepository.getEstudiantesByCarreraAndCiudad(ciudad, carrera);
     }
 }
