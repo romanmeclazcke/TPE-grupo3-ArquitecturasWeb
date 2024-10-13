@@ -12,6 +12,29 @@ public class CarreraConNumInscriptosDto {
 
     }
 
+    public void setIdCarrera(int idCarrera) {
+        this.idCarrera = idCarrera;
+    }
+
+    public void setNombreCarrera(String nombreCarrera) {
+        this.nombreCarrera = nombreCarrera;
+    }
+
+    public void setNumInscriptos(long numInscriptos) {
+        this.numInscriptos = numInscriptos;
+    }
+
+    public int getIdCarrera() {
+        return idCarrera;
+    }
+
+    public String getNombreCarrera() {
+        return nombreCarrera;
+    }
+
+    public long getNumInscriptos() {
+        return numInscriptos;
+    }
 
     @Override
     public String toString() {
