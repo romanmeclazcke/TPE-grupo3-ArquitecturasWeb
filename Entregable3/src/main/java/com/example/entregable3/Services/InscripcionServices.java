@@ -42,14 +42,19 @@ public class InscripcionServices implements BaseServices<Inscripcion>{
     @Override
     public Inscripcion update(Integer id, Inscripcion entity) throws Exception {
         try {
-            Optional<Inscripcion> inscripcion = this.inscripcionRepository.findById(id);
-            Inscripcion i = inscripcion.get();
-            i = this.inscripcionRepository.save(entity);
-            return i;
+            Optional<Inscripcion> inscripcionOpt = this.inscripcionRepository.findById(id);
+            if (inscripcionOpt.isPresent()) {
+                Inscripcion inscripcionExistente = inscripcionOpt.get();
+                inscripcionExistente.setFecha_graduacion(entity.getFecha_graduacion());
+
+                return this.inscripcionRepository.save(inscripcionExistente);
+            }
         } catch (Exception e) {
             throw new Exception(e.getMessage());
         }
+        return entity;
     }
+
 
     @Override
     public boolean delete(Integer id) throws Exception {
