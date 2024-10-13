@@ -16,6 +16,9 @@ public class CarreraServices implements BaseServices<Carrera>{
     @Autowired
     private CarreraRepository carreraRepository;
 
+    public CarreraServices(CarreraRepository carreraRepository) {
+        this.carreraRepository = carreraRepository;
+    }
 
     @Override
     public List<Carrera> findAll() {
@@ -45,9 +48,16 @@ public class CarreraServices implements BaseServices<Carrera>{
     public Carrera update(Integer id, Carrera entity) throws Exception {
         try {
             Optional<Carrera> carrera = this.carreraRepository.findById(id);
-            Carrera c = carrera.get();
-            c = this.carreraRepository.save(entity);
-            return c;
+            if (carrera.isPresent()) {
+                Carrera existente = carrera.get();
+
+                if (entity.getNombre() != null)
+                    existente.setNombre(entity.getNombre());
+
+                return this.carreraRepository.save(existente);
+            } else {
+                throw new Exception("Carrera con ID: " + id + " no encontrada");
+            }
         } catch (Exception e) {
             throw new Exception(e.getMessage());
         }

@@ -1,6 +1,5 @@
 package com.example.entregable3.Controllers;
 
-import com.example.entregable3.DTO.EstudianteDTO;
 import com.example.entregable3.Model.Estudiante;
 import com.example.entregable3.Services.EstudianteServices;
 import org.springframework.beans.factory.annotation.Autowired;

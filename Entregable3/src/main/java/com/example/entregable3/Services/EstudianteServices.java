@@ -44,9 +44,31 @@ public class EstudianteServices implements BaseServices<Estudiante>{
     public Estudiante update(Integer id, Estudiante entity) throws Exception {
         try {
             Optional<Estudiante> estudiante = this.estudianteRepository.findById(id);
-            Estudiante e = estudiante.get();
-            e = this.estudianteRepository.save(entity);
-            return e;
+            if (estudiante.isPresent()) {
+                Estudiante existente = estudiante.get();
+
+                //Para asegurar que no sobreescribo con nulos
+                if (entity.getNombre() != null)
+                    existente.setNombre(entity.getNombre());
+
+                if (entity.getApellido() != null)
+                    existente.setApellido(entity.getApellido());
+
+                if (entity.getEdad() != null)
+                    existente.setEdad(entity.getEdad());
+
+                if (entity.getGenero() != null)
+                    existente.setGenero(entity.getGenero());
+
+                if (entity.getDocumento() != null)
+                    existente.setDocumento(entity.getDocumento());
+
+                if (entity.getCiudad_residencia() != null)
+                    existente.setCiudad_residencia(entity.getCiudad_residencia());
+
+                return this.estudianteRepository.save(existente);
+            } else
+                throw new Exception("Estudiante con ID: " + id + " no encontrado");
         } catch (Exception e) {
             throw new Exception(e.getMessage());
         }

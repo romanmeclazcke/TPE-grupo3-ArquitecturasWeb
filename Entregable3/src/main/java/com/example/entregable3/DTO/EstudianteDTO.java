@@ -1,9 +1,13 @@
 package com.example.entregable3.DTO;
 
-import java.io.Serializable;
+import jakarta.persistence.Column;
+import lombok.Getter;
+import lombok.Setter;
 
-public class EstudianteDTO implements Serializable { //PARA QUÉ?
+public class EstudianteDTO {
+    @Getter
     private Integer num_libreta;
+    @Getter @Setter
     private String nombre;
     private String apellido;
     private int edad;
@@ -21,18 +25,18 @@ public class EstudianteDTO implements Serializable { //PARA QUÉ?
         this.ciudad_residencia = ciudad_residencia;
     }
 
-    public EstudianteDTO(Integer num_libreta, String nombre, String apellido, String ciudad_residencia) {
-        this.num_libreta = num_libreta;
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.ciudad_residencia = ciudad_residencia;
-    }
-
     public EstudianteDTO(Integer num_libreta, String nombre, String apellido, int edad) {
         this.num_libreta = num_libreta;
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
+    }
+
+    public EstudianteDTO(Integer num_libreta, String nombre, String apellido, String ciudad_residencia) {
+        this.num_libreta = num_libreta;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.ciudad_residencia = ciudad_residencia;
     }
 
     public EstudianteDTO(Integer num_libreta, String nombre, String apellido, char genero) {
@@ -42,66 +46,16 @@ public class EstudianteDTO implements Serializable { //PARA QUÉ?
         this.genero = genero;
     }
 
-    public Integer getNum_libreta() {
-        return num_libreta;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
-
-    public int getEdad() {
-        return edad;
-    }
-
-    public void setEdad(int edad) {
-        this.edad = edad;
-    }
-
-    public char getGenero() {
-        return genero;
-    }
-
-    public void setGenero(char genero) {
-        this.genero = genero;
-    }
-
-    public int getDocumento() {
-        return documento;
-    }
-
-    public void setDocumento(int documento) {
-        this.documento = documento;
-    }
-
-    public String getCiudad_residencia() {
-        return ciudad_residencia;
-    }
-
-    public void setCiudad_residencia(String ciudad_residencia) {
-        this.ciudad_residencia = ciudad_residencia;
-    }
-
     @Override
     public String toString() {
-        return "num_libreta=" + this.num_libreta +
-                ", nombre='" + this.nombre + '\'' +
-                ", apellido='" + this.apellido + '\'' +
-                ", edad=" + this.edad +
-                ", genero=" + this.genero +
-                ", documento=" + this.documento +
-                ", ciudad_residencia='" + this.ciudad_residencia + '\n';
+        return "EstudianteDTO{" +
+                "num_libreta=" + num_libreta +
+                ", nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", edad=" + edad +
+                ", genero=" + genero +
+                ", documento=" + documento +
+                ", ciudad_residencia='" + ciudad_residencia + '\'' +
+                '}';
     }
 }

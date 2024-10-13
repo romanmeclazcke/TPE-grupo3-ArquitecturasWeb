@@ -16,9 +16,9 @@ public class Estudiante {
     @Column
     private String nombre;
     private String apellido;
-    private int edad;
-    private char genero;
-    private int documento;
+    private Integer edad;
+    private Character genero;
+    private Integer documento;
     private String ciudad_residencia;
 
     @OneToMany(mappedBy = "estudiante")
@@ -29,7 +29,7 @@ public class Estudiante {
         this.inscripciones = new ArrayList<Inscripcion>();
     }
 
-    public Estudiante( String nombre, String apellido, int edad, char genero, int documento, String ciudad_residencia) {
+    public Estudiante( String nombre, String apellido, Integer edad, Character genero, Integer documento, String ciudad_residencia) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
