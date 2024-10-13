@@ -4,6 +4,7 @@ import com.example.entregable3.DTO.EstudianteDTO;
 import com.example.entregable3.Model.Carrera;
 import com.example.entregable3.Model.Inscripcion;
 import com.example.entregable3.Repository.InscripcionRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,6 +13,7 @@ import java.util.Optional;
 @Service("InscripcionService")
 public class InscripcionServices implements BaseServices<Inscripcion>{
 
+    @Autowired
     private InscripcionRepository inscripcionRepository;
 
     @Override

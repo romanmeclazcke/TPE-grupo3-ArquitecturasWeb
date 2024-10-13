@@ -1,5 +1,6 @@
 package com.example.entregable3.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -15,6 +16,7 @@ public class Carrera {
     @Column
     private String nombre;
     @OneToMany(mappedBy = "carrera")
+    @JsonIgnore
     private List<Inscripcion> inscriptos;
 
     public Carrera() {

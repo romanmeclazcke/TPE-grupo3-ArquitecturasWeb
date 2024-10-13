@@ -1,5 +1,6 @@
 package com.example.entregable3.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -22,6 +23,7 @@ public class Estudiante {
     private String ciudad_residencia;
 
     @OneToMany(mappedBy = "estudiante")
+    @JsonIgnore
     private List<Inscripcion> inscripciones;
 
     public Estudiante() {

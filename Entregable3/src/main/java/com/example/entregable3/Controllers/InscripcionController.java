@@ -4,7 +4,10 @@ package com.example.entregable3.Controllers;
 import com.example.entregable3.DTO.CarreraConNumInscriptosDto;
 import com.example.entregable3.DTO.EstudianteDTO;
 import com.example.entregable3.Model.Carrera;
+import com.example.entregable3.Model.Estudiante;
 import com.example.entregable3.Model.Inscripcion;
+import com.example.entregable3.Services.CarreraServices;
+import com.example.entregable3.Services.EstudianteServices;
 import com.example.entregable3.Services.InscripcionServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,6 +22,10 @@ public class InscripcionController {
 
     @Autowired
     private InscripcionServices inscripcionServices;
+    @Autowired
+    private EstudianteServices estudianteServices;
+    @Autowired
+    private CarreraServices carreraServices;
 
     @GetMapping("")
     public ResponseEntity<?> getAllInscripciones() {
@@ -41,7 +48,10 @@ public class InscripcionController {
     @PostMapping("")
     public ResponseEntity<?> createInscripcion(@RequestBody Inscripcion inscripcion) {
         try {
-            return ResponseEntity.status(HttpStatus.OK).body(inscripcionServices.save(inscripcion));
+            Estudiante e  = estudianteServices.findById(inscripcion.getEstudiante().getNum_libreta());
+            Carrera c = carreraServices.findById(inscripcion.getCarrera().getIdCarrera());
+            Inscripcion i  = new Inscripcion(e,c,inscripcion.getFecha_graduacion());
+            return ResponseEntity.status(HttpStatus.OK).body(inscripcionServices.save(i));
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("{\"error\":\"Error. No se pudo ingresar la inscripción, revise los campos e intente nuevamente.\"}");
         }
