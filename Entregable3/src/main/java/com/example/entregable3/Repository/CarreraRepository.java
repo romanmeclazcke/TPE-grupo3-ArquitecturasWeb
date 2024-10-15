@@ -20,4 +20,6 @@ public interface CarreraRepository extends JpaRepository<Carrera,Integer> {
             "GROUP BY c.idCarrera, EXTRACT(YEAR FROM i.fecha_inscripcion) " +
             "ORDER BY c.nombre , EXTRACT(YEAR FROM i.fecha_inscripcion)  ")
     List<ReporteCarreraDto> getReporteCarreras();
+
+
 }

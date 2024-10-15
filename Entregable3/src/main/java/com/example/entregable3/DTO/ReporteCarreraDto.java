@@ -22,6 +22,29 @@ public class ReporteCarreraDto {
         this.nombre = nombre;
     }
 
+    public Long getNumeroInscriptos() {
+        return numeroInscriptos;
+    }
+
+    public void setNumeroInscriptos(Long numeroInscriptos) {
+        this.numeroInscriptos = numeroInscriptos;
+    }
+
+    public Long getEgresadosPorAnio() {
+        return egresadosPorAnio;
+    }
+
+    public void setEgresadosPorAnio(Long egresadosPorAnio) {
+        this.egresadosPorAnio = egresadosPorAnio;
+    }
+
+    public Integer getAnioLectivo() {
+        return anioLectivo;
+    }
+
+    public void setAnioLectivo(Integer anioLectivo) {
+        this.anioLectivo = anioLectivo;
+    }
 
     @Override
     public String toString() {
