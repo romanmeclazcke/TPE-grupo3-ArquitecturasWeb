@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@Table(name="estudiante")
 public class Estudiante {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
