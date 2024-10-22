@@ -1,14 +1,11 @@
 import Entities.Carrera;
 import Entities.Estudiante;
-import Entities.Inscripcion;
-import Repository.EstudianteRepositoryImpl;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import javax.swing.plaf.synth.SynthTextAreaUI;
 
-public class main {
+public class Main {
 
     public static void main(String[] args) {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("Example");
