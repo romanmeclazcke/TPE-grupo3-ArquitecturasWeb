@@ -27,5 +27,8 @@ public class Usuario {
     @ManyToMany()
     private List<Cuenta> cuentas;
 
+    @ManyToOne()
+    private Rol rol;
+
 
 }

@@ -25,7 +25,4 @@ public class Monopatin {
     private Boolean disponible;
 
 
-
-
-
 }
