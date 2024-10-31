@@ -22,7 +22,6 @@ public class Viaje {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-
     @Column
     private Date fecha_inicio;
     private Date fecha_fin;
@@ -30,6 +29,11 @@ public class Viaje {
     private Time hora_fin;
     private Double km;
     private Long id_usuario;
+    private Long id_monopatin; //?
+
+    @ManyToOne
+    @JoinColumn(name = "id_tarifa")
+    private Tarifa tarifa;
 
     @OneToMany(mappedBy = "viaje", cascade = CascadeType.ALL)
     private List<Pausa> pausas;
