@@ -8,27 +8,18 @@ import lombok.NoArgsConstructor;
 import java.util.List;
 
 @Entity
-@Table(name="usuario")
+@Table(name="rol")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Usuario {
-
+public class Rol {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column
-    private String nombre;
-    private String apellido;
-    private String email;
-    private Long telefono;
+    private String tipo_rol;
 
-    @ManyToMany()
-    private List<Cuenta> cuentas;
-
-    @ManyToOne()
-    private Rol rol;
-
-
+    @OneToMany(mappedBy = "rol")
+    private List<Usuario> usuarios;
 }
