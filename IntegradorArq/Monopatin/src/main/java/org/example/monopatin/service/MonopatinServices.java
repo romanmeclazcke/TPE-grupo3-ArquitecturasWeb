@@ -6,6 +6,7 @@ import org.example.monopatin.entity.Monopatin;
 import org.example.monopatin.repository.MonopatinRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -19,12 +20,38 @@ public class MonopatinServices {
     public MonopatinResponseDto save(MonopatinRequestDto MonopatinRequesDto) throws Exception {
         try{
             Monopatin monopatin = mapearDtoAEntidad(MonopatinRequesDto);
-            monopatinRepository.save(monopatin);
+            this.monopatinRepository.save(monopatin);
             return this.mapearEntidadADto(monopatin);
         } catch (Exception e){
             throw new Exception(e.getMessage());
         }
     }
+
+
+    public void delete(@PathVariable Long id) {
+        try{
+            if(this.monopatinRepository.existsById(id))
+                this.monopatinRepository.deleteById(id);
+            else
+                throw new Exception("El Monopatin con id: " + id + " no ha sido encontrado.");
+
+        } catch (Exception e) {
+            throw new RuntimeException(e.getMessage());
+        }
+    }
+
+
+    public MonopatinResponseDto editarMonopatin(Long monopatinId, MonopatinRequestDto monopatinRequestDto) throws Exception {
+        Monopatin monopatin = this.monopatinRepository.findById(monopatinId)
+                .orElseThrow(() -> new Exception("El monopatin a editar no existe"));
+        monopatin.setTiempo_uso(monopatinRequestDto.getTiempo_uso());
+        monopatin.setKilometros(monopatinRequestDto.getKilometros());
+        monopatin.setDisponible(monopatinRequestDto.isDisponible());
+        monopatin.setDisponible(monopatinRequestDto.isDisponible());
+        this.monopatinRepository.save(monopatin);
+        return this.mapearEntidadADto(monopatin);
+    }
+
 
     public List<MonopatinResponseDto> getAll() throws Exception {
         try{
@@ -34,6 +61,16 @@ public class MonopatinServices {
                     .map(this::mapearEntidadADto)
                     .collect(Collectors.toList());
         } catch (Exception e){
+            throw new Exception(e.getMessage());
+        }
+    }
+
+
+    public MonopatinResponseDto getById(@PathVariable Long id) throws Exception {
+        try{
+            Monopatin monopatin = this.monopatinRepository.findById(id).get();
+            return this.mapearEntidadADto(monopatin);
+        } catch (Exception e) {
             throw new Exception(e.getMessage());
         }
     }

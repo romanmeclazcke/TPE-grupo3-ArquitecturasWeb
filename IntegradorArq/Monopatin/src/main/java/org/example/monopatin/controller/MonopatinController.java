@@ -24,6 +24,25 @@ public class MonopatinController {
         }
     }
 
+    @DeleteMapping("/{monopatinId}")
+    public ResponseEntity<?> delete(@PathVariable Long monopatinId) throws Exception {
+        try{
+            monopatinServices.delete(monopatinId);
+            return ResponseEntity.status(HttpStatus.ACCEPTED).body("{ Monopatin eliminado con exito }");
+        } catch (Exception e){
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
+        }
+    }
+
+    @PutMapping("/{monopatinId}")
+    public ResponseEntity<?> editarMonopatin(@PathVariable Long monopatinId, @RequestBody @Valid MonopatinRequestDto monopatinRequestDto) throws Exception {
+        try{
+            return ResponseEntity.status(HttpStatus.OK).body(monopatinServices.editarMonopatin(monopatinId,monopatinRequestDto));
+        } catch (Exception e ){
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
+        }
+    }
+
     @GetMapping("")
     public ResponseEntity<?> getAll() throws Exception {
         try{
@@ -32,4 +51,15 @@ public class MonopatinController {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
         }
     }
+
+
+    @GetMapping("/{monopatinId}")
+    public ResponseEntity<?> getById(@PathVariable Long monopatinId) throws Exception {
+        try{
+            return ResponseEntity.status(HttpStatus.OK).body(monopatinServices.getById(monopatinId));
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
+        }
+    }
+
 }
