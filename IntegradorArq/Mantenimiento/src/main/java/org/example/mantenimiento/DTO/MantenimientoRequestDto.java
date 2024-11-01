@@ -14,6 +14,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class MantenimientoRequestDto {
+    private long id;
     private LocalDate fecha_fin;
     private List<String> acciones;
 

@@ -10,6 +10,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class MantenimientoResponseDto {
+    private Long id;
     private Long id_monopatin;
     private LocalDate fecha_inicio;
     private LocalDate fecha_fin;

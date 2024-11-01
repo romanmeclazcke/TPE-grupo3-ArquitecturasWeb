@@ -17,6 +17,8 @@ import java.util.List;
 public class Mantenimiento {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private Long id_monopatin;
 
     @Column

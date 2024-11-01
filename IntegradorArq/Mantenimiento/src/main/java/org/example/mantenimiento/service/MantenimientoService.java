@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -76,19 +77,25 @@ public class MantenimientoService {
 
     @Transactional
     public void endMantenimiento(Long idMonopatin) {
-        if (mantenimientoRepository.existsById(idMonopatin)) {
-            Mantenimiento mantenimiento = mantenimientoRepository.findById(idMonopatin).get();
+        List<Mantenimiento> mantenimientos = mantenimientoRepository.findAllByIdMonopatin(idMonopatin); //Ya que pueden haber varios registros de un mismo monopatín
 
-            mantenimiento.setFecha_fin(LocalDate.now());
-            mantenimientoRepository.save(mantenimiento);
+        Mantenimiento activo = null;
+        int i = 0;
+        while (activo == null) {
+            if (mantenimientos.get(i).getFecha_fin() == null)
+                activo = mantenimientos.get(i);
+            i++;
+        }
 
-            Monopatin monopatin = monopatinFeignClient.getMonopatinById(idMonopatin);
-            if (monopatin != null) {
-                monopatin.setDisponible(true);
-                monopatinFeignClient.updateMonopatin(idMonopatin, monopatin);
-            } else {
-                throw new NotFoundException("Monopatín con ID: " + idMonopatin + " no encontrado");
-            }
+        activo.setFecha_fin(LocalDate.now());
+        mantenimientoRepository.save(activo);
+
+        Monopatin monopatin = monopatinFeignClient.getMonopatinById(idMonopatin);
+        if (monopatin != null) {
+            monopatin.setDisponible(true);
+            monopatinFeignClient.updateMonopatin(idMonopatin, monopatin);
+        } else {
+            throw new NotFoundException("Monopatín con ID: " + idMonopatin + " no encontrado");
         }
     }
 
