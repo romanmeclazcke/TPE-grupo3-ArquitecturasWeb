@@ -1,11 +1,11 @@
 server:
-  port: 8080
+  port: 8081
 spring:
   application:
-    name: Usuario
+    name: Viaje
 
   datasource:
-    url: jdbc:mysql://localhost:3307/usuarios
+    url: jdbc:mysql://localhost:3307/viaje
     username: root
     password:
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -16,3 +16,4 @@ spring:
     show-sql: true
     properties:
       hibernate.format_sql: true
+

@@ -6,6 +6,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
+
 @Entity
 @Table(name="tarifa")
 @Data
@@ -18,6 +20,9 @@ public class Tarifa {
     private Long id;
 
     @Column
-    private Double tarifa_normal;
-    private Double tarifa_extra;
+    private Double tarifa;
+
+    private String tipo_tarifa;
+
+    private Date fecha_inicio;
 }
