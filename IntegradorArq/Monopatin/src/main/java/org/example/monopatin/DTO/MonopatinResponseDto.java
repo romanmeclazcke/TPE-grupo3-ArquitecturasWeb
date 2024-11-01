@@ -20,7 +20,4 @@ public class MonopatinResponseDto {
     private Duration tiempo_uso;
     private Double kilometros;
     private Boolean disponible;
-
-
-
 }

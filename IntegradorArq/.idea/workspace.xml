@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9714064e-1399-4df4-affd-db1d8e41d3b1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/entity/Viaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/entity/Viaje.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mantenimiento/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Mantenimiento/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mantenimiento/src/main/java/org/example/mantenimiento/controller/MantenimientoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mantenimiento/src/main/java/org/example/mantenimiento/controller/MantenimientoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mantenimiento/src/main/java/org/example/mantenimiento/repository/MantenimientoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mantenimiento/src/main/java/org/example/mantenimiento/repository/MantenimientoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mantenimiento/src/main/java/org/example/mantenimiento/service/MantenimientoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mantenimiento/src/main/java/org/example/mantenimiento/service/MantenimientoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/DTO/MonopatinResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/DTO/MonopatinResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/entity/Tarifa.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/entity/Tarifa.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +21,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -26,25 +33,28 @@
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="2o7GKFEdni1567qgckOtdSie1Lb" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/maiam/OneDrive/Documentos/TUDAI/2° año/Arquitecturas Web/micro_integrador3",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.configurations.included.in.services": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/maiam/OneDrive/Documentos/TUDAI/2° año/Arquitecturas Web/IdeaProjects/TPE-grupo3-ArquitecturasWeb/IntegradorArq&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
@@ -132,6 +142,8 @@
       <workItem from="1730213135951" duration="616000" />
       <workItem from="1730408069343" duration="867000" />
       <workItem from="1730409297249" duration="2847000" />
+      <workItem from="1730412212395" duration="3631000" />
+      <workItem from="1730467561548" duration="5196000" />
     </task>
     <servers />
   </component>

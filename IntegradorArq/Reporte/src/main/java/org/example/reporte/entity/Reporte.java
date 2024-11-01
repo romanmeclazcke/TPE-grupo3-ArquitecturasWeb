@@ -1,5 +1,4 @@
-package org.example.viaje.entity;
-
+package org.example.reporte.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -7,17 +6,15 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name="tarifa")
+@Table(name="reporte")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Tarifa {
+public class Reporte {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column
-    private Double tarifa;
-    private String tipo;
+    
 }
