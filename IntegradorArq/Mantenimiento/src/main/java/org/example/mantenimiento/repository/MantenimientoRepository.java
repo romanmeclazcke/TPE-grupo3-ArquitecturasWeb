@@ -3,6 +3,7 @@ package org.example.mantenimiento.repository;
 import org.example.mantenimiento.entity.Mantenimiento;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -13,4 +14,8 @@ public interface MantenimientoRepository extends JpaRepository<Mantenimiento, Lo
 
     @Query("SELECT m FROM Mantenimiento m WHERE m.id_monopatin = :idMonopatin")
     List<Mantenimiento> findAllByIdMonopatin(Long idMonopatin);
+
+    @Query("SELECT COUNT(m) > 0 FROM Mantenimiento m WHERE m.id_monopatin = :idMonopatin")
+    boolean existsById(@Param("idMonopatin") Long idMonopatin);
+
 }

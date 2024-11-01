@@ -47,7 +47,6 @@ public class MantenimientoService {
         else
             fechaInicio = LocalDate.now();
 
-        LocalDate fechaFin = null;
 
         if (fechaInicio.isAfter(LocalDate.now())) {
             responseDto.setMensaje("La fecha de inicio no puede ser futura");

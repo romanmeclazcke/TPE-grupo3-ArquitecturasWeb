@@ -13,6 +13,6 @@ public interface MonopatinFeignClient {
     @GetMapping("/monopatines/{monopatinId}")
     Monopatin getMonopatinById(@PathVariable("monopatinId") Long monopatinId);
 
-    @PutMapping("api/monopatines/{monopatinId}")
+    @PutMapping("/monopatines/{monopatinId}")
     void updateMonopatin(@PathVariable("monopatinId") Long id, @RequestBody Monopatin monopatin);
 }
