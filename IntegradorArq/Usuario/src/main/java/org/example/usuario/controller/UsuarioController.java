@@ -38,7 +38,7 @@ public class UsuarioController {
     @PostMapping("")
     public ResponseEntity<?> crearUsuario(@RequestBody @Valid UsuarioRequestDto UsuarioRequestDto){
         try {
-            return ResponseEntity.status(HttpStatus.OK).body(usuarioService.save(UsuarioRequestDto));
+            return ResponseEntity.status(HttpStatus.CREATED).body(usuarioService.save(UsuarioRequestDto));
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("{\"error\":\"Error. No se pudo ingresar e;l usuario, revise los campos e intente nuevamente.\"}");
         }
@@ -49,7 +49,7 @@ public class UsuarioController {
     @PostMapping("/{userId}/agregar-cuenta/{cuentaId}")
     public ResponseEntity<?> agregarCuenta(@PathVariable Long userId,@PathVariable Long cuentaId){
         try {
-            return ResponseEntity.status(HttpStatus.OK).body(usuarioService.agregarCuenta(userId,cuentaId));
+            return ResponseEntity.status(HttpStatus.CREATED).body(usuarioService.agregarCuenta(userId,cuentaId));
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("{\"error\":\"Error. No se pudo ingresar e;l usuario, revise los campos e intente nuevamente.\"}");
         }
@@ -66,6 +66,7 @@ public class UsuarioController {
         }
     }
 
+    @PatchMapping("/{userId}")
     public ResponseEntity<?> editarUsuario(@PathVariable Long userId, @RequestBody @Valid UsuarioRequestDto usuarioRequestDto) {
         try {
             return ResponseEntity.status(HttpStatus.OK).body(usuarioService.editarUsuario(userId, usuarioRequestDto));
@@ -73,6 +74,4 @@ public class UsuarioController {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("{\"error\":\"Error. No se pudo editar el usuario con id: " + userId + ".\"}");
         }
     }
-
-
 }

@@ -15,10 +15,6 @@ public class TarifaService {
 
     public TarifaResponseDto crearTarfia(TarifaRequestDto TarifaRequestDto) throws Exception{
         try{
-            if(TarifaRequestDto.getTipo_tarifa()!="tarifa_normal"||TarifaRequestDto.getTipo_tarifa()!="tarifa_extra"){
-                throw new Exception("Tipo de tarifa incorrecto");
-            }
-
             Tarifa  t= this.mapearDtoAEntididad(TarifaRequestDto);
 
             this.tarifaRepository.save(t);
