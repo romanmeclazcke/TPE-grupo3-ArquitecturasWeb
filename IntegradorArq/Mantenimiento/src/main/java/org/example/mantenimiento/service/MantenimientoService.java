@@ -16,6 +16,7 @@ import java.util.Optional;
 
 @Service
 public class MantenimientoService {
+    @Autowired
     MonopatinFeignClient monopatinFeignClient;
     @Autowired
     MantenimientoRepository mantenimientoRepository;
@@ -46,25 +47,16 @@ public class MantenimientoService {
         else
             fechaInicio = LocalDate.now();
 
-        LocalDate fechaFin = mantenimientoRequestDto.getFecha_fin();
+        LocalDate fechaFin = null;
 
         if (fechaInicio.isAfter(LocalDate.now())) {
             responseDto.setMensaje("La fecha de inicio no puede ser futura");
             responseDto.setExito(false);
             return responseDto;
         }
-        if (fechaFin != null && fechaFin.isBefore(fechaInicio)) {
-            responseDto.setMensaje("La fecha de fin no puede ser previa a la de inicio");
-            responseDto.setExito(false);
-            return responseDto;
-        }
 
         //Registro el mantenimiento
-        Mantenimiento mantenimiento = new Mantenimiento();
-        mantenimiento.setId_monopatin(idMonopatin);
-        mantenimiento.setFecha_inicio(fechaInicio);
-        mantenimiento.setFecha_fin(fechaFin);
-        mantenimiento.setAcciones(mantenimientoRequestDto.getAcciones());
+        Mantenimiento mantenimiento = this.mapearDtoAEntidad(mantenimientoRequestDto, idMonopatin);
         mantenimientoRepository.save(mantenimiento);
 
         monopatin.setDisponible(false); //Lo marco como no disponible para su uso
@@ -121,11 +113,10 @@ public class MantenimientoService {
         return respuesta;
     }
 
-    private Mantenimiento mapearDtoAEntidad(MantenimientoRequestDto mantenimientoRequestDto) {
+    private Mantenimiento mapearDtoAEntidad(MantenimientoRequestDto mantenimientoRequestDto,Long idMonopatin) {
         Mantenimiento m = new Mantenimiento();
         m.setFecha_inicio(mantenimientoRequestDto.getFecha_inicio());
-        m.setFecha_fin(mantenimientoRequestDto.getFecha_fin());
-        m.setId_monopatin(mantenimientoRequestDto.getId_monopatin());
+        m.setId_monopatin(idMonopatin);
         m.setAcciones(mantenimientoRequestDto.getAcciones());
         return m;
     }

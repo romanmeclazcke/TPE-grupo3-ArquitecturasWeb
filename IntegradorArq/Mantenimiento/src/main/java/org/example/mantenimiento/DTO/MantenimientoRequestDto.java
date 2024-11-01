@@ -14,15 +14,8 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class MantenimientoRequestDto {
-    private long id;
-    private LocalDate fecha_fin;
-    private List<String> acciones;
-
-    @NotNull(message = "El id del monopatín es un campo obligatorio")
-    @NotEmpty(message = "El id del monopatín no puede estar vacío")
-    private Long id_monopatin;
-
     @NotNull(message = "La fecha de inicio es un campo obligatorio")
     @NotEmpty(message = "La fecha de inicio no puede estar vacía")
     private LocalDate fecha_inicio;
+    private List<String> acciones;
 }

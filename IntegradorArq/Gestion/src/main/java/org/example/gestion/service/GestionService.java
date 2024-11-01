@@ -7,6 +7,6 @@ import org.springframework.stereotype.Service;
 @Service
 public class GestionService {
 
-    @Autowired
-    GestionRepository gestionRepository;
+//    @Autowired
+//    GestionRepository gestionRepository;
 }

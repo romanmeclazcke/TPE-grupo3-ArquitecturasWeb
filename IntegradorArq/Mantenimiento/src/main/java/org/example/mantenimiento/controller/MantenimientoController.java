@@ -18,6 +18,7 @@ public class MantenimientoController {
 
     @PostMapping("/{idMonopatin}")
     public ResponseEntity<?> createMantenimiento(@PathVariable Long idMonopatin, @RequestBody @Valid MantenimientoRequestDto mantenimientoDTO) {
+        System.out.println(idMonopatin);
         try {
             return ResponseEntity.status(HttpStatus.CREATED).body(mantenimientoService.save(idMonopatin, mantenimientoDTO));
         } catch (NotFoundException e) {
