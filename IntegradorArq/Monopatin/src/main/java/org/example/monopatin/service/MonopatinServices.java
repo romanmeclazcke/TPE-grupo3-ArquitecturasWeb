@@ -3,6 +3,7 @@ package org.example.monopatin.service;
 import org.example.monopatin.DTO.MonopatinRequestDto;
 import org.example.monopatin.DTO.MonopatinResponseDto;
 import org.example.monopatin.entity.Monopatin;
+import org.example.monopatin.feignClient.ViajeFeignClient;
 import org.example.monopatin.repository.MonopatinRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,6 +17,8 @@ public class MonopatinServices {
 
     @Autowired
     MonopatinRepository monopatinRepository;
+    @Autowired
+    ViajeFeignClient viajeFeignClient;
 
     public MonopatinResponseDto save(MonopatinRequestDto MonopatinRequesDto) throws Exception {
         try{
@@ -73,6 +76,21 @@ public class MonopatinServices {
         } catch (Exception e) {
             throw new Exception(e.getMessage());
         }
+    }
+
+    public MonopatinResponseDto activarMonopatin(Long monopatinId) throws Exception{
+        Monopatin monopatin = this.monopatinRepository.findById(monopatinId)
+                .orElseThrow(() -> new Exception("El monopatin requerido no existe"));
+        if (monopatin.getDisponible()==true) {
+            monopatin.setDisponible(false);
+            this.monopatinRepository.save(monopatin);
+
+
+            return this.mapearEntidadADto(monopatin);
+        } else {
+            throw new Exception("El monopatin requerido, no se encuentra disponible");
+        }
+        
     }
 
     private Monopatin mapearDtoAEntidad(MonopatinRequestDto MonopatinRequesDto) {

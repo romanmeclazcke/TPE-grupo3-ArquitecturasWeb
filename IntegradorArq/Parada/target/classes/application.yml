@@ -1,0 +1,22 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: Parada
+
+  datasource:
+    url: jdbc:mysql://localhost:3307/parada
+    username: root
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
+
+  cloud:
+    loadbalancer:
+      enabled: true # Habilita el LoadBalancer

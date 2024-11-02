@@ -29,7 +29,7 @@ public class Viaje {
     private Time hora_fin;
     private Double km;
     private Long id_usuario;
-    private Long id_monopatin; //?
+    private Long id_monopatin; //??
 
     @ManyToOne
     @JoinColumn(name = "id_tarifa")
