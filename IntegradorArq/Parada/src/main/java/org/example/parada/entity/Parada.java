@@ -19,6 +19,7 @@ public class Parada {
     private Long id;
 
     @Column
-    private List<Long> id_monopatines; // ??????????
+    @ElementCollection //Chequear si funciona
+    private List<Long> id_monopatines;
 
 }
