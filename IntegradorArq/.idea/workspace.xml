@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9714064e-1399-4df4-affd-db1d8e41d3b1" name="Changes" comment="Cambie puerto del microservicio Viaje" />
+    <list default="true" id="9714064e-1399-4df4-affd-db1d8e41d3b1" name="Changes" comment="Cambie estado de respuesta de eliminar cuenta">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reporte/src/main/java/org/example/reporte/controller/ReporteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reporte/src/main/java/org/example/reporte/controller/ReporteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reporte/src/main/java/org/example/reporte/entity/Reporte.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reporte/src/main/java/org/example/reporte/service/ReporteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reporte/src/main/java/org/example/reporte/service/ReporteService.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -187,7 +192,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730478014703</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Cambie estado de respuesta de eliminar cuenta">
+      <option name="closed" value="true" />
+      <created>1730670889914</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1730670889914</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,7 +208,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Configure el clientsMonopatin, ajuste puertos de los microservicios" />
-    <option name="LAST_COMMIT_MESSAGE" value="Configure el clientsMonopatin, ajuste puertos de los microservicios" />
+    <MESSAGE value="Cambie estado de respuesta de eliminar cuenta" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cambie estado de respuesta de eliminar cuenta" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
