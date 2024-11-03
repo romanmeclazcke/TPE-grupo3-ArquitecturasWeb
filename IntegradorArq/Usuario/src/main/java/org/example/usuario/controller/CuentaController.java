@@ -51,7 +51,7 @@ public class CuentaController {
     public ResponseEntity<?> eliminarCuenta(@PathVariable Long id) {
         try {
             cuentaService.eliminarCuenta(id);
-            return ResponseEntity.status(HttpStatus.NO_CONTENT).build(); // Devuelve 204 No Content
+            return ResponseEntity.status(HttpStatus.OK).build(); // Devuelve 204 No Content
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e + "{\"error\":\"Error. No se pudo eliminar la cuenta, revise los campos e intente nuevamente.\"}");
         }

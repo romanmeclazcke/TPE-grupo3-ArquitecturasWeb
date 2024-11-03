@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9714064e-1399-4df4-affd-db1d8e41d3b1" name="Changes" comment="Cambie puerto del microservicio Viaje">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mantenimiento/src/main/java/org/example/mantenimiento/controller/MantenimientoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mantenimiento/src/main/java/org/example/mantenimiento/controller/MantenimientoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mantenimiento/src/main/java/org/example/mantenimiento/feignClients/MonopatinFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mantenimiento/src/main/java/org/example/mantenimiento/feignClients/MonopatinFeignClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mantenimiento/src/main/java/org/example/mantenimiento/repository/MantenimientoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mantenimiento/src/main/java/org/example/mantenimiento/repository/MantenimientoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mantenimiento/src/main/java/org/example/mantenimiento/service/MantenimientoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mantenimiento/src/main/java/org/example/mantenimiento/service/MantenimientoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/controller/MonopatinController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/controller/MonopatinController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/feignClient/ViajeFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/feignClient/ViajeFeignClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/service/MonopatinServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/service/MonopatinServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parada/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Parada/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/resources/application.yml" afterDir="false" />
-    </list>
+    <list default="true" id="9714064e-1399-4df4-affd-db1d8e41d3b1" name="Changes" comment="Cambie puerto del microservicio Viaje" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
