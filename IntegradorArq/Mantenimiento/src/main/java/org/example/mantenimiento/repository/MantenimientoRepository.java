@@ -18,4 +18,7 @@ public interface MantenimientoRepository extends JpaRepository<Mantenimiento, Lo
     @Query("SELECT COUNT(m) > 0 FROM Mantenimiento m WHERE m.id_monopatin = :idMonopatin")
     boolean existsById(@Param("idMonopatin") Long idMonopatin);
 
+
+    @Query("SELECT CASE WHEN COUNT(m) > 0 THEN true ELSE false END FROM Mantenimiento m WHERE m.id_monopatin = :idMonopatin")
+    boolean obtenerSiEstaEnMantenimiento(@Param("idMonopatin") Long idMonopatin);
 }

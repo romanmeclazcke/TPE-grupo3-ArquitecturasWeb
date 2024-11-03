@@ -2,6 +2,7 @@ package org.example.mantenimiento.service;
 
 import org.example.mantenimiento.DTO.MantenimientoRequestDto;
 import org.example.mantenimiento.DTO.MantenimientoResponseDto;
+import org.example.mantenimiento.DTO.MonopatinEnMantenimientoResponseDto;
 import org.example.mantenimiento.entity.Mantenimiento;
 import org.example.mantenimiento.feignClients.MonopatinFeignClient;
 import org.example.mantenimiento.repository.MantenimientoRepository;
@@ -89,6 +90,42 @@ public class MantenimientoService {
             throw new NotFoundException("Monopatín con ID: " + idMonopatin + " no encontrado");
         }
     }
+
+
+    public MonopatinEnMantenimientoResponseDto elMonopatinSeEncuentraEnMantenimiento(Long idMonopatin) {
+        MonopatinEnMantenimientoResponseDto responseDto = new MonopatinEnMantenimientoResponseDto();
+
+        try {
+            Monopatin monopatin = this.monopatinFeignClient.getMonopatinById(idMonopatin);
+
+            if (monopatin == null) {
+                responseDto.setMensaje("El monopatín con ID " + idMonopatin + " no existe");
+                responseDto.setExito(false);
+                return responseDto;
+            }
+
+            boolean monopatinEstaEnMantenimiento = this.mantenimientoRepository.obtenerSiEstaEnMantenimiento(idMonopatin);
+
+            if (!monopatinEstaEnMantenimiento) {
+                responseDto.setEm_mantenimiento(false);
+                responseDto.setId_monopatin(idMonopatin);
+                responseDto.setMensaje("El monopatín con ID " + idMonopatin + " no está en mantenimiento");
+                responseDto.setExito(true);
+            } else {
+                responseDto.setEm_mantenimiento(true);
+                responseDto.setId_monopatin(idMonopatin);
+                responseDto.setMensaje("El monopatín con ID " + idMonopatin + " está en mantenimiento");
+                responseDto.setExito(true);
+            }
+
+        } catch (Exception e) {
+            responseDto.setMensaje("No se pudo encontrar el monopatín con ID " + idMonopatin);
+            responseDto.setExito(false);
+        }
+
+        return responseDto;
+    }
+
 
     private MantenimientoResponseDto mapToResponseDTO(Mantenimiento mantenimiento) {
         MantenimientoResponseDto responseDto = new MantenimientoResponseDto();

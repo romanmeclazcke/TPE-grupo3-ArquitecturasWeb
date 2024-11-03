@@ -18,9 +18,20 @@ public class MantenimientoController {
 
     @PostMapping("/{idMonopatin}")
     public ResponseEntity<?> createMantenimiento(@PathVariable Long idMonopatin, @RequestBody @Valid MantenimientoRequestDto mantenimientoDTO) {
-        System.out.println(idMonopatin);
         try {
             return ResponseEntity.status(HttpStatus.CREATED).body(mantenimientoService.save(idMonopatin, mantenimientoDTO));
+        } catch (NotFoundException e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+
+    @GetMapping("/{idMonopatin}")
+    public ResponseEntity<?> elMonopatinSeEncuentraEnMantenimiento(@PathVariable Long idMonopatin){
+        try {
+            return ResponseEntity.status(HttpStatus.CREATED).body(mantenimientoService.elMonopatinSeEncuentraEnMantenimiento(idMonopatin));
         } catch (NotFoundException e) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
         } catch (Exception e) {

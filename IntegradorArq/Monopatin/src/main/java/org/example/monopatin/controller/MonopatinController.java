@@ -1,7 +1,7 @@
 package org.example.monopatin.controller;
 
 import org.example.monopatin.DTO.MonopatinRequestDto;
-import org.example.monopatin.feignClient.ViajeFeignClient;
+//import org.example.monopatin.feignClient.ViajeFeignClient;
 import org.example.monopatin.service.MonopatinServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -15,8 +15,8 @@ public class MonopatinController {
 
     @Autowired
     MonopatinServices monopatinServices;
-    @Autowired
-    ViajeFeignClient viajeFeignClient;
+//    @Autowired
+//    ViajeFeignClient viajeFeignClient;
 
     @PostMapping("")
     public ResponseEntity<?> crearMonopatin(@RequestBody @Valid MonopatinRequestDto MonopatinRequestDto) {
