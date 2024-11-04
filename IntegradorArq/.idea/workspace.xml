@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9714064e-1399-4df4-affd-db1d8e41d3b1" name="Changes" comment="Cambie estado de respuesta de eliminar cuenta">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reporte/src/main/java/org/example/reporte/DTO/ReporteResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reporte/src/main/java/org/example/reporte/DTO/ReporteResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reporte/src/main/java/org/example/reporte/controller/ReporteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reporte/src/main/java/org/example/reporte/controller/ReporteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reporte/src/main/java/org/example/reporte/feignClients/MonopatinFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reporte/src/main/java/org/example/reporte/feignClients/MonopatinFeignClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reporte/src/main/java/org/example/reporte/service/ReporteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reporte/src/main/java/org/example/reporte/service/ReporteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/entity/Pausa.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/entity/Pausa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/service/TarifaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/service/TarifaService.java" afterDir="false" />
-    </list>
+    <list default="true" id="9714064e-1399-4df4-affd-db1d8e41d3b1" name="Changes" comment="Cree logica para poder agregar una pausa a un viaje" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -193,7 +184,7 @@
       <workItem from="1730667526058" duration="1721000" />
       <workItem from="1730728857344" duration="3094000" />
       <workItem from="1730739317188" duration="56000" />
-      <workItem from="1730739377126" duration="2982000" />
+      <workItem from="1730739377126" duration="3299000" />
     </task>
     <task id="LOCAL-00001" summary="Configure el clientsMonopatin, ajuste puertos de los microservicios">
       <option name="closed" value="true" />
@@ -211,7 +202,23 @@
       <option name="project" value="LOCAL" />
       <updated>1730670889914</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Cree logica para poder agregar una pausa a un viaje">
+      <option name="closed" value="true" />
+      <created>1730742427398</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1730742427398</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Cree logica para poder agregar una pausa a un viaje">
+      <option name="closed" value="true" />
+      <created>1730742623506</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1730742623506</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,7 +227,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Configure el clientsMonopatin, ajuste puertos de los microservicios" />
     <MESSAGE value="Cambie estado de respuesta de eliminar cuenta" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cambie estado de respuesta de eliminar cuenta" />
+    <MESSAGE value="Cree logica para poder agregar una pausa a un viaje" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cree logica para poder agregar una pausa a un viaje" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
