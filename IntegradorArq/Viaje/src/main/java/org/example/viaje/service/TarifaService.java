@@ -1,6 +1,6 @@
 package org.example.viaje.service;
-import org.example.viaje.DTO.TarifaRequestDto;
-import org.example.viaje.DTO.TarifaResponseDto;
+//import org.example.viaje.DTO.TarifaRequestDto;
+//import org.example.viaje.DTO.TarifaResponseDto;
 import org.example.viaje.entity.Tarifa;
 import org.example.viaje.repository.TarifaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +13,7 @@ public class TarifaService {
 
 
 
-    public TarifaResponseDto crearTarfia(TarifaRequestDto TarifaRequestDto) throws Exception{
+    /*public TarifaResponseDto crearTarfia(TarifaRequestDto TarifaRequestDto) throws Exception{
         try{
             Tarifa  t= this.mapearDtoAEntididad(TarifaRequestDto);
 
@@ -43,5 +43,5 @@ public class TarifaService {
        TarifaResponseDto.setTipo_tarifa(tarifa.getTipo_tarifa());
        TarifaResponseDto.setId(tarifa.getId());
        return TarifaResponseDto;
-    }
+    }*/
 }

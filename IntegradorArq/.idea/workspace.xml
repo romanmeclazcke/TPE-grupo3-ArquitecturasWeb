@@ -6,25 +6,23 @@
   <component name="ChangeListManager">
     <list default="true" id="9714064e-1399-4df4-affd-db1d8e41d3b1" name="Changes" comment="Cambie estado de respuesta de eliminar cuenta">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mantenimiento/src/main/java/org/example/mantenimiento/DTO/MantenimientoRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mantenimiento/src/main/java/org/example/mantenimiento/DTO/MantenimientoRequestDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mantenimiento/src/main/java/org/example/mantenimiento/feignClients/MonopatinFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mantenimiento/src/main/java/org/example/mantenimiento/feignClients/MonopatinFeignClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mantenimiento/src/main/java/org/example/mantenimiento/repository/MantenimientoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mantenimiento/src/main/java/org/example/mantenimiento/repository/MantenimientoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reporte/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Reporte/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reporte/src/main/java/org/example/reporte/repository/ReporteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reporte/src/main/java/org/example/reporte/repository/ReporteRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reporte/src/main/java/org/example/reporte/service/ReporteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reporte/src/main/java/org/example/reporte/service/ReporteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/MonopatinApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/MonopatinApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/controller/MonopatinController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/controller/MonopatinController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/feignClient/ViajeFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/feignClient/ViajeFeignClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/service/MonopatinServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/service/MonopatinServices.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Viaje/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/DTO/ViajeRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/DTO/ViajeRequestDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/DTO/ViajeResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/DTO/ViajeResponseDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/ViajeApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/ViajeApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/controller/ViajeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/controller/ViajeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/entity/Viaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/entity/Viaje.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/repository/ViajeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/repository/ViajeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/feignClients/MonopatinFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/feignClients/MonopatinFeignClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/service/TarifaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/service/TarifaService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/service/ViajeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/service/ViajeService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -109,7 +107,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.MantenimientoApplication">
+  <component name="RunManager" selected="Spring Boot.MonopatinApplication">
     <configuration name="GestionApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="Gestion" />
@@ -198,6 +196,7 @@
       <workItem from="1730667283768" duration="237000" />
       <workItem from="1730667526058" duration="1721000" />
       <workItem from="1730728857344" duration="3094000" />
+      <workItem from="1730738662021" duration="2777000" />
     </task>
     <task id="LOCAL-00001" summary="Configure el clientsMonopatin, ajuste puertos de los microservicios">
       <option name="closed" value="true" />
