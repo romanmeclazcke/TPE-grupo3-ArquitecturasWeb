@@ -1,11 +1,11 @@
 package org.example.viaje.service;
 
-import org.example.monopatin.entity.Monopatin;
+//import org.example.monopatin.entity.Monopatin;
 import org.example.usuario.entity.Usuario;
 import org.example.viaje.DTO.ViajeRequestDTO;
 import org.example.viaje.DTO.ViajeResponseDTO;
 import org.example.viaje.entity.Viaje;
-import org.example.viaje.feignClients.MonopatinFeignClient;
+//import org.example.viaje.feignClients.MonopatinFeignClient;
 import org.example.viaje.feignClients.UsuarioFeignClient;
 import org.example.viaje.repository.ViajeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,16 +18,16 @@ import java.util.List;
 
 @Service
 public class ViajeService {
-    @Autowired
-    MonopatinFeignClient monopatinFeignClient;
+    /*@Autowired
+    MonopatinFeignClient monopatinFeignClient;*/
     @Autowired
     UsuarioFeignClient usuarioFeignClient;
     @Autowired
     ViajeRepository viajeRepository;
 
     @Transactional
-    public ViajeResponseDTO save(ViajeRequestDTO viajeDTO) {
-        ViajeResponseDTO responseDTO = new ViajeResponseDTO();
+    public ViajeResponseDTO save(Long monopatinId, Long usuarioId) {
+        /*ViajeResponseDTO responseDTO = new ViajeResponseDTO();
         Long idMonopatin = viajeDTO.getIdMonopatin();
         Long idUsuario = viajeDTO.getIdUsuario();
 
@@ -52,20 +52,20 @@ public class ViajeService {
             responseDTO.setMensaje("El usuario con ID " + idUsuario + " no existe");
             responseDTO.setExito(false);
             return responseDTO;
-        }
+        }*/
 
         //Registro el viaje
-        Viaje viaje = convertirDTOaViaje(viajeDTO);
+        Viaje viaje = new Viaje();
+        viaje.setId_monopatin(monopatinId);
+        viaje.setId_usuario(usuarioId);
         viaje.setFecha_inicio(LocalDate.now());
         viaje.setFecha_fin(null); //es null hasta invocar terminarViaje
-        viaje.setId_usuario(idUsuario);
 
         viajeRepository.save(viaje);
-        monopatin.setDisponible(false);
-        monopatinFeignClient.updateMonopatin(idMonopatin, monopatin);
+        /*monopatin.setDisponible(false);
+        monopatinFeignClient.updateMonopatin(idMonopatin, monopatin);*/
 
-        responseDTO = mapToResponseDTO(viaje);
-        return responseDTO;
+        return mapToResponseDTO(viaje);
     }
 
     @Transactional
@@ -83,9 +83,9 @@ public class ViajeService {
         activo.setFecha_inicio(LocalDate.now());
         viajeRepository.save(activo);
 
-        Monopatin monopatin = monopatinFeignClient.getMonopatinById(idMonopatin);
+        /*Monopatin monopatin = monopatinFeignClient.getMonopatinById(idMonopatin);
         monopatin.setDisponible(true);
-        monopatinFeignClient.updateMonopatin(idMonopatin, monopatin);
+        monopatinFeignClient.updateMonopatin(idMonopatin, monopatin);*/
     }
 
     private ViajeResponseDTO mapToResponseDTO(Viaje viaje) {

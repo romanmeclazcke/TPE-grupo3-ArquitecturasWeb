@@ -3,7 +3,7 @@ package org.example.monopatin.service;
 import org.example.monopatin.DTO.MonopatinRequestDto;
 import org.example.monopatin.DTO.MonopatinResponseDto;
 import org.example.monopatin.entity.Monopatin;
-//import org.example.monopatin.feignClient.ViajeFeignClient;
+import org.example.monopatin.feignClient.ViajeFeignClient;
 import org.example.monopatin.repository.MonopatinRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,8 +17,8 @@ public class MonopatinServices {
 
     @Autowired
     MonopatinRepository monopatinRepository;
-//    @Autowired
-//    ViajeFeignClient viajeFeignClient;
+    @Autowired
+    ViajeFeignClient viajeFeignClient;
 
     public MonopatinResponseDto save(MonopatinRequestDto MonopatinRequesDto) throws Exception {
         try{
@@ -49,7 +49,6 @@ public class MonopatinServices {
                 .orElseThrow(() -> new Exception("El monopatin a editar no existe"));
         monopatin.setTiempo_uso(monopatinRequestDto.getTiempo_uso());
         monopatin.setKilometros(monopatinRequestDto.getKilometros());
-        monopatin.setDisponible(monopatinRequestDto.isDisponible());
         monopatin.setDisponible(monopatinRequestDto.isDisponible());
         this.monopatinRepository.save(monopatin);
         return this.mapearEntidadADto(monopatin);
@@ -85,6 +84,7 @@ public class MonopatinServices {
             monopatin.setDisponible(false);
             this.monopatinRepository.save(monopatin);
 
+            this.viajeFeignClient.createViaje(monopatinId,usuarioId);
 
             return this.mapearEntidadADto(monopatin);
         } else {

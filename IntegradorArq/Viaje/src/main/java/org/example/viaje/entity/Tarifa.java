@@ -21,8 +21,6 @@ public class Tarifa {
 
     @Column
     private Double tarifa;
-    private String tipo;
-
     private String tipo_tarifa;
 
     private Date fecha_inicio;
