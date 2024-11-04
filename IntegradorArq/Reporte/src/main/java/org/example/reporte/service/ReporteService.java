@@ -1,23 +1,18 @@
 package org.example.reporte.service;
 
-
 import org.example.reporte.DTO.ReporteDto;
 import org.example.reporte.feignClients.MonopatinFeignClient;
 import org.example.reporte.repository.ReporteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
 @Service
 public class ReporteService {
 
     @Autowired
     ReporteRepository reporteRepository;
-
     @Autowired
     MonopatinFeignClient monopatinFeignClient;
-
 
     public ReporteDto obtenerReportePorTipo(String tipoReporte){
         ReporteDto reporteDto = new ReporteDto();

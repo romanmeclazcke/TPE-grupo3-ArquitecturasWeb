@@ -1,4 +1,4 @@
-package org.example.mantenimiento.feignClients;
+package org.example.viaje.feignClients;
 
 import org.example.monopatin.entity.Monopatin;
 import org.springframework.cloud.openfeign.FeignClient;

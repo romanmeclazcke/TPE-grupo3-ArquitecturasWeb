@@ -24,11 +24,6 @@ public class ViajeRequestDTO {
     @NotNull(message = "El monopatín es obligatorio")
     private Long idMonopatin;
 
-    @NotNull(message = "La fecha de inicio es obligatoria")
-    private Date fechaInicio;
-
-    private Date fechaFin;
-
     @Positive(message = "Los kilómetros recorridos deben ser un valor positivo")
     private Double kilometrosRecorridos;
 }

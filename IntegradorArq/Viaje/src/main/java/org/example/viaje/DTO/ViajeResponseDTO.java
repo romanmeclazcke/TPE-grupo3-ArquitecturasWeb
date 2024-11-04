@@ -1,5 +1,6 @@
 package org.example.viaje.DTO;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 
@@ -12,12 +13,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ViajeResponseDTO {
     private Long idUsuario;
-
     private Long idMonopatin;
-
-    private Date fechaInicio;
-
-    private Date fechaFin;
-
+    private LocalDate fechaInicio;
+    private LocalDate fechaFin;
     private Double kilometrosRecorridos;
+
+    private String mensaje;
+    private boolean exito;
 }

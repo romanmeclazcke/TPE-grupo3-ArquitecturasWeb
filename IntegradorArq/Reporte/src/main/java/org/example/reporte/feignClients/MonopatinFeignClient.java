@@ -1,4 +1,4 @@
-package org.example.mantenimiento.feignClients;
+package org.example.reporte.feignClients;
 
 import org.example.monopatin.entity.Monopatin;
 import org.springframework.cloud.openfeign.FeignClient;
@@ -15,4 +15,3 @@ public interface MonopatinFeignClient {
 
     @PutMapping("/monopatines/{monopatinId}")
     void updateMonopatin(@PathVariable("monopatinId") Long id, @RequestBody Monopatin monopatin);
-}

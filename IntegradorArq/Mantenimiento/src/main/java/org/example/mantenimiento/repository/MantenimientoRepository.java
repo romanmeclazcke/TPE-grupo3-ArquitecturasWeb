@@ -13,7 +13,7 @@ public interface MantenimientoRepository extends JpaRepository<Mantenimiento, Lo
     Mantenimiento save(Mantenimiento nuevo);
 
     @Query("SELECT m FROM Mantenimiento m WHERE m.id_monopatin = :idMonopatin")
-    List<Mantenimiento> findAllByIdMonopatin(Long idMonopatin);
+    List<Mantenimiento> findAllByIdMonopatin(@Param("idMonopatin") Long idMonopatin);
 
     @Query("SELECT COUNT(m) > 0 FROM Mantenimiento m WHERE m.id_monopatin = :idMonopatin")
     boolean existsById(@Param("idMonopatin") Long idMonopatin);

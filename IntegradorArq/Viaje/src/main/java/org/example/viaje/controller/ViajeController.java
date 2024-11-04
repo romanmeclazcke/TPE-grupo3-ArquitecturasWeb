@@ -18,10 +18,10 @@ public class ViajeController {
     @Autowired
     ViajeService viajeService;
 
-    @PostMapping("/nueva")
+    @PostMapping("")
     public ResponseEntity<?> createViaje(@RequestBody @Valid ViajeRequestDTO ViajeRequestDTO){
         try {
-            return ResponseEntity.status(HttpStatus.OK).body(viajeService.save(ViajeRequestDTO));
+            return ResponseEntity.status(HttpStatus.CREATED).body(viajeService.save(ViajeRequestDTO));
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
         }
