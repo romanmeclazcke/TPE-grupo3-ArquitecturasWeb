@@ -4,25 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9714064e-1399-4df4-affd-db1d8e41d3b1" name="Changes" comment="Cambie estado de respuesta de eliminar cuenta">
+    <list default="true" id="9714064e-1399-4df4-affd-db1d8e41d3b1" name="Changes" comment="Avances">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/MonopatinApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/MonopatinApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/controller/MonopatinController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/controller/MonopatinController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/feignClient/ViajeFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/feignClient/ViajeFeignClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/service/MonopatinServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/service/MonopatinServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Monopatin/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/MonopatinApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/MonopatinApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/controller/MonopatinController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/controller/MonopatinController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/feignClient/ViajeFeignClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/feignClient/ViajeFeignClient.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/service/MonopatinServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/service/MonopatinServices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/controller/ViajeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/controller/ViajeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/feignClients/MonopatinFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/feignClients/MonopatinFeignClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/service/TarifaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/service/TarifaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/service/ViajeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/service/ViajeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Viaje/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/controller/ViajeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/controller/ViajeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/service/ViajeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/service/ViajeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/DTO/TarifaRequestDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/DTO/TarifaRequestDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/DTO/TarifaResponseDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/DTO/TarifaResponseDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/entity/Tarifa.class" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/entity/Tarifa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/feignClients/MonopatinFeignClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/service/TarifaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/service/TarifaService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +72,8 @@
     "Spring Boot.GestionApplication.executor": "Run",
     "Spring Boot.MantenimientoApplication.executor": "Run",
     "Spring Boot.MonopatinApplication.executor": "Run",
-    "git-widget-placeholder": "Merging main",
+    "Spring Boot.ViajeApplication.executor": "Run",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/maiam/OneDrive/Documentos/TUDAI/2° año/Arquitecturas Web/IdeaProjects/TPE-grupo3-ArquitecturasWeb/IntegradorArq",
     "node.js.detected.package.eslint": "true",
@@ -222,7 +215,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730670889914</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Avances">
+      <option name="closed" value="true" />
+      <created>1730743596471</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1730743596471</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,18 +232,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Configure el clientsMonopatin, ajuste puertos de los microservicios" />
     <MESSAGE value="Cambie estado de respuesta de eliminar cuenta" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cambie estado de respuesta de eliminar cuenta" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-field">
-          <url>file://$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/entity/Tarifa.java</url>
-          <line>23</line>
-          <properties field="tipo" class="org.example.viaje.entity.Tarifa" />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Avances" />
+    <option name="LAST_COMMIT_MESSAGE" value="Avances" />
   </component>
 </project>
