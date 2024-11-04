@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 public interface MonopatinFeignClient {
 
     @GetMapping("/monopatines/{monopatinId}")
-    Monopatin getMonopatinById(@PathVariable("monopatinId") Long monopatinId);
+    org.example.reporte.Model.Monopatin getMonopatinById(@PathVariable("monopatinId") Long monopatinId);
 
     @PutMapping("/monopatines/{monopatinId}")
     void updateMonopatin(@PathVariable("monopatinId") Long id, @RequestBody Monopatin monopatin);
+
+}

@@ -21,8 +21,13 @@ public class Pausa {
     private Long id;
 
     @Column
-    private Date fecha;
+    private Date fecha_inicio;
     private Time hora_inicio;
+
+    @Column(nullable = true)
+    private  Date fecha_fin;
+
+    @Column(nullable = true)
     private Time hora_fin;
 
     @ManyToOne

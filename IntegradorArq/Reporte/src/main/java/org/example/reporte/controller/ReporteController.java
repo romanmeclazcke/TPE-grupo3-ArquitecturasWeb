@@ -1,7 +1,6 @@
 package org.example.reporte.controller;
 
 
-import org.example.reporte.DTO.ReporteDto;
 import org.example.reporte.service.ReporteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

@@ -1,6 +1,7 @@
 package org.example.reporte.service;
 
-import org.example.reporte.DTO.ReporteDto;
+
+import org.example.reporte.DTO.ReporteResponseDto;
 import org.example.reporte.feignClients.MonopatinFeignClient;
 import org.example.reporte.repository.ReporteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,13 +15,13 @@ public class ReporteService {
     @Autowired
     MonopatinFeignClient monopatinFeignClient;
 
-    public ReporteDto obtenerReportePorTipo(String tipoReporte){
-        ReporteDto reporteDto = new ReporteDto();
+    public ReporteResponseDto obtenerReportePorTipo(String tipoReporte){
+        ReporteResponseDto reporteDto = new ReporteResponseDto();
         if(tipoReporte!="kilometros" || tipoReporte!="conPausa"||tipoReporte!="sinPausa"){
              reporteDto.setExito(false);
              reporteDto.setMensaje("Solo podes filtar por kilometors, conPausa, SinPausa");
         }
-        reporteDto.setMontopatines(this.monopatinFeignClient.getMonopatinesOrdenadosPor(tipoReporte));
+        reporteDto.setMonopatines(null);//hacer consulta al microservicio que trae los monopatines ordenador o por kilometros, con o sin pausa
         return reporteDto;
     }
 }

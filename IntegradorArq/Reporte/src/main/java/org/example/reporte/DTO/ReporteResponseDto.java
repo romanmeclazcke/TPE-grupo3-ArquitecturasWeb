@@ -3,16 +3,17 @@ package org.example.reporte.DTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.example.reporte.Model.Monopatin;
 
 import java.time.Duration;
 import java.time.LocalDate;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class ReporteResponseDto {
-    private Long id;
-    private Long idMonopatin;
-    private LocalDate fecha;
-    private Duration tiempo_uso_total;
+    private List<Monopatin> monopatines;
+    private Boolean exito;
+    private String mensaje;
 }
