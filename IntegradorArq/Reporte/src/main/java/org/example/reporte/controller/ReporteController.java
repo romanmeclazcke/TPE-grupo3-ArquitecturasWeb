@@ -18,9 +18,9 @@ public class ReporteController {
     ReporteService reporteService;
 
     @GetMapping("")
-    public ResponseEntity<?> obtenerReportePorTipo(@RequestParam(required = true) String tipo) {
+    public ResponseEntity<?> obtenerReportePorTipo(@RequestParam(required = true) String tipo, @RequestParam(required = true) Long idMonopatin) {
         try{
-            return ResponseEntity.status(HttpStatus.OK).body(this.reporteService.obtenerReportePorTipo(tipo));
+            return ResponseEntity.status(HttpStatus.OK).body(this.reporteService.obtenerReportePorTipo(tipo, idMonopatin));
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
         }

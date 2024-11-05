@@ -48,13 +48,13 @@ public class CuentaController {
         }
     }
 
-    @DeleteMapping("/{id}")
-    public ResponseEntity<?> eliminarCuenta(@PathVariable Long id) {
+    @PutMapping("/{id}/anular")
+    public ResponseEntity<?> anularCuenta(@PathVariable Long id) {
         try {
-            cuentaService.eliminarCuenta(id);
+            cuentaService.anularCuenta(id);
             return ResponseEntity.status(HttpStatus.OK).build(); // Devuelve 204 No Content
         } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e + "{\"error\":\"Error. No se pudo eliminar la cuenta, revise los campos e intente nuevamente.\"}");
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e + "{\"error\":\"Error. No se pudo anular la cuenta.\"}");
         }
     }
 

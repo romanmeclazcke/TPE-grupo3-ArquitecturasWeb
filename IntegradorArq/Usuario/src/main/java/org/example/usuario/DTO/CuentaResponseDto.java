@@ -17,4 +17,5 @@ import java.util.List;
 public class CuentaResponseDto {
     private Double credito;
     private Date fecha_alta;
+    private boolean activa;
 }

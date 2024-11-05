@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.sql.Time;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Data
@@ -14,9 +15,9 @@ import java.util.Date;
 public class PausaResponseDto {
     Long id;
     Date fecha_inicio;
-    Time hora_frin;
+    LocalDateTime hora_frin;
     Date fecha_fin;
-    Time hora_inicio;
+    LocalDateTime hora_inicio;
     String mensaje;
     Boolean estado;
 }

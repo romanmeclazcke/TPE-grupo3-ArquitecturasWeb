@@ -22,6 +22,7 @@ public class Cuenta {
     @Column
     private Date fecha_alta;
     private Double credito;
+    private boolean activa;
 
     @ManyToMany(mappedBy = "cuentas")
     private List<Usuario> usuarios;

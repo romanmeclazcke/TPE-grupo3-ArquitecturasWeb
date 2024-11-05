@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 
 import java.sql.Time;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 
@@ -25,8 +26,8 @@ public class Viaje {
     @Column
     private LocalDate fecha_inicio;
     private LocalDate fecha_fin;
-    private Time hora_inicio;
-    private Time hora_fin;
+    private LocalDateTime hora_inicio;
+    private LocalDateTime hora_fin;
     private Double km;
     private Long id_usuario;
     private Long id_monopatin;

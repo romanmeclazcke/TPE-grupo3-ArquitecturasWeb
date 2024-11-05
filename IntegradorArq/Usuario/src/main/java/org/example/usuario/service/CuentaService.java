@@ -1,6 +1,7 @@
 package org.example.usuario.service;
 
 
+import jakarta.persistence.EntityNotFoundException;
 import org.example.usuario.DTO.CuentaCargarSaldoDto;
 import org.example.usuario.DTO.CuentaRequestDto;
 import org.example.usuario.DTO.CuentaResponseDto;
@@ -51,12 +52,13 @@ public class CuentaService {
         }
     }
 
-    public void eliminarCuenta(Long id) throws Exception {
+    public void anularCuenta(Long id) throws Exception {
         try {
-            Cuenta cuenta = cuentaRepository.findById(id).orElseThrow(() -> new Exception("Cuenta no encontrada"));
-            cuentaRepository.deleteById(id);
+            Cuenta cuenta = cuentaRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("Cuenta no encontrada"));
+            cuenta.setActiva(false);
+            this.cuentaRepository.save(cuenta);
         } catch (Exception e) {
-            throw new Exception("Error al eliminar cuenta: " + e.getMessage());
+            throw new Exception("Error al anular cuenta: " + e.getMessage());
         }
     }
 
