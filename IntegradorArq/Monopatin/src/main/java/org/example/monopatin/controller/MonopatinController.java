@@ -17,7 +17,6 @@ public class MonopatinController {
     @Autowired
     MonopatinServices monopatinServices;
 
-
     @PostMapping("")
     public ResponseEntity<?> crearMonopatin(@RequestBody @Valid MonopatinRequestDto MonopatinRequestDto) {
         try{
@@ -65,7 +64,7 @@ public class MonopatinController {
         }
     }
 
-    @PutMapping("monopatinId/{monopatinId}/usuarioId/{usuarioId}")
+    @PostMapping("/activar/{monopatinId}/usuarioId/{usuarioId}")
     public ResponseEntity<?> activarMonopatin(@PathVariable Long monopatinId,@PathVariable Long usuarioId){
         try {
             return ResponseEntity.status(HttpStatus.OK).body(monopatinServices.activarMonopatin(monopatinId, usuarioId));

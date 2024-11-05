@@ -18,11 +18,20 @@ public class ViajeController {
     @Autowired
     ViajeService viajeService;
 
-    @PostMapping("monopatinId/{monopatinId}/usuarioId/{usuarioId}")
-    public ResponseEntity<?> createViaje(@PathVariable Long monopatinId, @PathVariable Long usuarioId) {
+    @PostMapping("/crear/{monopatinId}/usuario/{usuarioId}")
+    public ResponseEntity<?> createViaje(@PathVariable("monopatinId") Long monopatinId, @PathVariable("usuarioId") Long usuarioId) {
         try {
             return ResponseEntity.status(HttpStatus.CREATED).body(viajeService.save(monopatinId,usuarioId));
         } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
+        }
+    }
+
+    @GetMapping("")
+    public ResponseEntity<?> getAll() throws Exception {
+        try{
+            return ResponseEntity.status(HttpStatus.OK).body(viajeService.getAll());
+        } catch (Exception e){
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
         }
     }

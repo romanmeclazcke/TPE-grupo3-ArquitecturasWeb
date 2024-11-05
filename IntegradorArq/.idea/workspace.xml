@@ -6,15 +6,24 @@
   <component name="ChangeListManager">
     <list default="true" id="9714064e-1399-4df4-affd-db1d8e41d3b1" name="Changes" comment="Avances">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/DTO/MonopatinRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/DTO/MonopatinRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/controller/MonopatinController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/controller/MonopatinController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/feignClient/ViajeFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/feignClient/ViajeFeignClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monopatin/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/DTO/MonopatinRequestDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/DTO/MonopatinRequestDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/controller/MonopatinController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/controller/MonopatinController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/feignClient/ViajeFeignClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/feignClient/ViajeFeignClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/service/MonopatinServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/service/MonopatinServices.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/ViajeApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/ViajeApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/controller/ViajeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/controller/ViajeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/feignClients/UsuarioFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/feignClients/UsuarioFeignClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/service/ViajeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/service/ViajeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Viaje/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Viaje/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/DTO/TarifaRequestDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/DTO/TarifaRequestDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/DTO/TarifaResponseDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/DTO/TarifaResponseDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/entity/Tarifa.class" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/entity/Tarifa.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/feignClients/MonopatinFeignClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/service/TarifaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/service/TarifaService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/ViajeApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/ViajeApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/controller/ViajeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/controller/ViajeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/feignClients/UsuarioFeignClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/service/ViajeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/service/ViajeService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,34 +71,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.GestionApplication.executor": "Run",
-    "Spring Boot.MantenimientoApplication.executor": "Run",
-    "Spring Boot.MonopatinApplication.executor": "Run",
-    "Spring Boot.ViajeApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/maiam/OneDrive/Documentos/TUDAI/2° año/Arquitecturas Web/IdeaProjects/TPE-grupo3-ArquitecturasWeb/IntegradorArq",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.configurations.included.in.services": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.GestionApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.MantenimientoApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.MonopatinApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ViajeApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/maiam/OneDrive/Documentos/TUDAI/2° año/Arquitecturas Web/IdeaProjects/TPE-grupo3-ArquitecturasWeb/IntegradorArq&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "JAVA"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;JAVA&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\maiam\OneDrive\Documentos\TUDAI\2° año\Arquitecturas Web\IdeaProjects\TPE-grupo3-ArquitecturasWeb\IntegradorArq\Monopatin\src\main\resources" />
@@ -108,7 +117,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.MonopatinApplication">
+  <component name="RunManager" selected="Spring Boot.ViajeApplication">
     <configuration name="GestionApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="Gestion" />
@@ -198,6 +207,8 @@
       <workItem from="1730667526058" duration="1721000" />
       <workItem from="1730728857344" duration="3094000" />
       <workItem from="1730738662021" duration="2777000" />
+      <workItem from="1730744943389" duration="128000" />
+      <workItem from="1730762742930" duration="3269000" />
     </task>
     <task id="LOCAL-00001" summary="Configure el clientsMonopatin, ajuste puertos de los microservicios">
       <option name="closed" value="true" />

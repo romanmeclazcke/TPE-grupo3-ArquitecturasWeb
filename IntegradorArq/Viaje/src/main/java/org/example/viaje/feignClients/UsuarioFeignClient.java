@@ -1,4 +1,4 @@
-package org.example.viaje.feignClients;
+/*package org.example.viaje.feignClients;
 
 import org.example.usuario.entity.Usuario;
 import org.springframework.cloud.openfeign.FeignClient;
@@ -10,4 +10,4 @@ public interface UsuarioFeignClient {
 
     @GetMapping("/usuarios/{id}")
     Usuario getUsuarioById(@PathVariable("id") Long idUsuario);
-}
+}*/

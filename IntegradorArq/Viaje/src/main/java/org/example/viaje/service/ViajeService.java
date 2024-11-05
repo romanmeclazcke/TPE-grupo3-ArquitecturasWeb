@@ -6,7 +6,7 @@ import org.example.viaje.DTO.ViajeRequestDTO;
 import org.example.viaje.DTO.ViajeResponseDTO;
 import org.example.viaje.entity.Viaje;
 //import org.example.viaje.feignClients.MonopatinFeignClient;
-import org.example.viaje.feignClients.UsuarioFeignClient;
+//import org.example.viaje.feignClients.UsuarioFeignClient;
 import org.example.viaje.repository.ViajeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cglib.core.Local;
@@ -15,13 +15,14 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class ViajeService {
     /*@Autowired
     MonopatinFeignClient monopatinFeignClient;*/
-    @Autowired
-    UsuarioFeignClient usuarioFeignClient;
+    /*@Autowired
+    UsuarioFeignClient usuarioFeignClient;*/
     @Autowired
     ViajeRepository viajeRepository;
 
@@ -109,5 +110,26 @@ public class ViajeService {
         
         return viaje;
     }
-    
+
+    public List<ViajeResponseDTO> getAll() throws Exception {
+        try{
+            List<Viaje> monopatines = viajeRepository.findAll();
+
+            return monopatines.stream()
+                    .map(this::mapearEntidadADto)
+                    .collect(Collectors.toList());
+        } catch (Exception e){
+            throw new Exception(e.getMessage());
+        }
+    }
+
+    public ViajeResponseDTO mapearEntidadADto(Viaje viaje) {
+        ViajeResponseDTO responseDto = new ViajeResponseDTO();
+        responseDto.setIdMonopatin(viaje.getId_monopatin());
+        responseDto.setIdUsuario(viaje.getId_usuario());
+        responseDto.setFechaInicio(viaje.getFecha_inicio());
+        responseDto.setFechaFin(viaje.getFecha_fin());
+        responseDto.setKilometrosRecorridos(viaje.getKm());
+        return responseDto;
+    }
 }

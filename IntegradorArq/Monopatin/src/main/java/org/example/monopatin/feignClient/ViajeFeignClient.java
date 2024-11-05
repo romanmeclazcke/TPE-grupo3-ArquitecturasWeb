@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 @FeignClient(name = "viaje-service", url = "http://localhost:8084")
 public interface ViajeFeignClient {
 
-    @PostMapping("monopatinId/{monopatinId}/usuarioId/{usuarioId}")
-    void createViaje(@PathVariable Long monopatinId, Long usuarioId);
+    @PostMapping("/viaje/crear/{monopatinId}/usuario/{usuarioId}")
+    void createViaje(@PathVariable("monopatinId") Long monopatinId,@PathVariable("usuarioId") Long usuarioId);
 
 }
