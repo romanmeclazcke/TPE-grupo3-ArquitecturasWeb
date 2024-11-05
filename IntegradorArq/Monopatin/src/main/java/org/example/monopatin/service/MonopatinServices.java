@@ -2,10 +2,12 @@ package org.example.monopatin.service;
 
 import org.example.monopatin.DTO.MonopatinRequestDto;
 import org.example.monopatin.DTO.MonopatinResponseDto;
+import org.example.monopatin.DTO.MonopatinSumaKilometrosDto;
 import org.example.monopatin.entity.Monopatin;
 import org.example.monopatin.feignClient.ViajeFeignClient;
 import org.example.monopatin.repository.MonopatinRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
 
@@ -91,6 +93,19 @@ public class MonopatinServices {
             throw new Exception("El monopatin requerido, no se encuentra disponible");
         }
         
+    }
+
+
+    public MonopatinResponseDto sumarKilometros(Long monopatinId, MonopatinSumaKilometrosDto monopatinSumaKilometrosDto) throws Exception{
+        try{
+            Monopatin monopatin = this.monopatinRepository.findById(monopatinId).orElseThrow(()-> new Exception("El monopatin requerido no existe"));
+
+            monopatin.setKilometros(monopatin.getKilometros()+monopatinSumaKilometrosDto.getKilometros());
+            this.monopatinRepository.save(monopatin);
+            return this.mapearEntidadADto(monopatin);
+        } catch (Exception e) {
+            throw new Exception(e.getMessage());
+        }
     }
 
     private Monopatin mapearDtoAEntidad(MonopatinRequestDto MonopatinRequesDto) {

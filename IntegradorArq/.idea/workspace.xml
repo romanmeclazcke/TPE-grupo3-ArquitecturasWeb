@@ -4,32 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9714064e-1399-4df4-affd-db1d8e41d3b1" name="Changes" comment="Cambio de puerto de las bases de datos">
+    <list default="true" id="9714064e-1399-4df4-affd-db1d8e41d3b1" name="Changes" comment="Cree metodos para poder asignar un monopatin a una parada y poder retirarlo de la misma. Tambien agregue metodos para poder cargar saldo a una cuenta">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Monopatin/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parada/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Parada/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parada/src/main/java/org/example/parada/DTO/ParadaRequestDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parada/src/main/java/org/example/parada/ParadaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parada/src/main/java/org/example/parada/ParadaApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parada/src/main/java/org/example/parada/controller/ParadaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parada/src/main/java/org/example/parada/controller/ParadaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parada/src/main/java/org/example/parada/feignClients/MonopatinFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parada/src/main/java/org/example/parada/feignClients/MonopatinFeignClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parada/src/main/java/org/example/parada/service/ParadaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parada/src/main/java/org/example/parada/service/ParadaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parada/target/classes/org/example/parada/DTO/ParadaRequestDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parada/target/classes/org/example/parada/DTO/ParadaResponseDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/Parada/target/classes/org/example/parada/DTO/ParadaResponseDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parada/target/classes/org/example/parada/ParadaApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/Parada/target/classes/org/example/parada/ParadaApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parada/target/classes/org/example/parada/controller/ParadaController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parada/target/classes/org/example/parada/entity/Parada.class" beforeDir="false" afterPath="$PROJECT_DIR$/Parada/target/classes/org/example/parada/entity/Parada.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parada/target/classes/org/example/parada/feignClients/MonopatinFeignClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/Parada/target/classes/org/example/parada/feignClients/MonopatinFeignClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parada/target/classes/org/example/parada/repository/ParadaRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/Parada/target/classes/org/example/parada/repository/ParadaRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parada/target/classes/org/example/parada/service/ParadaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/Parada/target/classes/org/example/parada/service/ParadaService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parada/target/classes/org/example/parada/service/exception/NotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/Parada/target/classes/org/example/parada/service/exception/NotFoundException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parada/target/test-classes/org/example/parada/ParadaApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/Parada/target/test-classes/org/example/parada/ParadaApplicationTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/DTO/CuentaRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/DTO/CuentaRequestDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/controller/CuentaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/controller/CuentaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/service/CuentaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/service/CuentaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Usuario/target/classes/org/example/usuario/DTO/CuentaRequestDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/target/classes/org/example/usuario/DTO/CuentaRequestDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Usuario/target/classes/org/example/usuario/controller/CuentaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/target/classes/org/example/usuario/controller/CuentaController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Usuario/target/classes/org/example/usuario/service/CuentaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/target/classes/org/example/usuario/service/CuentaService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/target/classes/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,38 +53,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.GestionApplication.executor": "Run",
-    "Spring Boot.MantenimientoApplication.executor": "Run",
-    "Spring Boot.MonopatinApplication.executor": "Run",
-    "Spring Boot.ParadaApplication.executor": "Run",
-    "Spring Boot.ViajeApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/maiam/OneDrive/Documentos/TUDAI/2° año/Arquitecturas Web/IdeaProjects/TPE-grupo3-ArquitecturasWeb/IntegradorArq",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.39770114",
-    "run.configurations.included.in.services": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.GestionApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.MantenimientoApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.MonopatinApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ParadaApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Spring Boot.ViajeApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/maiam/OneDrive/Documentos/TUDAI/2° año/Arquitecturas Web/IdeaProjects/TPE-grupo3-ArquitecturasWeb/IntegradorArq&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.39770114&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "JAVA"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;JAVA&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\maiam\OneDrive\Documentos\TUDAI\2° año\Arquitecturas Web\IdeaProjects\TPE-grupo3-ArquitecturasWeb\IntegradorArq\Monopatin\src\main\resources" />
@@ -219,7 +195,7 @@
       <workItem from="1730738662021" duration="2777000" />
       <workItem from="1730744943389" duration="128000" />
       <workItem from="1730762742930" duration="3269000" />
-      <workItem from="1730807119166" duration="3285000" />
+      <workItem from="1730807119166" duration="5108000" />
     </task>
     <task id="LOCAL-00001" summary="Configure el clientsMonopatin, ajuste puertos de los microservicios">
       <option name="closed" value="true" />
@@ -253,7 +229,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730807266185</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Cree metodos para poder asignar un monopatin a una parada y poder retirarlo de la misma. Tambien agregue metodos para poder cargar saldo a una cuenta">
+      <option name="closed" value="true" />
+      <created>1730810593484</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1730810593484</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,6 +248,7 @@
     <MESSAGE value="Cambie estado de respuesta de eliminar cuenta" />
     <MESSAGE value="Avances" />
     <MESSAGE value="Cambio de puerto de las bases de datos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cambio de puerto de las bases de datos" />
+    <MESSAGE value="Cree metodos para poder asignar un monopatin a una parada y poder retirarlo de la misma. Tambien agregue metodos para poder cargar saldo a una cuenta" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cree metodos para poder asignar un monopatin a una parada y poder retirarlo de la misma. Tambien agregue metodos para poder cargar saldo a una cuenta" />
   </component>
 </project>

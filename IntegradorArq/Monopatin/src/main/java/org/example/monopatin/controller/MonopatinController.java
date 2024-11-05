@@ -2,6 +2,7 @@ package org.example.monopatin.controller;
 
 import org.example.monopatin.DTO.MonopatinRequestDto;
 //import org.example.monopatin.feignClient.ViajeFeignClient;
+import org.example.monopatin.DTO.MonopatinSumaKilometrosDto;
 import org.example.monopatin.feignClient.ViajeFeignClient;
 import org.example.monopatin.service.MonopatinServices;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -68,6 +69,16 @@ public class MonopatinController {
     public ResponseEntity<?> activarMonopatin(@PathVariable Long monopatinId,@PathVariable Long usuarioId){
         try {
             return ResponseEntity.status(HttpStatus.OK).body(monopatinServices.activarMonopatin(monopatinId, usuarioId));
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
+        }
+    }
+
+
+    @PatchMapping("/{idMonopatin}/sumar/kilometros")
+    public ResponseEntity<?> sumarKilometros(@PathVariable Long idMonopatin, @RequestBody MonopatinSumaKilometrosDto monopatinSumaKilometrosDto){
+        try{
+            return ResponseEntity.status(HttpStatus.OK).body(this.monopatinServices.sumarKilometros(idMonopatin,monopatinSumaKilometrosDto));
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
         }
