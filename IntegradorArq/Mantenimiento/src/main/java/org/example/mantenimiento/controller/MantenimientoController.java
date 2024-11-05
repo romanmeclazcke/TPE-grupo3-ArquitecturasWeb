@@ -28,6 +28,17 @@ public class MantenimientoController {
     }
 
 
+    @PatchMapping("/finalizar/{idMonopatin}")
+    public ResponseEntity<?> finMantenimiento(@PathVariable Long idMonopatin) {
+        try {
+            return ResponseEntity.status(HttpStatus.CREATED).body(mantenimientoService.endMantenimiento(idMonopatin));
+        } catch (NotFoundException e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     @GetMapping("/{idMonopatin}")
     public ResponseEntity<?> elMonopatinSeEncuentraEnMantenimiento(@PathVariable Long idMonopatin){
         try {

@@ -68,26 +68,15 @@ public class MantenimientoService {
     }
 
     @Transactional
-    public void endMantenimiento(Long idMonopatin) {
-        List<Mantenimiento> mantenimientos = mantenimientoRepository.findAllByIdMonopatin(idMonopatin); //Ya que pueden haber varios registros de un mismo monopatín
+    public MantenimientoResponseDto endMantenimiento(Long idMonopatin)throws Exception {
+        try{
+            Mantenimiento mantenimiento= this.mantenimientoRepository.getultimoMantenimiento(idMonopatin).orElseThrow(()-> new NotFoundException("El monopatin no se encuentra en mantenimiento"));
 
-        Mantenimiento activo = null;
-        int i = 0;
-        while (activo == null) {
-            if (mantenimientos.get(i).getFecha_fin() == null)
-                activo = mantenimientos.get(i);
-            i++;
-        }
-
-        activo.setFecha_fin(LocalDate.now());
-        mantenimientoRepository.save(activo);
-
-        Monopatin monopatin = monopatinFeignClient.getMonopatinById(idMonopatin);
-        if (monopatin != null) {
-            monopatin.setDisponible(true);
-            monopatinFeignClient.updateMonopatin(idMonopatin, monopatin);
-        } else {
-            throw new NotFoundException("Monopatín con ID: " + idMonopatin + " no encontrado");
+            mantenimiento.setFecha_fin(LocalDate.now());
+            mantenimientoRepository.save(mantenimiento);
+            return this.mapearEntidadADto(mantenimiento);
+        } catch (Exception e) {
+            throw new Exception("Error al finalizar mantenimiento");
         }
     }
 
@@ -100,27 +89,27 @@ public class MantenimientoService {
 
             if (monopatin == null) {
                 responseDto.setMensaje("El monopatín con ID " + idMonopatin + " no existe");
-                responseDto.setExito(false);
+                responseDto.setEstado(false);
                 return responseDto;
             }
 
             boolean monopatinEstaEnMantenimiento = this.mantenimientoRepository.obtenerSiEstaEnMantenimiento(idMonopatin);
 
             if (!monopatinEstaEnMantenimiento) {
-                responseDto.setEm_mantenimiento(false);
-                responseDto.setId_monopatin(idMonopatin);
+                responseDto.setEn_mantenimiento(false);
+                responseDto.setIdMonopatin(idMonopatin);
                 responseDto.setMensaje("El monopatín con ID " + idMonopatin + " no está en mantenimiento");
-                responseDto.setExito(true);
+                responseDto.setEstado(true);
             } else {
-                responseDto.setEm_mantenimiento(true);
-                responseDto.setId_monopatin(idMonopatin);
+                responseDto.setEn_mantenimiento(true);
+                responseDto.setIdMonopatin(idMonopatin);
                 responseDto.setMensaje("El monopatín con ID " + idMonopatin + " está en mantenimiento");
-                responseDto.setExito(true);
+                responseDto.setEstado(true);
             }
 
         } catch (Exception e) {
             responseDto.setMensaje("No se pudo encontrar el monopatín con ID " + idMonopatin);
-            responseDto.setExito(false);
+            responseDto.setEstado(false);
         }
 
         return responseDto;

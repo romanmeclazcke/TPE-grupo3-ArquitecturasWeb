@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9714064e-1399-4df4-affd-db1d8e41d3b1" name="Changes" comment="Cree metodos para poder asignar un monopatin a una parada y poder retirarlo de la misma. Tambien agregue metodos para poder cargar saldo a una cuenta">
+    <list default="true" id="9714064e-1399-4df4-affd-db1d8e41d3b1" name="Changes" comment="Cree metodo para poder sumar la cantidad de kilometros de un monopatin">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mantenimiento/src/main/java/org/example/mantenimiento/controller/MantenimientoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mantenimiento/src/main/java/org/example/mantenimiento/controller/MantenimientoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mantenimiento/src/main/java/org/example/mantenimiento/repository/MantenimientoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mantenimiento/src/main/java/org/example/mantenimiento/repository/MantenimientoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mantenimiento/src/main/java/org/example/mantenimiento/service/MantenimientoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mantenimiento/src/main/java/org/example/mantenimiento/service/MantenimientoService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +106,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ParadaApplication">
+  <component name="RunManager" selected="Spring Boot.MantenimientoApplication">
     <configuration name="GestionApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="Gestion" />
@@ -195,7 +198,7 @@
       <workItem from="1730738662021" duration="2777000" />
       <workItem from="1730744943389" duration="128000" />
       <workItem from="1730762742930" duration="3269000" />
-      <workItem from="1730807119166" duration="5108000" />
+      <workItem from="1730807119166" duration="6389000" />
     </task>
     <task id="LOCAL-00001" summary="Configure el clientsMonopatin, ajuste puertos de los microservicios">
       <option name="closed" value="true" />
@@ -237,7 +240,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730810593484</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Cree metodo para poder sumar la cantidad de kilometros de un monopatin">
+      <option name="closed" value="true" />
+      <created>1730812865230</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1730812865230</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,6 +260,7 @@
     <MESSAGE value="Avances" />
     <MESSAGE value="Cambio de puerto de las bases de datos" />
     <MESSAGE value="Cree metodos para poder asignar un monopatin a una parada y poder retirarlo de la misma. Tambien agregue metodos para poder cargar saldo a una cuenta" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cree metodos para poder asignar un monopatin a una parada y poder retirarlo de la misma. Tambien agregue metodos para poder cargar saldo a una cuenta" />
+    <MESSAGE value="Cree metodo para poder sumar la cantidad de kilometros de un monopatin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cree metodo para poder sumar la cantidad de kilometros de un monopatin" />
   </component>
 </project>
