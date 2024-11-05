@@ -16,8 +16,7 @@ import java.util.Date;
 @NoArgsConstructor
 public class CuentaRequestDto {
 
-    @NotEmpty(message = "el campo nombre del rol no puede estar vacío")
-    @NotNull( message = "El nombre deel rol es un campo obligatorio.")
+    @NotNull( message = "El credito es Obligatorio para editar una cuenta")
     private Double credito;
 
 

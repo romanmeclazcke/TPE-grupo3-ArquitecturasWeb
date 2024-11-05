@@ -1,6 +1,7 @@
 package org.example.usuario.controller;
 
 import jakarta.validation.Valid;
+import org.example.usuario.DTO.CuentaCargarSaldoDto;
 import org.example.usuario.DTO.CuentaRequestDto;
 import org.example.usuario.entity.Cuenta;
 import org.example.usuario.service.CuentaService;
@@ -54,6 +55,16 @@ public class CuentaController {
             return ResponseEntity.status(HttpStatus.OK).build(); // Devuelve 204 No Content
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e + "{\"error\":\"Error. No se pudo eliminar la cuenta, revise los campos e intente nuevamente.\"}");
+        }
+    }
+
+
+    @PatchMapping("{idCuenta}/cargar-saldo")
+    public ResponseEntity<?> cargarSaldo(@PathVariable Long idCuenta, @RequestBody CuentaCargarSaldoDto cuentaCargarSaldoDto){
+        try{
+            return ResponseEntity.status(HttpStatus.OK).body(this.cuentaService.cargarSaldo(idCuenta,cuentaCargarSaldoDto));
+        }catch (Exception e){
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e + "{\"error\":\"Error. No se pudo cargar saldo a  la cuenta, revise los campos e intente nuevamente.\"}");
         }
     }
 }

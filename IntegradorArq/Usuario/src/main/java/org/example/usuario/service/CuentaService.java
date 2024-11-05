@@ -1,6 +1,7 @@
 package org.example.usuario.service;
 
 
+import org.example.usuario.DTO.CuentaCargarSaldoDto;
 import org.example.usuario.DTO.CuentaRequestDto;
 import org.example.usuario.DTO.CuentaResponseDto;
 import org.example.usuario.entity.Cuenta;
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CuentaService {
@@ -20,19 +22,19 @@ public class CuentaService {
     CuentaRepository cuentaRepository;
 
     public List<CuentaResponseDto> getCuentasByUser(Long userId) throws Exception {
-        try{
+        try {
             return this.cuentaRepository.getCuentasByUser(userId);
-        }catch(Exception e){
+        } catch (Exception e) {
             throw new Exception(e.getMessage());
         }
     }
 
     public CuentaResponseDto save(CuentaRequestDto CuentaRequestDto) throws Exception {
-        try{
+        try {
             Cuenta cuenta = this.mapearDtoAEntidad(CuentaRequestDto);
             this.cuentaRepository.save(cuenta);
             return this.mapearEntidadADto(cuenta);
-        }catch (Exception e){
+        } catch (Exception e) {
             throw new Exception(e.getMessage());
         }
     }
@@ -51,12 +53,23 @@ public class CuentaService {
 
     public void eliminarCuenta(Long id) throws Exception {
         try {
-            if (!cuentaRepository.existsById(id)) {
-                throw new Exception("Cuenta no encontrada");
-            }
+            Cuenta cuenta = cuentaRepository.findById(id).orElseThrow(() -> new Exception("Cuenta no encontrada"));
             cuentaRepository.deleteById(id);
         } catch (Exception e) {
             throw new Exception("Error al eliminar cuenta: " + e.getMessage());
+        }
+    }
+
+
+    public CuentaResponseDto cargarSaldo(Long idCuenta, CuentaCargarSaldoDto cuentaCargarSaldoDto) throws Exception {
+        try {
+            Cuenta cuenta = cuentaRepository.findById(idCuenta).orElseThrow(() -> new Exception("Cuenta no encontrada"));
+
+            cuenta.setCredito(cuenta.getCredito() + cuentaCargarSaldoDto.getCredito());
+            cuentaRepository.save(cuenta);
+            return this.mapearEntidadADto(cuenta);
+        } catch (Exception e) {
+            throw new RuntimeException("Error al cargar la cuenta" + e.getMessage());
         }
     }
 
