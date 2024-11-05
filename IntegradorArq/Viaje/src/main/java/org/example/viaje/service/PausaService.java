@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.sql.Time;
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.Optional;
 
@@ -36,7 +37,7 @@ public class PausaService {
 
             Pausa p = new Pausa();
             p.setViaje(viaje);
-            p.setHora_inicio(new Time(System.currentTimeMillis()));
+            p.setHora_inicio(LocalDateTime.now());
             this.pausaRepository.save(p);
 
             return this.mapearDeEntidadADto(p);

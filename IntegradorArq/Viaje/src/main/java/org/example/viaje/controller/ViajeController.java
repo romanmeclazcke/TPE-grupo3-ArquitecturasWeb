@@ -35,4 +35,14 @@ public class ViajeController {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
         }
     }
+
+
+    @GetMapping("/monopatin/{idMonopatin}")
+    public ResponseEntity<?> getViajesPorMonopatin(@PathVariable Long idMonopatin) throws Exception {
+        try{
+            return ResponseEntity.status(HttpStatus.OK).body(viajeService.getViajesPorMonopatin(idMonopatin));
+        } catch (Exception e){
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
+        }
+    }
 }

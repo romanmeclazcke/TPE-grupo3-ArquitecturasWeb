@@ -12,7 +12,7 @@ import java.util.List;
 @FeignClient(name = "viaje-service", url = "http://localhost:8084")
 public interface ViajeFeignClient {
 
-    @GetMapping("/viaje/{idMonopatin}")
+    @GetMapping("/viaje/monopatin/{idMonopatin}")
     List<Viaje> obtenerViajesPorMonopatin(@PathVariable("idMonopatin") Long idMonopatin);
 
     @GetMapping("/viaje/{idMonopatin}/kilometros")

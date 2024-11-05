@@ -14,5 +14,9 @@ public interface ViajeRepository extends JpaRepository<Viaje, Long> {
 
     @Query("SELECT v FROM Viaje v WHERE v.id_monopatin = :idMonopatin AND v.id_usuario = :idUsuario")
     List<Viaje> findAllByIds(@Param("idMonopatin") Long idMonopatin, @Param("idUsuario") Long idUsuario);
-    
+
+    @Query("SELECT v FROM Viaje v WHERE v.id_monopatin = :idMonopatin")
+    List<Viaje> getViajesPorMonopatin(@Param("idMonopatin") Long idMonopatin);
+
+
 }

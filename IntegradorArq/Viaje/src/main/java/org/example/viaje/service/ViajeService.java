@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -87,6 +88,20 @@ public class ViajeService {
         /*Monopatin monopatin = monopatinFeignClient.getMonopatinById(idMonopatin);
         monopatin.setDisponible(true);
         monopatinFeignClient.updateMonopatin(idMonopatin, monopatin);*/
+    }
+
+
+    public List<ViajeResponseDTO> getViajesPorMonopatin(Long idMonopatin) {
+        try{
+           List<Viaje> viajes= this.viajeRepository.getViajesPorMonopatin(idMonopatin);
+           List<ViajeResponseDTO> viajesResponse= new ArrayList<>();
+           for (Viaje viaje : viajes) {
+               viajesResponse.add(this.mapearEntidadADto(viaje));
+           }
+           return viajesResponse;
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     private ViajeResponseDTO mapToResponseDTO(Viaje viaje) {
