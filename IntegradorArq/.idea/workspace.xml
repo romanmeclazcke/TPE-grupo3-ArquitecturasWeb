@@ -17,6 +17,7 @@
       <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/entity/Pausa.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/entity/Pausa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/entity/Viaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/entity/Viaje.java" afterDir="false" />
     </list>
+    <list default="true" id="9714064e-1399-4df4-affd-db1d8e41d3b1" name="Changes" comment="Actualice metodo para obtener el ultimo mantenimiento de un monopatin y poder finalizarlo" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
