@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9714064e-1399-4df4-affd-db1d8e41d3b1" name="Changes" comment="Cree metodo para poder sumar la cantidad de kilometros de un monopatin">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mantenimiento/src/main/java/org/example/mantenimiento/controller/MantenimientoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mantenimiento/src/main/java/org/example/mantenimiento/controller/MantenimientoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mantenimiento/src/main/java/org/example/mantenimiento/repository/MantenimientoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mantenimiento/src/main/java/org/example/mantenimiento/repository/MantenimientoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mantenimiento/src/main/java/org/example/mantenimiento/service/MantenimientoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mantenimiento/src/main/java/org/example/mantenimiento/service/MantenimientoService.java" afterDir="false" />
-    </list>
+    <list default="true" id="9714064e-1399-4df4-affd-db1d8e41d3b1" name="Changes" comment="Actualice metodo para obtener el ultimo mantenimiento de un monopatin y poder finalizarlo" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -198,7 +193,7 @@
       <workItem from="1730738662021" duration="2777000" />
       <workItem from="1730744943389" duration="128000" />
       <workItem from="1730762742930" duration="3269000" />
-      <workItem from="1730807119166" duration="6389000" />
+      <workItem from="1730807119166" duration="6632000" />
     </task>
     <task id="LOCAL-00001" summary="Configure el clientsMonopatin, ajuste puertos de los microservicios">
       <option name="closed" value="true" />
@@ -248,7 +243,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730812865230</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Actualice metodo para obtener el ultimo mantenimiento de un monopatin y poder finalizarlo">
+      <option name="closed" value="true" />
+      <created>1730814348640</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1730814348640</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,6 +264,7 @@
     <MESSAGE value="Cambio de puerto de las bases de datos" />
     <MESSAGE value="Cree metodos para poder asignar un monopatin a una parada y poder retirarlo de la misma. Tambien agregue metodos para poder cargar saldo a una cuenta" />
     <MESSAGE value="Cree metodo para poder sumar la cantidad de kilometros de un monopatin" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cree metodo para poder sumar la cantidad de kilometros de un monopatin" />
+    <MESSAGE value="Actualice metodo para obtener el ultimo mantenimiento de un monopatin y poder finalizarlo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Actualice metodo para obtener el ultimo mantenimiento de un monopatin y poder finalizarlo" />
   </component>
 </project>
