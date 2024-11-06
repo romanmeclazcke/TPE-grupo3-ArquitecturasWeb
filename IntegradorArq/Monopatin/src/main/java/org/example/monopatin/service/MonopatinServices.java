@@ -120,6 +120,8 @@ public class MonopatinServices {
     private MonopatinResponseDto mapearEntidadADto(Monopatin monopatin) {
         MonopatinResponseDto monopatinResponseDto = new MonopatinResponseDto();
         monopatinResponseDto.setId(monopatin.getId());
+        monopatinResponseDto.setY(monopatin.getY());
+        monopatinResponseDto.setX(monopatin.getX());
         monopatinResponseDto.setTiempo_uso(monopatin.getTiempo_uso());
         monopatinResponseDto.setKilometros(monopatin.getKilometros());
         monopatinResponseDto.setDisponible(monopatin.getDisponible());

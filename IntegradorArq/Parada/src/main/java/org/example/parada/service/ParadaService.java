@@ -21,7 +21,6 @@ public class ParadaService {
     @Autowired
     ParadaRepository paradaRepository;
 
-
     @Autowired
     MonopatinFeignClient monopatinFeignClient;
 
@@ -114,6 +113,8 @@ public class ParadaService {
 
     private ParadaResponseDto mapearEntidadADto(Parada parada) {
         ParadaResponseDto responseDto = new ParadaResponseDto();
+        responseDto.setY(parada.getY());
+        responseDto.setX(parada.getX());
         responseDto.setId(parada.getId());
         responseDto.setMonopatines(parada.getId_monopatines());
         return responseDto;

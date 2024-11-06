@@ -6,7 +6,7 @@
 		<groupId>org.example</groupId>
 		<artifactId>IntegradorArq</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/>
 	</parent>
 	<groupId>org.example</groupId>
 	<artifactId>Gestion</artifactId>

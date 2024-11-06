@@ -4,7 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9714064e-1399-4df4-affd-db1d8e41d3b1" name="Changes" comment="actualice imports" />
+    <list default="true" id="9714064e-1399-4df4-affd-db1d8e41d3b1" name="Changes" comment="actualice imports">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gestion/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Gestion/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mapa/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Mapa/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/DTO/MonopatinResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/DTO/MonopatinResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/entity/Monopatin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/entity/Monopatin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/service/MonopatinServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/service/MonopatinServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monopatin/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/DTO/MonopatinResponseDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/DTO/MonopatinResponseDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/entity/Monopatin.class" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/entity/Monopatin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/service/MonopatinServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/service/MonopatinServices.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Parada/src/main/java/org/example/parada/DTO/ParadaResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parada/src/main/java/org/example/parada/DTO/ParadaResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Parada/src/main/java/org/example/parada/entity/Parada.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parada/src/main/java/org/example/parada/entity/Parada.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Parada/src/main/java/org/example/parada/service/ParadaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parada/src/main/java/org/example/parada/service/ParadaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Parada/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Parada/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Parada/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Parada/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Parada/target/classes/org/example/parada/DTO/ParadaResponseDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/Parada/target/classes/org/example/parada/DTO/ParadaResponseDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Parada/target/classes/org/example/parada/entity/Parada.class" beforeDir="false" afterPath="$PROJECT_DIR$/Parada/target/classes/org/example/parada/entity/Parada.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Parada/target/classes/org/example/parada/service/ParadaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/Parada/target/classes/org/example/parada/service/ParadaService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reporte/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Reporte/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/repository/CuentaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/repository/CuentaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Viaje/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/service/ViajeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/service/ViajeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Viaje/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Viaje/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/target/classes/application.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,8 +96,9 @@
     "Spring Boot.MonopatinApplication.executor": "Run",
     "Spring Boot.ParadaApplication.executor": "Run",
     "Spring Boot.ReporteApplication.executor": "Run",
+    "Spring Boot.UsuarioApplication.executor": "Run",
     "Spring Boot.ViajeApplication.executor": "Run",
-    "git-widget-placeholder": "ciclos-bug",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/maiam/OneDrive/Documentos/TUDAI/2° año/Arquitecturas Web/IdeaProjects/TPE-grupo3-ArquitecturasWeb/IntegradorArq",
     "node.js.detected.package.eslint": "true",
@@ -111,7 +138,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ParadaApplication">
+  <component name="RunManager" selected="Spring Boot.ViajeApplication">
     <configuration name="GestionApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="Gestion" />
@@ -179,8 +206,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.20224.419" />
-        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-IU-242.20224.419" />
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
       </set>
     </attachedChunks>
   </component>
@@ -220,6 +247,7 @@
       <workItem from="1730899216993" duration="3122000" />
       <workItem from="1730902969519" duration="21000" />
       <workItem from="1730903612407" duration="6302000" />
+      <workItem from="1730935810866" duration="1236000" />
     </task>
     <task id="LOCAL-00001" summary="Configure el clientsMonopatin, ajuste puertos de los microservicios">
       <option name="closed" value="true" />

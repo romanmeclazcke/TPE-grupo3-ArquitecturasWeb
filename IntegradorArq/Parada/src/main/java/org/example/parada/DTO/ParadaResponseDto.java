@@ -12,6 +12,8 @@ import java.util.List;
 public class ParadaResponseDto {
     private Long id;
     private List<Long> monopatines;
+    private Integer x;
+    private Integer y;
 
     private String mensaje;
     private boolean exito;

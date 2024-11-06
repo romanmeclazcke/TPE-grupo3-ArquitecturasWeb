@@ -1,7 +1,6 @@
 package org.example.viaje.service;
 
 //import org.example.monopatin.entity.Monopatin;
-import org.example.usuario.entity.Usuario;
 import org.example.viaje.DTO.ViajeRequestDTO;
 import org.example.viaje.DTO.ViajeResponseDTO;
 import org.example.viaje.entity.Viaje;

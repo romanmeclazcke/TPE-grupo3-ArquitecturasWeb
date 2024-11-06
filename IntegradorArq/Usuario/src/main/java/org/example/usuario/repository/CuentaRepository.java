@@ -13,7 +13,7 @@ import java.util.List;
 @Repository
 public interface CuentaRepository  extends JpaRepository<Cuenta, Long> {
 
-    @Query("SELECT new org.example.usuario.DTO.CuentaResponseDto(c.credito, c.fecha_alta) " +
+    @Query("SELECT new org.example.usuario.DTO.CuentaResponseDto(c.credito, c.fecha_alta,c.activa) " +
             "FROM Cuenta c JOIN c.usuarios u " +
             "WHERE u.id = :userId")
     List<CuentaResponseDto> getCuentasByUser(@Param("userId") Long userId);

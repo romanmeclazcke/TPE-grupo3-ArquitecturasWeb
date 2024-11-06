@@ -22,4 +22,7 @@ public class Parada {
     @ElementCollection //Chequear si funciona
     private List<Long> id_monopatines;
 
+    private Integer x;
+    private Integer y;
+
 }

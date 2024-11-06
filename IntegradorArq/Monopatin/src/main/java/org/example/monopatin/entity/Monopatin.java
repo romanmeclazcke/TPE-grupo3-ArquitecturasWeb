@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.boot.context.properties.bind.DefaultValue;
 
 import java.time.Duration;
 
@@ -21,8 +22,9 @@ public class Monopatin {
 
     @Column
     private Duration tiempo_uso;
-    private Double kilometros;
+    private Double kilometros= 0.0;
     private Boolean disponible;
-
+    private Integer x= 0;
+    private Integer y =0;
 
 }
