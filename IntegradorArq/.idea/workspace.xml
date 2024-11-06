@@ -4,32 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9714064e-1399-4df4-affd-db1d8e41d3b1" name="Changes" comment="Cree metodo para poder sumar la cantidad de kilometros de un monopatin">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="9714064e-1399-4df4-affd-db1d8e41d3b1" name="Changes" comment="Cree Microservicios mapa para poder consultar el monpatin mas cerca de tu ubicacion y la distancia entre 2 paradas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mapa/src/main/java/org/example/mapa/feignClients/MonopatinFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mapa/src/main/java/org/example/mapa/feignClients/MonopatinFeignClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parada/src/main/java/org/example/parada/controller/ParadaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parada/src/main/java/org/example/parada/controller/ParadaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parada/src/main/java/org/example/parada/service/ParadaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parada/src/main/java/org/example/parada/service/ParadaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reporte/target/classes/org/example/reporte/ReporteApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/Reporte/target/classes/org/example/reporte/ReporteApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reporte/target/classes/org/example/reporte/controller/ReporteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Reporte/target/classes/org/example/reporte/controller/ReporteController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reporte/target/classes/org/example/reporte/entity/Reporte.class" beforeDir="false" afterPath="$PROJECT_DIR$/Reporte/target/classes/org/example/reporte/entity/Reporte.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reporte/target/classes/org/example/reporte/repository/ReporteRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/Reporte/target/classes/org/example/reporte/repository/ReporteRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reporte/target/classes/org/example/reporte/service/ReporteService.class" beforeDir="false" afterPath="$PROJECT_DIR$/Reporte/target/classes/org/example/reporte/service/ReporteService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reporte/target/test-classes/org/example/reporte/ReporteApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/Reporte/target/test-classes/org/example/reporte/ReporteApplicationTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Usuario/target/classes/org/example/usuario/DTO/CuentaResponseDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/target/classes/org/example/usuario/DTO/CuentaResponseDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Usuario/target/classes/org/example/usuario/controller/CuentaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/target/classes/org/example/usuario/controller/CuentaController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Usuario/target/classes/org/example/usuario/entity/Cuenta.class" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/target/classes/org/example/usuario/entity/Cuenta.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Usuario/target/classes/org/example/usuario/service/CuentaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/target/classes/org/example/usuario/service/CuentaService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/DTO/PausaResponseDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/DTO/PausaResponseDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/controller/ViajeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/controller/ViajeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/entity/Pausa.class" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/entity/Pausa.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/entity/Viaje.class" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/entity/Viaje.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/repository/ViajeRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/repository/ViajeRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/service/PausaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/service/PausaService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/service/ViajeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/service/ViajeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Parada/target/classes/org/example/parada/controller/ParadaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Parada/target/classes/org/example/parada/controller/ParadaController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Parada/target/classes/org/example/parada/service/ParadaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/Parada/target/classes/org/example/parada/service/ParadaService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,7 +216,7 @@
       <workItem from="1730844119246" duration="1274000" />
       <workItem from="1730897184395" duration="428000" />
       <workItem from="1730897615596" duration="1592000" />
-      <workItem from="1730899216993" duration="1819000" />
+      <workItem from="1730899216993" duration="2757000" />
     </task>
     <task id="LOCAL-00001" summary="Configure el clientsMonopatin, ajuste puertos de los microservicios">
       <option name="closed" value="true" />
@@ -288,7 +266,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730812865230</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Cree Microservicios mapa para poder consultar el monpatin mas cerca de tu ubicacion y la distancia entre 2 paradas">
+      <option name="closed" value="true" />
+      <created>1730901318281</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1730901318281</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -301,6 +287,7 @@
     <MESSAGE value="Cambio de puerto de las bases de datos" />
     <MESSAGE value="Cree metodos para poder asignar un monopatin a una parada y poder retirarlo de la misma. Tambien agregue metodos para poder cargar saldo a una cuenta" />
     <MESSAGE value="Cree metodo para poder sumar la cantidad de kilometros de un monopatin" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cree metodo para poder sumar la cantidad de kilometros de un monopatin" />
+    <MESSAGE value="Cree Microservicios mapa para poder consultar el monpatin mas cerca de tu ubicacion y la distancia entre 2 paradas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cree Microservicios mapa para poder consultar el monpatin mas cerca de tu ubicacion y la distancia entre 2 paradas" />
   </component>
 </project>
