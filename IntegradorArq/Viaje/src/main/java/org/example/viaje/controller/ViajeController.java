@@ -2,6 +2,7 @@ package org.example.viaje.controller;
 
 
 import org.example.viaje.DTO.ViajeRequestDTO;
+import org.example.viaje.feignClients.ParadaFeignClient;
 import org.example.viaje.service.ViajeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,11 +19,23 @@ public class ViajeController {
     @Autowired
     ViajeService viajeService;
 
-    @PostMapping("/crear/{monopatinId}/usuario/{usuarioId}")
-    public ResponseEntity<?> createViaje(@PathVariable("monopatinId") Long monopatinId, @PathVariable("usuarioId") Long usuarioId) {
+    @Autowired
+    ParadaFeignClient paradaFeignClient;
+
+    @PostMapping("/crear/{monopatinId}/usuario/{usuarioId}/paradaOrigen/{paradaId}")
+    public ResponseEntity<?> createViaje(@PathVariable("monopatinId") Long monopatinId, @PathVariable("usuarioId") Long usuarioId, @PathVariable Long paradaId) {
         try {
-            return ResponseEntity.status(HttpStatus.CREATED).body(viajeService.save(monopatinId,usuarioId));
+            return ResponseEntity.status(HttpStatus.CREATED).body(viajeService.save(monopatinId,usuarioId,paradaId));
         } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
+        }
+    }
+
+    @GetMapping("/verificar-parada/{paradaId}")
+    public ResponseEntity<?> verificarParada(@PathVariable("paradaId") Long paradaId) {
+        try{
+            return ResponseEntity.status(HttpStatus.OK).body(this.paradaFeignClient.getParadaById(paradaId));
+        } catch(Exception e){
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
         }
     }

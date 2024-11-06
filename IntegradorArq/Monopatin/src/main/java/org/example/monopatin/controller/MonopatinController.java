@@ -65,10 +65,10 @@ public class MonopatinController {
         }
     }
 
-    @PostMapping("/activar/{monopatinId}/usuarioId/{usuarioId}")
-    public ResponseEntity<?> activarMonopatin(@PathVariable Long monopatinId,@PathVariable Long usuarioId){
+    @PostMapping("/activar/{monopatinId}/usuarioId/{usuarioId}/paradaOrigen/{paradaId}")
+    public ResponseEntity<?> activarMonopatin(@PathVariable Long monopatinId,@PathVariable Long usuarioId, @PathVariable Long paradaId) throws Exception {
         try {
-            return ResponseEntity.status(HttpStatus.OK).body(monopatinServices.activarMonopatin(monopatinId, usuarioId));
+            return ResponseEntity.status(HttpStatus.OK).body(monopatinServices.activarMonopatin(monopatinId, usuarioId, paradaId));
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
         }

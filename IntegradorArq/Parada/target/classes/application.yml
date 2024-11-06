@@ -1,11 +1,11 @@
 server:
-  port: 8084
+  port: 8085
 spring:
   application:
     name: Parada
 
   datasource:
-    url: jdbc:mysql://localhost:3307/parada
+    url: jdbc:mysql://localhost:3306/parada
     username: root
     password:
     driver-class-name: com.mysql.cj.jdbc.Driver

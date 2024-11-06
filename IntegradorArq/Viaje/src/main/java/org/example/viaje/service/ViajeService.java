@@ -20,52 +20,21 @@ import java.util.stream.Collectors;
 
 @Service
 public class ViajeService {
-    /*@Autowired
-    MonopatinFeignClient monopatinFeignClient;*/
-    /*@Autowired
-    UsuarioFeignClient usuarioFeignClient;*/
+
     @Autowired
     ViajeRepository viajeRepository;
 
     @Transactional
-    public ViajeResponseDTO save(Long monopatinId, Long usuarioId) {
-        /*ViajeResponseDTO responseDTO = new ViajeResponseDTO();
-        Long idMonopatin = viajeDTO.getIdMonopatin();
-        Long idUsuario = viajeDTO.getIdUsuario();
-
-        //Valido que el monopatín exista
-        Monopatin monopatin = monopatinFeignClient.getMonopatinById(idMonopatin);
-        if (monopatin == null) {
-            responseDTO.setMensaje("El monopatín con ID " + idMonopatin + " no existe");
-            responseDTO.setExito(false);
-            return responseDTO;
-        }
-
-        //Valido que el monopatín esté disponible para un nuevo viaje
-        if (!monopatin.getDisponible()) {
-            responseDTO.setMensaje("El monopatín con ID " + idMonopatin + " está en uso");
-            responseDTO.setExito(false);
-            return responseDTO;
-        }
-
-        //Verifico que el usuario exista
-        Usuario usuario = usuarioFeignClient.getUsuarioById(idUsuario);
-        if (usuario == null) {
-            responseDTO.setMensaje("El usuario con ID " + idUsuario + " no existe");
-            responseDTO.setExito(false);
-            return responseDTO;
-        }*/
-
-        //Registro el viaje
+    public ViajeResponseDTO save(Long monopatinId, Long usuarioId, Long paradaDestinoId) {
         Viaje viaje = new Viaje();
         viaje.setId_monopatin(monopatinId);
         viaje.setId_usuario(usuarioId);
+        //------------#### FALTA CONSEGUIR PARADA ORIGEN
+        viaje.setId_parada_destino(paradaDestinoId);
         viaje.setFecha_inicio(LocalDate.now());
         viaje.setFecha_fin(null); //es null hasta invocar terminarViaje
 
         viajeRepository.save(viaje);
-        /*monopatin.setDisponible(false);
-        monopatinFeignClient.updateMonopatin(idMonopatin, monopatin);*/
 
         return mapToResponseDTO(viaje);
     }

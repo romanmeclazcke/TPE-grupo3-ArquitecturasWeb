@@ -31,6 +31,8 @@ public class Viaje {
     private Double km;
     private Long id_usuario;
     private Long id_monopatin;
+    private Long id_parada_origen;
+    private Long id_parada_destino;
 
     @ManyToOne
     @JoinColumn(name = "id_tarifa")

@@ -19,6 +19,7 @@ public class MonopatinServices {
 
     @Autowired
     MonopatinRepository monopatinRepository;
+
     @Autowired
     ViajeFeignClient viajeFeignClient;
 
@@ -79,14 +80,14 @@ public class MonopatinServices {
         }
     }
 
-    public MonopatinResponseDto activarMonopatin(Long monopatinId, Long usuarioId) throws Exception{
+    public MonopatinResponseDto activarMonopatin(Long monopatinId, Long usuarioId, Long paradaDestinoId) throws Exception{
         Monopatin monopatin = this.monopatinRepository.findById(monopatinId)
                 .orElseThrow(() -> new Exception("El monopatin requerido no existe"));
-        if (monopatin.getDisponible()==true) {
+        if (monopatin.getDisponible() && this.viajeFeignClient.verificarParada(paradaDestinoId).getStatusCode().is2xxSuccessful()) {
             monopatin.setDisponible(false);
             this.monopatinRepository.save(monopatin);
 
-            this.viajeFeignClient.createViaje(monopatinId,usuarioId);
+            this.viajeFeignClient.createViaje(monopatinId,usuarioId,paradaDestinoId);
 
             return this.mapearEntidadADto(monopatin);
         } else {

@@ -14,6 +14,8 @@ import lombok.NoArgsConstructor;
 public class ViajeResponseDTO {
     private Long idUsuario;
     private Long idMonopatin;
+    private Long idParadaOrigen;
+    private Long idParadaDestino;
     private LocalDate fechaInicio;
     private LocalDate fechaFin;
     private Double kilometrosRecorridos;
