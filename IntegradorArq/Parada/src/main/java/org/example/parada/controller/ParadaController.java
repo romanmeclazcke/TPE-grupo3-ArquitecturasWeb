@@ -49,4 +49,22 @@ public class ParadaController {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
         }
     }
+
+    @GetMapping("/{idParada}")
+    public ResponseEntity<?> getParadaById(@PathVariable Long idParada){
+        try{
+            return ResponseEntity.status(HttpStatus.OK).body(this.paradaService.getParadaById(idParada));
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
+        }
+    }
+
+    @GetMapping("")
+    public ResponseEntity<?> getParadas(){
+        try{
+            return ResponseEntity.status(HttpStatus.OK).body(this.paradaService.getParadas());
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
+        }
+    }
 }

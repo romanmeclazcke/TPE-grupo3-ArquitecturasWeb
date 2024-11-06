@@ -22,6 +22,7 @@
         <module>Reporte</module>
         <module>Usuario</module>
         <module>Viaje</module>
+        <module>Mapa</module>
     </modules>
     <url/>
     <licenses>

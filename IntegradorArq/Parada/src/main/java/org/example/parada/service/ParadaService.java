@@ -12,6 +12,8 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class ParadaService {
@@ -83,6 +85,29 @@ public class ParadaService {
                 throw new NotFoundException("Parada con ID: " + id + " no encontrada");
         } catch (Exception e) {
             throw new RuntimeException(e.getMessage());
+        }
+    }
+
+
+    public ParadaResponseDto getParadaById(Long idParada) {
+        try {
+            Parada parada = this.paradaRepository.findById(idParada)
+                    .orElseThrow(() -> new NotFoundException("Parada con ID: " + idParada + " no encontrada"));
+            return this.mapearEntidadADto(parada);
+        } catch (Exception e) {
+            throw new RuntimeException("Error al obtener la parada: " + e.getMessage());
+        }
+    }
+
+    public List<ParadaResponseDto> getParadas() {
+        try {
+
+            List<Parada> paradas = paradaRepository.findAll();
+            return paradas.stream()
+                    .map(this::mapearEntidadADto)
+                    .collect(Collectors.toList());
+        } catch (Exception e) {
+            throw new RuntimeException("Error al obtener las paradas: " + e.getMessage(), e);
         }
     }
 
