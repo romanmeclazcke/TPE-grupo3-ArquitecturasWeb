@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9714064e-1399-4df4-affd-db1d8e41d3b1" name="Changes" comment="Cambie path del metodo crear viaje">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mapa/src/main/java/org/example/mapa/DTO/MonopatinResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mapa/src/main/java/org/example/mapa/DTO/MonopatinResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mapa/src/main/java/org/example/mapa/Model/Monopatin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mapa/src/main/java/org/example/mapa/Model/Monopatin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mapa/src/main/java/org/example/mapa/feignClients/MonopatinFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mapa/src/main/java/org/example/mapa/feignClients/MonopatinFeignClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mapa/src/main/java/org/example/mapa/service/MapsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mapa/src/main/java/org/example/mapa/service/MapsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/controller/MonopatinController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/controller/MonopatinController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/repository/MonopatinRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/repository/MonopatinRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/service/MonopatinServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/service/MonopatinServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/feignClient/ViajeFeignClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/feignClient/ViajeFeignClient.class" afterDir="false" />
-    </list>
+    <list default="true" id="9714064e-1399-4df4-affd-db1d8e41d3b1" name="Changes" comment="Cree logica para obtener los monopatines en un radio de 1 kilometro" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -233,7 +223,7 @@
       <workItem from="1730903612407" duration="6302000" />
       <workItem from="1730935810866" duration="1477000" />
       <workItem from="1730938291047" duration="453000" />
-      <workItem from="1730979617953" duration="1147000" />
+      <workItem from="1730979617953" duration="1671000" />
     </task>
     <task id="LOCAL-00001" summary="Configure el clientsMonopatin, ajuste puertos de los microservicios">
       <option name="closed" value="true" />
@@ -315,7 +305,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730938724072</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Cree logica para obtener los monopatines en un radio de 1 kilometro">
+      <option name="closed" value="true" />
+      <created>1730981138853</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1730981138853</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -332,6 +330,7 @@
     <MESSAGE value="actualice imports" />
     <MESSAGE value="Arregle error en ciclos de dependencias" />
     <MESSAGE value="Cambie path del metodo crear viaje" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cambie path del metodo crear viaje" />
+    <MESSAGE value="Cree logica para obtener los monopatines en un radio de 1 kilometro" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cree logica para obtener los monopatines en un radio de 1 kilometro" />
   </component>
 </project>
