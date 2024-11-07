@@ -11,6 +11,7 @@ import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -104,6 +105,20 @@ public class MonopatinServices {
             monopatin.setKilometros(monopatin.getKilometros()+monopatinSumaKilometrosDto.getKilometros());
             this.monopatinRepository.save(monopatin);
             return this.mapearEntidadADto(monopatin);
+        } catch (Exception e) {
+            throw new Exception(e.getMessage());
+        }
+    }
+
+
+    public List<MonopatinResponseDto> getMonopatinesEnRadio1km(Integer x, Integer y) throws Exception {
+        try{
+            List<Monopatin> monopatines= this.monopatinRepository.getMonopatinesEnRadio1km(x,y);
+            List<MonopatinResponseDto> respuesta = new ArrayList<>();
+            for (Monopatin monopatin : monopatines) {
+                respuesta.add(this.mapearEntidadADto(monopatin));
+            }
+            return respuesta;
         } catch (Exception e) {
             throw new Exception(e.getMessage());
         }

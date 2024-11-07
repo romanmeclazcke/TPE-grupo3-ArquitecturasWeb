@@ -13,4 +13,6 @@ public class MonopatinResponseDto {
     private Long id;
     private Duration tiempo_uso;
     private Double kilometros;
+    private Integer x;
+    private Integer y;
 }

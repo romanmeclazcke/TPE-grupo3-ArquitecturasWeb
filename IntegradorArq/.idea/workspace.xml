@@ -4,17 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9714064e-1399-4df4-affd-db1d8e41d3b1" name="Changes" comment="Arregle error en ciclos de dependencias">
+    <list default="true" id="9714064e-1399-4df4-affd-db1d8e41d3b1" name="Changes" comment="Cambie path del metodo crear viaje">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gestion/target/classes/org/example/gestion/GestionApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/Gestion/target/classes/org/example/gestion/GestionApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gestion/target/classes/org/example/gestion/controller/GestionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Gestion/target/classes/org/example/gestion/controller/GestionController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gestion/target/classes/org/example/gestion/service/GestionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/Gestion/target/classes/org/example/gestion/service/GestionService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gestion/target/test-classes/org/example/gestion/GestionApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/Gestion/target/test-classes/org/example/gestion/GestionApplicationTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mantenimiento/target/test-classes/org/example/mantenimiento/MantenimientoApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mantenimiento/target/test-classes/org/example/mantenimiento/MantenimientoApplicationTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/feignClient/ViajeFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/feignClient/ViajeFeignClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reporte/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Reporte/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Usuario/target/classes/org/example/usuario/repository/CuentaRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/target/classes/org/example/usuario/repository/CuentaRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/controller/ViajeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/controller/ViajeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mapa/src/main/java/org/example/mapa/DTO/MonopatinResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mapa/src/main/java/org/example/mapa/DTO/MonopatinResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mapa/src/main/java/org/example/mapa/Model/Monopatin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mapa/src/main/java/org/example/mapa/Model/Monopatin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mapa/src/main/java/org/example/mapa/feignClients/MonopatinFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mapa/src/main/java/org/example/mapa/feignClients/MonopatinFeignClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mapa/src/main/java/org/example/mapa/service/MapsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mapa/src/main/java/org/example/mapa/service/MapsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/controller/MonopatinController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/controller/MonopatinController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/repository/MonopatinRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/repository/MonopatinRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/service/MonopatinServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/service/MonopatinServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/feignClient/ViajeFeignClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/feignClient/ViajeFeignClient.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,7 +232,8 @@
       <workItem from="1730902969519" duration="21000" />
       <workItem from="1730903612407" duration="6302000" />
       <workItem from="1730935810866" duration="1477000" />
-      <workItem from="1730938291047" duration="370000" />
+      <workItem from="1730938291047" duration="453000" />
+      <workItem from="1730979617953" duration="1147000" />
     </task>
     <task id="LOCAL-00001" summary="Configure el clientsMonopatin, ajuste puertos de los microservicios">
       <option name="closed" value="true" />
@@ -307,7 +307,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730937150516</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Cambie path del metodo crear viaje">
+      <option name="closed" value="true" />
+      <created>1730938724072</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1730938724072</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -323,6 +331,7 @@
     <MESSAGE value="Cree Microservicios mapa para poder consultar el monpatin mas cerca de tu ubicacion y la distancia entre 2 paradas" />
     <MESSAGE value="actualice imports" />
     <MESSAGE value="Arregle error en ciclos de dependencias" />
-    <option name="LAST_COMMIT_MESSAGE" value="Arregle error en ciclos de dependencias" />
+    <MESSAGE value="Cambie path del metodo crear viaje" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cambie path del metodo crear viaje" />
   </component>
 </project>

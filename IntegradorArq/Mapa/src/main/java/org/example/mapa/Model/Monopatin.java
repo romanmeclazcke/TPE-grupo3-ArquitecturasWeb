@@ -14,4 +14,6 @@ public class Monopatin {
     private Duration tiempo_uso;
     private Double kilometros;
     private Boolean disponible;
+    private Integer x;
+    private Integer y;
 }

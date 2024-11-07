@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -48,29 +49,14 @@ public class MapsService {
 
 
 
-    public MonopatinResponseDto getMonopatinByUbicacion(UbicacionRequestDto monopatinRequestDto) {
+    public List<MonopatinResponseDto> getMonopatinByUbicacion(UbicacionRequestDto monopatinRequestDto) {
         try {
-            MonopatinResponseDto monopatinResponseDto = new MonopatinResponseDto();
-            List<Parada> paradas = this.paradaFeignClient.getParadas();
-
-            if (paradas.isEmpty()) {
-                throw new RuntimeException("No se encontraron paradas");
+            List<MonopatinResponseDto> monopatinResponseDto = new ArrayList<>();
+            List<Monopatin> monopatinesCercanos = this.monopatinFeignClient.getMonopatinesEnRadio1km(Math.toIntExact(monopatinRequestDto.getX()), Math.toIntExact(monopatinRequestDto.getY()));
+            for (Monopatin monopatin : monopatinesCercanos) {
+                monopatinResponseDto.add(new MonopatinResponseDto(monopatin.getId(),monopatin.getTiempo_uso(),monopatin.getKilometros(),monopatin.getX(),monopatin.getY()));
             }
-
-            for (Parada parada : paradas) {
-                if (parada.getMonopatines().size() > 0) {
-                    Monopatin monopatin = this.monopatinFeignClient.getMonopatinById(parada.getMonopatines().get(0));
-                    if (monopatin == null) {
-                        throw new RuntimeException("No se encontró el monopatín con ID: " + parada.getMonopatines().get(0));
-                    }
-                    monopatinResponseDto.setId(monopatin.getId());
-                    monopatinResponseDto.setKilometros(monopatin.getKilometros());
-                    monopatinResponseDto.setTiempo_uso(monopatin.getTiempo_uso());
-                    return monopatinResponseDto;
-                }
-            }
-            return new MonopatinResponseDto(); // Retorna un DTO vacío
-
+            return monopatinResponseDto;
         } catch (Exception e) {
             throw new RuntimeException("Error al obtener el monopatín por ubicación: " + e.getMessage(), e);
         }
