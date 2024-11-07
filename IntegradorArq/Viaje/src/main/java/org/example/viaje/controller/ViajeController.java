@@ -22,8 +22,8 @@ public class ViajeController {
     @Autowired
     ParadaFeignClient paradaFeignClient;
 
-    @PostMapping("/crear/{monopatinId}/usuario/{usuarioId}/paradaOrigen/{paradaId}")
-    public ResponseEntity<?> createViaje(@PathVariable("monopatinId") Long monopatinId, @PathVariable("usuarioId") Long usuarioId, @PathVariable Long paradaId) {
+    @PostMapping("/crear/{monopatinId}/usuario/{usuarioId}/paradaDestino/{paradaId}")
+    public ResponseEntity<?> createViaje(@PathVariable("monopatinId") Long monopatinId, @PathVariable("usuarioId") Long usuarioId, @PathVariable("paradaId") Long paradaId) {
         try {
             return ResponseEntity.status(HttpStatus.CREATED).body(viajeService.save(monopatinId,usuarioId,paradaId));
         } catch (Exception e) {

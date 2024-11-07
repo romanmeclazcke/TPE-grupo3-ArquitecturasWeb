@@ -4,32 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9714064e-1399-4df4-affd-db1d8e41d3b1" name="Changes" comment="actualice imports">
+    <list default="true" id="9714064e-1399-4df4-affd-db1d8e41d3b1" name="Changes" comment="Arregle error en ciclos de dependencias">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gestion/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Gestion/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mapa/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Mapa/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/DTO/MonopatinResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/DTO/MonopatinResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/entity/Monopatin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/entity/Monopatin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/service/MonopatinServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/service/MonopatinServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Monopatin/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/DTO/MonopatinResponseDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/DTO/MonopatinResponseDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/entity/Monopatin.class" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/entity/Monopatin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/service/MonopatinServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/service/MonopatinServices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parada/src/main/java/org/example/parada/DTO/ParadaResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parada/src/main/java/org/example/parada/DTO/ParadaResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parada/src/main/java/org/example/parada/entity/Parada.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parada/src/main/java/org/example/parada/entity/Parada.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parada/src/main/java/org/example/parada/service/ParadaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parada/src/main/java/org/example/parada/service/ParadaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parada/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Parada/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parada/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Parada/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parada/target/classes/org/example/parada/DTO/ParadaResponseDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/Parada/target/classes/org/example/parada/DTO/ParadaResponseDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parada/target/classes/org/example/parada/entity/Parada.class" beforeDir="false" afterPath="$PROJECT_DIR$/Parada/target/classes/org/example/parada/entity/Parada.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parada/target/classes/org/example/parada/service/ParadaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/Parada/target/classes/org/example/parada/service/ParadaService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reporte/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Reporte/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/repository/CuentaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/repository/CuentaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/service/ViajeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/service/ViajeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gestion/target/classes/org/example/gestion/GestionApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/Gestion/target/classes/org/example/gestion/GestionApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gestion/target/classes/org/example/gestion/controller/GestionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Gestion/target/classes/org/example/gestion/controller/GestionController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gestion/target/classes/org/example/gestion/service/GestionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/Gestion/target/classes/org/example/gestion/service/GestionService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gestion/target/test-classes/org/example/gestion/GestionApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/Gestion/target/test-classes/org/example/gestion/GestionApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mantenimiento/target/test-classes/org/example/mantenimiento/MantenimientoApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mantenimiento/target/test-classes/org/example/mantenimiento/MantenimientoApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/feignClient/ViajeFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/feignClient/ViajeFeignClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reporte/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Reporte/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuario/target/classes/org/example/usuario/repository/CuentaRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/target/classes/org/example/usuario/repository/CuentaRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/controller/ViajeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/controller/ViajeController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,41 +68,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.GestionApplication.executor": "Run",
-    "Spring Boot.MantenimientoApplication.executor": "Run",
-    "Spring Boot.MapaApplication.executor": "Run",
-    "Spring Boot.MonopatinApplication.executor": "Run",
-    "Spring Boot.ParadaApplication.executor": "Run",
-    "Spring Boot.ReporteApplication.executor": "Run",
-    "Spring Boot.UsuarioApplication.executor": "Run",
-    "Spring Boot.ViajeApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/maiam/OneDrive/Documentos/TUDAI/2° año/Arquitecturas Web/IdeaProjects/TPE-grupo3-ArquitecturasWeb/IntegradorArq",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.39770114",
-    "run.configurations.included.in.services": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.GestionApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.MantenimientoApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.MapaApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.MonopatinApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ParadaApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ReporteApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.UsuarioApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ViajeApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/maiam/OneDrive/Documentos/TUDAI/2° año/Arquitecturas Web/IdeaProjects/TPE-grupo3-ArquitecturasWeb/IntegradorArq&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.39770114&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "JAVA"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;JAVA&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Maps/src/main/resources" />
@@ -247,7 +232,8 @@
       <workItem from="1730899216993" duration="3122000" />
       <workItem from="1730902969519" duration="21000" />
       <workItem from="1730903612407" duration="6302000" />
-      <workItem from="1730935810866" duration="1236000" />
+      <workItem from="1730935810866" duration="1477000" />
+      <workItem from="1730938291047" duration="370000" />
     </task>
     <task id="LOCAL-00001" summary="Configure el clientsMonopatin, ajuste puertos de los microservicios">
       <option name="closed" value="true" />
@@ -313,7 +299,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730902206257</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Arregle error en ciclos de dependencias">
+      <option name="closed" value="true" />
+      <created>1730937150516</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1730937150516</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,6 +322,7 @@
     <MESSAGE value="Cree metodo para poder sumar la cantidad de kilometros de un monopatin" />
     <MESSAGE value="Cree Microservicios mapa para poder consultar el monpatin mas cerca de tu ubicacion y la distancia entre 2 paradas" />
     <MESSAGE value="actualice imports" />
-    <option name="LAST_COMMIT_MESSAGE" value="actualice imports" />
+    <MESSAGE value="Arregle error en ciclos de dependencias" />
+    <option name="LAST_COMMIT_MESSAGE" value="Arregle error en ciclos de dependencias" />
   </component>
 </project>

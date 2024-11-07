@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 @FeignClient(name = "viaje-service", url = "http://localhost:8084")
 public interface ViajeFeignClient {
 
-    @PostMapping("/viaje/crear/{monopatinId}/usuario/{usuarioId}/paradaOrigen/{paradaId}")
+    @PostMapping("/viaje/crear/{monopatinId}/usuario/{usuarioId}/paradaDestino/{paradaId}")
     void createViaje(@PathVariable("monopatinId") Long monopatinId,@PathVariable("usuarioId") Long usuarioId ,@PathVariable("paradaId") Long paradaId);
 
     @GetMapping("/viaje/verificar-parada/{paradaId}")
