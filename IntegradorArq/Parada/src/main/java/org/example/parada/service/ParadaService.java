@@ -111,6 +111,16 @@ public class ParadaService {
     }
 
 
+    public ParadaResponseDto getParadaContieneMonopatin(Long idMonopatin)throws  Exception{
+        try{
+            Parada p =this.paradaRepository.getParadaContieneMonopatin(idMonopatin);
+            return this.mapearEntidadADto(p);
+        }catch (Exception e){
+            throw new Exception(e.getMessage());
+        }
+    }
+
+
     private ParadaResponseDto mapearEntidadADto(Parada parada) {
         ParadaResponseDto responseDto = new ParadaResponseDto();
         responseDto.setY(parada.getY());

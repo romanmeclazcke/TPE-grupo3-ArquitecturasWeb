@@ -67,4 +67,14 @@ public class ParadaController {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
         }
     }
+
+
+    @GetMapping("/contine-monopatin/{idMonopatin}")
+    public ResponseEntity<?> getParadaContieneMonopatin(@PathVariable Long idMonopatin){
+        try{
+            return ResponseEntity.status(HttpStatus.OK).body(this.paradaService.getParadaContieneMonopatin(idMonopatin));
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
+        }
+    }
 }

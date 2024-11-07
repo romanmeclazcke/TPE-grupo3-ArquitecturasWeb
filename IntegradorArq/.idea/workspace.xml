@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9714064e-1399-4df4-affd-db1d8e41d3b1" name="Changes" comment="Cree logica para obtener los monopatines en un radio de 1 kilometro" />
+    <list default="true" id="9714064e-1399-4df4-affd-db1d8e41d3b1" name="Changes" comment="Cree logica para obtener los monopatines en un radio de 1 kilometro">
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/controller/MonopatinController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/controller/MonopatinController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/controller/MonopatinController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/controller/MonopatinController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Parada/src/main/java/org/example/parada/controller/ParadaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parada/src/main/java/org/example/parada/controller/ParadaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Parada/src/main/java/org/example/parada/repository/ParadaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parada/src/main/java/org/example/parada/repository/ParadaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Parada/src/main/java/org/example/parada/service/ParadaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parada/src/main/java/org/example/parada/service/ParadaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/feignClients/ParadaFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/feignClients/ParadaFeignClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/service/ViajeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/service/ViajeService.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -98,6 +108,7 @@
       <recent name="C:\Users\maiam\OneDrive\Documentos\TUDAI\2° año\Arquitecturas Web\IdeaProjects\TPE-grupo3-ArquitecturasWeb\IntegradorArq\Monopatin\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example.viaje.Model" />
       <recent name="org.example.mapa.feignClients" />
       <recent name="org.example.parada.service.exception" />
     </key>

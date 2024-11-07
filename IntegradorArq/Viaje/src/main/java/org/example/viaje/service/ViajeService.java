@@ -3,9 +3,11 @@ package org.example.viaje.service;
 //import org.example.monopatin.entity.Monopatin;
 import org.example.viaje.DTO.ViajeRequestDTO;
 import org.example.viaje.DTO.ViajeResponseDTO;
+import org.example.viaje.Model.Parada;
 import org.example.viaje.entity.Viaje;
 //import org.example.viaje.feignClients.MonopatinFeignClient;
 //import org.example.viaje.feignClients.UsuarioFeignClient;
+import org.example.viaje.feignClients.ParadaFeignClient;
 import org.example.viaje.repository.ViajeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cglib.core.Local;
@@ -13,6 +15,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -23,15 +26,22 @@ public class ViajeService {
     @Autowired
     ViajeRepository viajeRepository;
 
+    @Autowired
+    ParadaFeignClient paradaFeignClient;
+
     @Transactional
     public ViajeResponseDTO save(Long monopatinId, Long usuarioId, Long paradaDestinoId) {
+
+        Parada p = this.paradaFeignClient.getParadaQueContieneMonopatin(monopatinId);
+        System.out.println("Parada"+p);
         Viaje viaje = new Viaje();
         viaje.setId_monopatin(monopatinId);
         viaje.setId_usuario(usuarioId);
-        //------------#### FALTA CONSEGUIR PARADA ORIGEN
+        viaje.setId_parada_origen(p.getId());
+        viaje.setHora_inicio(LocalDateTime.now());
         viaje.setId_parada_destino(paradaDestinoId);
         viaje.setFecha_inicio(LocalDate.now());
-        viaje.setFecha_fin(null); //es null hasta invocar terminarViaje
+        viaje.setFecha_fin(null);
 
         viajeRepository.save(viaje);
 
