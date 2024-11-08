@@ -6,21 +6,42 @@ import org.example.viaje.repository.TarifaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Service
 public class TarifaService {
+
     @Autowired
     TarifaRepository tarifaRepository;
 
-
-
     public TarifaResponseDto crearTarfia(TarifaRequestDto TarifaRequestDto) throws Exception{
         try{
-            Tarifa  t= this.mapearDtoAEntididad(TarifaRequestDto);
+            Tarifa t = this.mapearDtoAEntididad(TarifaRequestDto);
 
             this.tarifaRepository.save(t);
-
             return this.mapearEntididadADto(t);
         }catch(Exception e){
+            throw new Exception(e.getMessage());
+        }
+    }
+
+
+    public List<TarifaResponseDto> getAll() throws Exception {
+        try{
+            List<Tarifa> tarifas = this.tarifaRepository.findAll();
+            return tarifas.stream()
+                    .map(this::mapearEntididadADto)
+                    .collect(Collectors.toList());
+        } catch (Exception e) {
+            throw new Exception(e.getMessage());
+        }
+    }
+
+    public TarifaResponseDto getById(Long idTarifa) throws Exception {
+        try {
+            return this.mapearEntididadADto(this.tarifaRepository.findById(idTarifa).get());
+        } catch (Exception e) {
             throw new Exception(e.getMessage());
         }
     }

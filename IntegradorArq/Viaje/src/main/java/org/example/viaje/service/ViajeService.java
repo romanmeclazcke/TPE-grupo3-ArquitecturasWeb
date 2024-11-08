@@ -1,9 +1,9 @@
 package org.example.viaje.service;
 
 //import org.example.monopatin.entity.Monopatin;
+import org.example.viaje.Model.Parada;
 import org.example.viaje.DTO.ViajeRequestDTO;
 import org.example.viaje.DTO.ViajeResponseDTO;
-import org.example.viaje.Model.Parada;
 import org.example.viaje.entity.Viaje;
 //import org.example.viaje.feignClients.MonopatinFeignClient;
 //import org.example.viaje.feignClients.UsuarioFeignClient;
@@ -37,7 +37,7 @@ public class ViajeService {
         Viaje viaje = new Viaje();
         viaje.setId_monopatin(monopatinId);
         viaje.setId_usuario(usuarioId);
-        viaje.setId_parada_origen(p.getId());
+        viaje.setId_parada_origen(p.getIdParada());
         viaje.setHora_inicio(LocalDateTime.now());
         viaje.setId_parada_destino(paradaDestinoId);
         viaje.setFecha_inicio(LocalDate.now());
