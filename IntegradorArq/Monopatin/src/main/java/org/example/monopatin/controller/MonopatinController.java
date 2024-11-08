@@ -93,4 +93,31 @@ public class MonopatinController {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
         }
     }
+
+    @GetMapping("/order/kilometros")
+    public ResponseEntity<?> getMonopatinesPorKilometros() throws Exception {
+        try {
+            return ResponseEntity.status(HttpStatus.OK).body(monopatinServices.getMonopatinesPorKilometros());
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
+        }
+    }
+
+    @GetMapping("/order/tiempo-uso/con-pausa")
+    public ResponseEntity<?> getMonopatinesConTiempoPausa() throws Exception {
+        try {
+            return ResponseEntity.status(HttpStatus.OK).body(monopatinServices.getMonopatinesPorKilometros());
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
+        }
+    }
+
+    @GetMapping("/order/tiempo-uso/sin-pausa")
+    public ResponseEntity<?> getMonopatinesSinTiempoPausa() throws Exception {
+        try {
+            return ResponseEntity.status(HttpStatus.OK).body(monopatinServices.getMonopatinesSinTiempoPausa());
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
+        }
+    }
 }

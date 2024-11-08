@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9714064e-1399-4df4-affd-db1d8e41d3b1" name="Changes" comment="Cree logica para saber donde se encuentra un monopatin al iniciar un viaje" />
+    <list default="true" id="9714064e-1399-4df4-affd-db1d8e41d3b1" name="Changes" comment="Cree logica para saber donde se encuentra un monopatin al iniciar un viaje">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/controller/MonopatinController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/controller/MonopatinController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/repository/MonopatinRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/repository/MonopatinRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/service/MonopatinServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/service/MonopatinServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reporte/src/main/java/org/example/reporte/DTO/ReporteKilometrosResponseDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reporte/src/main/java/org/example/reporte/DTO/ReporteResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reporte/src/main/java/org/example/reporte/DTO/ReporteResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reporte/src/main/java/org/example/reporte/DTO/ReporteTiempoResponseDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reporte/src/main/java/org/example/reporte/controller/ReporteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reporte/src/main/java/org/example/reporte/controller/ReporteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reporte/src/main/java/org/example/reporte/service/ReporteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reporte/src/main/java/org/example/reporte/service/ReporteService.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -98,9 +108,11 @@
       <recent name="C:\Users\maiam\OneDrive\Documentos\TUDAI\2° año\Arquitecturas Web\IdeaProjects\TPE-grupo3-ArquitecturasWeb\IntegradorArq\Monopatin\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example.reporte.DTO" />
+      <recent name="org.example.reporte.controller" />
+      <recent name="org.example.reporte.feignClients" />
       <recent name="org.example.viaje.Model" />
       <recent name="org.example.mapa.feignClients" />
-      <recent name="org.example.parada.service.exception" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -113,7 +125,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ViajeApplication">
+  <component name="RunManager" selected="Spring Boot.MantenimientoApplication">
     <configuration name="GestionApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="Gestion" />
@@ -225,6 +237,8 @@
       <workItem from="1730935810866" duration="1477000" />
       <workItem from="1730938291047" duration="453000" />
       <workItem from="1730979617953" duration="1671000" />
+      <workItem from="1731072796036" duration="968000" />
+      <workItem from="1731097678914" duration="1592000" />
     </task>
     <task id="LOCAL-00001" summary="Configure el clientsMonopatin, ajuste puertos de los microservicios">
       <option name="closed" value="true" />
@@ -322,7 +336,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731007512561</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Cree logica para saber donde se encuentra un monopatin al iniciar un viaje">
+      <option name="closed" value="true" />
+      <created>1731007589692</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1731007589692</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -11,4 +11,13 @@ public interface MonopatinRepository extends JpaRepository<Monopatin, Long> {
 
     @Query("SELECT m FROM Monopatin  m where m.x between  :x-500 and :x+500 AND m.y between  :y-500 AND :y+500")
     List<Monopatin> getMonopatinesEnRadio1km(@PathVariable("x") Integer x, @PathVariable("y")Integer y);
+
+
+    @Query("SELECT  m from Monopatin  m order by  m.kilometros desc ")
+    List<Monopatin> getMonopatinesPorKilometros();
+
+
+
+    @Query("SELECT  m from Monopatin  m order by  m.tiempo_uso desc ")
+    List<Monopatin> getMonopatinesSinTiempoPausa();
 }

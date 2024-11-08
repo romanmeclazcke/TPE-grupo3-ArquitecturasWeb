@@ -17,10 +17,29 @@ public class ReporteController {
     @Autowired
     ReporteService reporteService;
 
-    @GetMapping("")
-    public ResponseEntity<?> obtenerReportePorTipo(@RequestParam(required = true) String tipo, @RequestParam(required = true) Long idMonopatin) {
+    @GetMapping("/kilometros")
+    public ResponseEntity<?> obtenerReporteKilometro() {
         try{
-            return ResponseEntity.status(HttpStatus.OK).body(this.reporteService.obtenerReportePorTipo(tipo, idMonopatin));
+            return ResponseEntity.status(HttpStatus.OK).body(this.reporteService.obtenerReporteKilometro());
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
+        }
+    }
+
+    @GetMapping("/tiempo")
+    public ResponseEntity<?> obtenerReporteTiempoSinPausa() {
+        try{
+            return ResponseEntity.status(HttpStatus.OK).body(this.reporteService.obtenerReporteTiempoSinPausa());
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
+        }
+    }
+
+
+    @GetMapping("/tiempo/con-pausa")
+    public ResponseEntity<?> obtenerReporteTiempoConPausa() {
+        try{
+            return ResponseEntity.status(HttpStatus.OK).body(this.reporteService.obtenerReporteKilometro());
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
         }

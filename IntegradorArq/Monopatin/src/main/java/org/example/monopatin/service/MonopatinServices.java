@@ -124,6 +124,48 @@ public class MonopatinServices {
         }
     }
 
+
+    public List<MonopatinResponseDto> getMonopatinesPorKilometros() throws Exception {
+        try{
+            List<Monopatin> monopatines= this.monopatinRepository.getMonopatinesPorKilometros();
+            List<MonopatinResponseDto> respuesta = new ArrayList<>();
+            for (Monopatin monopatin : monopatines) {
+                respuesta.add(this.mapearEntidadADto(monopatin));
+            }
+            return respuesta;
+        } catch (Exception e) {
+            throw new Exception(e.getMessage());
+        }
+    }
+
+
+    public List<MonopatinResponseDto> getMonopatinesconTiempoPausa() throws Exception {
+        try{
+            List<Monopatin> monopatines= this.monopatinRepository.getMonopatinesPorKilometros();
+            List<MonopatinResponseDto> respuesta = new ArrayList<>();
+            for (Monopatin monopatin : monopatines) {
+                respuesta.add(this.mapearEntidadADto(monopatin));
+            }
+            return respuesta;
+        } catch (Exception e) {
+            throw new Exception(e.getMessage());
+        }
+    }
+
+
+    public List<MonopatinResponseDto> getMonopatinesSinTiempoPausa() throws Exception {
+        try{
+            List<Monopatin> monopatines= this.monopatinRepository.getMonopatinesSinTiempoPausa();
+            List<MonopatinResponseDto> respuesta = new ArrayList<>();
+            for (Monopatin monopatin : monopatines) {
+                respuesta.add(this.mapearEntidadADto(monopatin));
+            }
+            return respuesta;
+        } catch (Exception e) {
+            throw new Exception(e.getMessage());
+        }
+    }
+
     private Monopatin mapearDtoAEntidad(MonopatinRequestDto MonopatinRequesDto) {
         Monopatin monopatin = new Monopatin();
         monopatin.setTiempo_uso(MonopatinRequesDto.getTiempo_uso());
