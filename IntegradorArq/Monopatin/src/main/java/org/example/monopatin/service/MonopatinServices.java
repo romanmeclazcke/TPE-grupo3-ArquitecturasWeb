@@ -1,5 +1,6 @@
 package org.example.monopatin.service;
 
+import org.example.monopatin.DTO.MonopatinDisponibilidadDTO;
 import org.example.monopatin.DTO.MonopatinRequestDto;
 import org.example.monopatin.DTO.MonopatinResponseDto;
 import org.example.monopatin.DTO.MonopatinSumaKilometrosDto;
@@ -161,6 +162,17 @@ public class MonopatinServices {
                 respuesta.add(this.mapearEntidadADto(monopatin));
             }
             return respuesta;
+        } catch (Exception e) {
+            throw new Exception(e.getMessage());
+        }
+    }
+
+    public MonopatinDisponibilidadDTO getDisponibilidad() throws Exception{
+        try {
+            MonopatinDisponibilidadDTO responseDTO = new MonopatinDisponibilidadDTO();
+        responseDTO.setMonopatinesDisponibles(monopatinRepository.countByDisponibilidad(true));
+        responseDTO.setMonopatinesEnMantenimiento(monopatinRepository.countByDisponibilidad(false));
+        return responseDTO;
         } catch (Exception e) {
             throw new Exception(e.getMessage());
         }

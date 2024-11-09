@@ -74,4 +74,13 @@ public class UsuarioController {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("{\"error\":\"Error. No se pudo editar el usuario con id: " + userId + ".\"}");
         }
     }
+
+    @GetMapping("/cercanos")
+    public ResponseEntity<?> getMonopatinesCercanos() {
+        try {
+            return ResponseEntity.status(HttpStatus.OK).body(usuarioService.getMonopatinesCercanos());
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
+        }
+    }
 }

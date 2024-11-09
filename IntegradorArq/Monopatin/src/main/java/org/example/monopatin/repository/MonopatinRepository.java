@@ -1,9 +1,12 @@
 package org.example.monopatin.repository;
 
+import org.example.monopatin.DTO.MonopatinDisponibilidadDTO;
 import org.example.monopatin.entity.Monopatin;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.web.bind.annotation.PathVariable;
+
+import feign.Param;
 
 import java.util.List;
 
@@ -20,4 +23,10 @@ public interface MonopatinRepository extends JpaRepository<Monopatin, Long> {
 
     @Query("SELECT  m from Monopatin  m order by  m.tiempo_uso desc ")
     List<Monopatin> getMonopatinesSinTiempoPausa();
+
+
+    @Query("SELECT COUNT(*) FROM Monopatin m WHERE (m.disponible=:disponibilidad)")
+    int countByDisponibilidad(@Param("disponibilidad") boolean disponible);
+    
+    
 }
