@@ -1,8 +1,8 @@
 package org.example.reporte.service;
 
 
-import org.example.monopatin.entity.Monopatin;
 import org.example.reporte.DTO.ReporteResponseDto;
+import org.example.reporte.Model.Monopatin;
 import org.example.reporte.feignClients.MonopatinFeignClient;
 import org.example.reporte.feignClients.ViajeFeignClient;
 import org.example.reporte.repository.ReporteRepository;
@@ -24,9 +24,9 @@ public class ReporteService {
     MonopatinFeignClient monopatinFeignClient;
 
     public List<ReporteResponseDto> obtenerReporteKilometro() {
-        List<Monopatin> monopatines = this.monopatinFeignClient.getMonopatinesPorKilometros();
+        List<org.example.reporte.Model.Monopatin> monopatines = this.monopatinFeignClient.getMonopatinesPorKilometros();
         List<ReporteResponseDto> reporteKilometros = new ArrayList<>();
-        for (Monopatin monopatin : monopatines) {
+        for (org.example.reporte.Model.Monopatin monopatin : monopatines) {
             reporteKilometros.add(this.mapearEntidadADto(monopatin));
         }
         return reporteKilometros;
@@ -34,9 +34,9 @@ public class ReporteService {
 
 
     public List<ReporteResponseDto> obtenerReporteTiempoSinPausa() {
-        List<Monopatin> monopatines = this.monopatinFeignClient.getMonopatinesSinTiempoPausa();
+        List<org.example.reporte.Model.Monopatin> monopatines = this.monopatinFeignClient.getMonopatinesSinTiempoPausa();
         List<ReporteResponseDto> reporteKilometros = new ArrayList<>();
-        for (Monopatin monopatin : monopatines) {
+        for (org.example.reporte.Model.Monopatin monopatin : monopatines) {
             reporteKilometros.add(this.mapearEntidadADto(monopatin));
         }
         return reporteKilometros;
@@ -44,9 +44,9 @@ public class ReporteService {
 
 
     public List<ReporteResponseDto> obtenerReporteTiempoConPausa() {
-        List<Monopatin> monopatines = this.monopatinFeignClient.getMonopatinesConTiempoPausa();
+        List<org.example.reporte.Model.Monopatin> monopatines = this.monopatinFeignClient.getMonopatinesConTiempoPausa();
         List<ReporteResponseDto> reporteKilometros = new ArrayList<>();
-        for (Monopatin monopatin : monopatines) {
+        for (org.example.reporte.Model.Monopatin monopatin : monopatines) {
             reporteKilometros.add(this.mapearEntidadADto(monopatin));
         }
         return reporteKilometros;
@@ -54,7 +54,7 @@ public class ReporteService {
 
 
 
-    private ReporteResponseDto mapearEntidadADto(Monopatin m ) {
+    private ReporteResponseDto mapearEntidadADto(Monopatin m) {
         ReporteResponseDto dto = new ReporteResponseDto();
         dto.setIdMonopatin(m.getId());
         dto.setKilometros(m.getKilometros());
