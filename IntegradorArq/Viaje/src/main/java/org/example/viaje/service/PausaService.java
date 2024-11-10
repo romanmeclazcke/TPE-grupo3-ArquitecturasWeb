@@ -10,7 +10,9 @@ import org.springframework.stereotype.Service;
 
 import java.sql.Time;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -41,6 +43,20 @@ public class PausaService {
             this.pausaRepository.save(p);
 
             return this.mapearDeEntidadADto(p);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+
+    public List<PausaResponseDto> getPausasPorViaje(Long idViaje){
+        try {
+            List<Pausa> pausas = this.pausaRepository.getPausasPorViaje(idViaje);
+            List<PausaResponseDto> pausasResponseDtos = new ArrayList<>();
+            for (Pausa pausa : pausas) {
+                pausasResponseDtos.add(this.mapearDeEntidadADto(pausa));
+            }
+            return pausasResponseDtos;
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

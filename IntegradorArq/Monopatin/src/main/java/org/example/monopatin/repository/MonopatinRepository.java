@@ -25,8 +25,9 @@ public interface MonopatinRepository extends JpaRepository<Monopatin, Long> {
     List<Monopatin> getMonopatinesSinTiempoPausa();
 
 
-    @Query("SELECT COUNT(*) FROM Monopatin m WHERE (m.disponible=:disponibilidad)")
-    int countByDisponibilidad(@Param("disponibilidad") boolean disponible);
-    
-    
+    @Query("SELECT COUNT(m) FROM Monopatin m WHERE m.disponible = :disponible")
+    int countByDisponibilidad(@Param("disponible") boolean disponible);
+
+
+
 }
