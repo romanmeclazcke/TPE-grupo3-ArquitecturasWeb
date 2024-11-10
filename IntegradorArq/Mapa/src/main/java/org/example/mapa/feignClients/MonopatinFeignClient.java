@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
-@FeignClient(name = "monopatin-service", url = "http://localhost:8081")
+@FeignClient(name = "monopatin-service", url = "http://localhost:8083")
 public interface MonopatinFeignClient {
 
     @GetMapping("/monopatines/{monopatinId}")

@@ -5,7 +5,6 @@ import org.example.reporte.DTO.ReporteResponseDto;
 import org.example.reporte.Model.Monopatin;
 import org.example.reporte.feignClients.MonopatinFeignClient;
 import org.example.reporte.feignClients.ViajeFeignClient;
-import org.example.reporte.repository.ReporteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,9 +13,6 @@ import java.util.List;
 
 @Service
 public class ReporteService {
-
-    @Autowired
-    ReporteRepository reporteRepository;
     @Autowired
     ViajeFeignClient viajeFeignClient;
 
