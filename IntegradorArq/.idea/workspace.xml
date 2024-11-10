@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9714064e-1399-4df4-affd-db1d8e41d3b1" name="Changes" comment="Cree logica para saber donde se encuentra un monopatin al iniciar un viaje">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/controller/TarifaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/controller/TarifaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/repository/TarifaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/repository/TarifaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/service/TarifaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/service/TarifaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/service/TarifaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/service/TarifaService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,7 +232,7 @@
       <workItem from="1731072796036" duration="968000" />
       <workItem from="1731097678914" duration="1592000" />
       <workItem from="1731103233467" duration="1900000" />
-      <workItem from="1731249267496" duration="732000" />
+      <workItem from="1731249267496" duration="1044000" />
     </task>
     <task id="LOCAL-00001" summary="Configure el clientsMonopatin, ajuste puertos de los microservicios">
       <option name="closed" value="true" />
