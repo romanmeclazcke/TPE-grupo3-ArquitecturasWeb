@@ -5,10 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9714064e-1399-4df4-affd-db1d8e41d3b1" name="Changes" comment="Cree logica para saber donde se encuentra un monopatin al iniciar un viaje">
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/controller/PausaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/controller/PausaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/repository/PausaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/repository/PausaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/service/PausaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/service/PausaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/controller/MonopatinController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/controller/MonopatinController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monopatin/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monopatin/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reporte/src/main/java/org/example/reporte/controller/ReporteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reporte/src/main/java/org/example/reporte/controller/ReporteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reporte/src/main/java/org/example/reporte/feignClients/MonopatinFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reporte/src/main/java/org/example/reporte/feignClients/MonopatinFeignClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reporte/src/main/java/org/example/reporte/service/ReporteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reporte/src/main/java/org/example/reporte/service/ReporteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reporte/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Reporte/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reporte/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Reporte/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reporte/target/classes/org/example/reporte/controller/ReporteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Reporte/target/classes/org/example/reporte/controller/ReporteController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reporte/target/classes/org/example/reporte/feignClients/MonopatinFeignClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/Reporte/target/classes/org/example/reporte/feignClients/MonopatinFeignClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reporte/target/classes/org/example/reporte/service/ReporteService.class" beforeDir="false" afterPath="$PROJECT_DIR$/Reporte/target/classes/org/example/reporte/service/ReporteService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/controller/UsuarioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuario/target/classes/org/example/usuario/controller/UsuarioController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/target/classes/org/example/usuario/controller/UsuarioController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuario/target/classes/org/example/usuario/service/UsuarioService.class" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/target/classes/org/example/usuario/service/UsuarioService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/controller/ViajeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/controller/ViajeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/repository/ViajeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/repository/ViajeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/service/ViajeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/service/ViajeService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,11 +120,11 @@
       <recent name="C:\Users\maiam\OneDrive\Documentos\TUDAI\2° año\Arquitecturas Web\IdeaProjects\TPE-grupo3-ArquitecturasWeb\IntegradorArq\Monopatin\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example.viaje.feignClients" />
       <recent name="org.example.reporte.feignClients" />
       <recent name="org.example.reporte.DTO" />
       <recent name="org.example.reporte.controller" />
       <recent name="org.example.viaje.Model" />
-      <recent name="org.example.mapa.feignClients" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -120,7 +137,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ViajeApplication">
+  <component name="RunManager" selected="Spring Boot.GestionApplication">
     <configuration name="GestionApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="Gestion" />
@@ -188,8 +205,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
+        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.20224.419" />
+        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-IU-242.20224.419" />
       </set>
     </attachedChunks>
   </component>
@@ -236,6 +253,9 @@
       <workItem from="1731097678914" duration="1592000" />
       <workItem from="1731103233467" duration="1900000" />
       <workItem from="1731249267496" duration="2727000" />
+      <workItem from="1731258008435" duration="437000" />
+      <workItem from="1731259475828" duration="4676000" />
+      <workItem from="1731264198382" duration="189000" />
     </task>
     <task id="LOCAL-00001" summary="Configure el clientsMonopatin, ajuste puertos de los microservicios">
       <option name="closed" value="true" />

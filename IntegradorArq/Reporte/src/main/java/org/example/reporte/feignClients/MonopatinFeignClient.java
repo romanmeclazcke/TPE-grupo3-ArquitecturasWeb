@@ -10,6 +10,9 @@ import java.util.List;
 @FeignClient(name = "monopatin-service", url = "http://localhost:8081")
 public interface MonopatinFeignClient {
 
+    @GetMapping("/monopatines")
+    List<Monopatin> getMonopatines();
+
     @GetMapping("/monopatines/order/kilometros")
     List<Monopatin> getMonopatinesPorKilometros();
 

@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.*;
 
 import jakarta.validation.Valid;
 
+import java.util.List;
+
 
 @RestController
 @RequestMapping("/viaje")
@@ -58,4 +60,15 @@ public class ViajeController {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
         }
     }
+
+    @GetMapping("/monopatines/viajes/{cant}/anio/{anio}")
+    public ResponseEntity<?> getMonopatinesConMasDeXViajes(@PathVariable("cant") int cant, @PathVariable("anio") int anio) {
+        try {
+            List<Long> monopatines = viajeService.getMonopatinesConMasDeXViajes(anio, cant);
+            return ResponseEntity.status(HttpStatus.OK).body(monopatines);
+        } catch (Exception e){
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
+        }
+    }
+
 }

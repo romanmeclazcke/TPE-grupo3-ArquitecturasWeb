@@ -18,5 +18,9 @@ public interface ViajeRepository extends JpaRepository<Viaje, Long> {
     @Query("SELECT v FROM Viaje v WHERE v.id_monopatin = :idMonopatin")
     List<Viaje> getViajesPorMonopatin(@Param("idMonopatin") Long idMonopatin);
 
+    @Query("SELECT v.id_monopatin FROM Viaje v WHERE FUNCTION('YEAR', v.fecha_inicio) = :anio GROUP BY v.id_monopatin HAVING COUNT(v) > :viajes")
+    List<Long> getMonopatinesConMasDeXViajes(@Param("anio") int anio, @Param("viajes") int viajes);
+
+
 
 }

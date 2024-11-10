@@ -1,6 +1,19 @@
 server:
-#  port: 8086
+  port: 8086
 spring:
   application:
     name: Reporte
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/reporte
+    username: root
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
 

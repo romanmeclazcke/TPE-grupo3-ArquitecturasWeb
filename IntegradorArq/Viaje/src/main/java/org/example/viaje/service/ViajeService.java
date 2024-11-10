@@ -116,6 +116,10 @@ public class ViajeService {
         }
     }
 
+    public List<Long> getMonopatinesConMasDeXViajes(int anio, int viajes) {
+        return viajeRepository.getMonopatinesConMasDeXViajes(anio, viajes);
+    }
+
     public ViajeResponseDTO mapearEntidadADto(Viaje viaje) {
         ViajeResponseDTO responseDto = new ViajeResponseDTO();
         responseDto.setIdMonopatin(viaje.getId_monopatin());
