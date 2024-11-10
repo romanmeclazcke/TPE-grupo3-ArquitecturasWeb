@@ -47,6 +47,15 @@ public class TarifaService {
     }
 
 
+    public TarifaResponseDto getTarifaEnPlazoValido() throws Exception {
+        try {
+            return this.mapearEntididadADto(this.tarifaRepository.getTarifaEnPlazoValido());
+        } catch (Exception e) {
+            throw new Exception(e.getMessage());
+        }
+    }
+
+
 
     private Tarifa mapearDtoAEntididad(TarifaRequestDto TarifaRequestDto) {
         Tarifa tarifa = new Tarifa();
