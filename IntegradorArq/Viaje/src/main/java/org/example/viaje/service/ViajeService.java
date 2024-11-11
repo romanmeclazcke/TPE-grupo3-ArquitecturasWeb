@@ -138,13 +138,6 @@ public class ViajeService {
         }
     }
 
-    public List<ViajeResumenMesesDTO> getTotalFacturadoEntre(int anio, int mesAnterior, int mesPosterior) throws Exception {
-        try {
-            return this.viajeRepository.getTotalFacturadoEntre(anio,mesAnterior,mesPosterior);
-        } catch (Exception e) {
-            throw new Exception(e.getMessage());
-        }
-    }
 
     private ViajeResponseDTO mapToResponseDTO(Viaje viaje) {
         ViajeResponseDTO responseDto = new ViajeResponseDTO();

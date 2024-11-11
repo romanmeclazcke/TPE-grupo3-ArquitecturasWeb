@@ -68,17 +68,6 @@ public class ViajeController {
         }
     }
 
-    @GetMapping("/anio/{anio}/entre/{mesAnterior}/{mesPosterior}")
-    public ResponseEntity<?> getTotalFacturadoEntre(@PathVariable("anio") int anio,@PathVariable("mesAnterior") int mesAnterior, @PathVariable("mesPosterior") int mesPosterior) {
-        try{
-            return ResponseEntity.status(HttpStatus.OK).body(viajeService.getTotalFacturadoEntre(anio,mesAnterior,mesPosterior));
-        } catch (Exception e){
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
-        }
-    }
-
-
-
     @PostMapping("/cerrar/{viajeId}")
     public ResponseEntity<?> cerrarViaje(@PathVariable("viajeId") Long viajeId) {
         try {

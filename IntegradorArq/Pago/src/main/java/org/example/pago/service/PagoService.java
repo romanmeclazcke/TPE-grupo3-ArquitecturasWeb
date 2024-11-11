@@ -2,6 +2,7 @@ package org.example.pago.service;
 
 import org.example.pago.DTO.CuentaRequestDto;
 import org.example.pago.DTO.PagoRequestDto;
+import org.example.pago.DTO.ResumenPagosDTO;
 import org.example.pago.FeignClient.UsuarioFeignClient;
 import org.example.pago.Model.Cuenta;
 import org.example.pago.entity.Pago;
@@ -63,6 +64,14 @@ public class PagoService {
             e.printStackTrace();
         }
         return false;
+    }
+
+    public ResumenPagosDTO getTotalFacturadoEntre(int anio, int mesAnterior, int mesPosterior) throws Exception {
+        try {
+            return this.pagoRepository.getTotalFacturadoEntre(anio,mesAnterior,mesPosterior);
+        } catch (Exception e) {
+            throw new Exception(e.getMessage());
+        }
     }
 
 
