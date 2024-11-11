@@ -1,4 +1,4 @@
-package org.example.usuario;
+package org.example.pago;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,10 +6,10 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
 @EnableFeignClients
-public class UsuarioApplication {
+public class PagoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(UsuarioApplication.class, args);
+		SpringApplication.run(PagoApplication.class, args);
 	}
 
 }

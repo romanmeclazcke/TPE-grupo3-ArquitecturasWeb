@@ -84,6 +84,7 @@ public class CuentaService {
 
     private CuentaResponseDto mapearEntidadADto(Cuenta cuenta){
         CuentaResponseDto cuentaResponseDto = new CuentaResponseDto();
+        cuentaResponseDto.setId(cuenta.getId());
         cuentaResponseDto.setFecha_alta(cuenta.getFecha_alta());
         cuentaResponseDto.setCredito(cuenta.getCredito());
         return cuentaResponseDto;

@@ -6,6 +6,7 @@ import org.example.viaje.Model.Parada;
 import org.example.viaje.entity.Tarifa;
 import org.example.viaje.entity.Viaje;
 import org.example.viaje.feignClients.MapaFeignClient;
+import org.example.viaje.feignClients.PagoFeignClient;
 import org.example.viaje.feignClients.ParadaFeignClient;
 import org.example.viaje.repository.ViajeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,6 +39,10 @@ public class ViajeService {
     @Autowired
     TarifaService tarifaService;
 
+
+    @Autowired
+    PagoFeignClient pagoFeignClient;
+
     @Transactional
     public ViajeResponseDTO save(Long monopatinId, Long usuarioId, Long paradaDestinoId) {
 
@@ -58,36 +63,64 @@ public class ViajeService {
 
     @Transactional
     public void endViaje(Long idViaje) throws Exception {
-        Viaje viaje = this.viajeRepository.findById(idViaje)
-                .orElseThrow(ChangeSetPersister.NotFoundException::new);
+        try{
+            Viaje viaje = this.viajeRepository.findById(idViaje)
+                    .orElseThrow(ChangeSetPersister.NotFoundException::new);
 
-        Distancia distancia = this.mapaFeignClient.getDistanciaEntreParada(viaje.getId_parada_origen(), viaje.getId_parada_destino());
-        viaje.setFecha_fin(LocalDate.now());
-        viaje.setHora_fin(LocalDateTime.now());
-        viaje.setKm(distancia.getDistancia());
-        viajeRepository.save(viaje);
+            Distancia distancia = this.mapaFeignClient.getDistanciaEntreParada(viaje.getId_parada_origen(), viaje.getId_parada_destino());
+            viaje.setFecha_fin(LocalDate.now());
+            viaje.setHora_fin(LocalDateTime.now());
+            viaje.setKm(distancia.getDistancia());
+            viajeRepository.save(viaje);
 
-        List<PausaResponseDto> pausas = this.pausaService.getPausasPorViaje(idViaje);
-        List<Long> minutosPausados = new ArrayList<>();
-        boolean cobrarTarifaExtra = false;
+            List<PausaResponseDto> pausas = this.pausaService.getPausasPorViaje(idViaje);
+            List<Long> minutosPausados = new ArrayList<>();
+            boolean cobrarTarifaExtra = false;
 
-        for (PausaResponseDto pausa : pausas) {
-            if (pausa.getHora_inicio() != null && pausa.getHora_frin() != null) {
-                Duration duracionPausa = Duration.between(pausa.getHora_inicio(), pausa.getHora_frin());
-                if (duracionPausa.toMinutes() < 15) {
-                    minutosPausados.add(duracionPausa.toMinutes());
+            for (PausaResponseDto pausa : pausas) {
+                if (pausa.getHora_inicio() != null && pausa.getHora_frin() != null) {
+                    Duration duracionPausa = Duration.between(pausa.getHora_inicio(), pausa.getHora_frin());
+                    if (duracionPausa.toMinutes() < 15) {
+                        minutosPausados.add(duracionPausa.toMinutes());
+                    } else {
+                        cobrarTarifaExtra = true;
+                    }
                 } else {
-                    cobrarTarifaExtra = true;
+                    throw new IllegalArgumentException("Las horas de inicio o fin de la pausa son null");
                 }
-            } else {
-                // Manejar el caso donde alguna de las horas es null
-                throw new IllegalArgumentException("Las horas de inicio o fin de la pausa son null");
             }
+            TarifaResponseDto tarifa = null;
+            if(cobrarTarifaExtra){
+                tarifa= this.tarifaService.getTarifaExtraEnPlazoValido();
+            }else{
+                tarifa = this.tarifaService.getTarifaNormalEnPlazoValido();
+            }
+            if (tarifa == null) {
+                throw new IllegalStateException("La tarifa obtenida es null");
+            }
+
+            double totalViaje = distancia.getDistancia() * tarifa.getTarifa();
+
+            Long totalMinutosPausados= 0L; //descontar esto al tiempo de viaje y asginarselo al monopatin
+            for (Long minuto : minutosPausados) {
+                totalMinutosPausados+=minuto;
+            }
+
+            PagoRequestDto pago = new PagoRequestDto();
+            pago.setUserId(viaje.getId_usuario());
+            pago.setViajeId(idViaje);
+            pago.setMonto(totalViaje);
+
+            try{
+                if (!this.pagoFeignClient.pagar(pago)){
+                    throw new IllegalStateException("El viaje fue cerrado pero hubo un error al pagar");
+                }
+            } catch (Exception e) {
+                throw new Exception(e.getMessage());
+            }
+        }catch (Exception e){
+            throw new Exception(e.getMessage());
         }
-
-
-        TarifaResponseDto tarifa = this.tarifaService.getTarifaEnPlazoValido();
-        double totalViaje = distancia.getDistancia() * tarifa.getTarifa();
 
     }
 

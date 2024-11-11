@@ -23,6 +23,7 @@
         <module>Usuario</module>
         <module>Viaje</module>
         <module>Mapa</module>
+        <module>pago</module>
     </modules>
     <url/>
     <licenses>

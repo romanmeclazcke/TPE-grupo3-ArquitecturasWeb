@@ -27,9 +27,18 @@ public class TarifaController {
     }
 
     @GetMapping("/plazo-valido")
-    public ResponseEntity<?> getTarifaEnPlazoValido() {
+    public ResponseEntity<?> getTarifaNormalEnPlazoValido() {
         try {
-            return ResponseEntity.status(HttpStatus.CREATED).body(tarifaService.getTarifaEnPlazoValido());
+            return ResponseEntity.status(HttpStatus.CREATED).body(tarifaService.getTarifaNormalEnPlazoValido());
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
+        }
+    }
+
+    @GetMapping("/extra/plazo-valido")
+    public ResponseEntity<?> getTarifaExtraEnPlazoValido() {
+        try {
+            return ResponseEntity.status(HttpStatus.CREATED).body(tarifaService.getTarifaExtraEnPlazoValido());
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
         }

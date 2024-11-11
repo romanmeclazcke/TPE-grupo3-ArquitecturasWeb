@@ -47,9 +47,16 @@ public class TarifaService {
     }
 
 
-    public TarifaResponseDto getTarifaEnPlazoValido() throws Exception {
+    public TarifaResponseDto getTarifaNormalEnPlazoValido() throws Exception {
         try {
-            return this.mapearEntididadADto(this.tarifaRepository.getTarifaEnPlazoValido());
+            return this.mapearEntididadADto(this.tarifaRepository.getTarifaNormalEnPlazoValido());
+        } catch (Exception e) {
+            throw new Exception(e.getMessage());
+        }
+    }
+    public TarifaResponseDto getTarifaExtraEnPlazoValido() throws Exception {
+        try {
+            return this.mapearEntididadADto(this.tarifaRepository.getTarifaExtraEnPlazoValido());
         } catch (Exception e) {
             throw new Exception(e.getMessage());
         }
