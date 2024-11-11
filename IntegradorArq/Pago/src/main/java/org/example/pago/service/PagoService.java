@@ -4,9 +4,13 @@ import org.example.pago.DTO.CuentaRequestDto;
 import org.example.pago.DTO.PagoRequestDto;
 import org.example.pago.FeignClient.UsuarioFeignClient;
 import org.example.pago.Model.Cuenta;
+import org.example.pago.entity.Pago;
+import org.example.pago.repository.PagoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -14,6 +18,9 @@ public class PagoService {
 
     @Autowired
     UsuarioFeignClient usuarioFeignClient;
+
+    @Autowired
+    PagoRepository pagoRepository;
 
     public boolean pagar(PagoRequestDto pagoRequestDto) throws Exception {
         try{
@@ -47,6 +54,7 @@ public class PagoService {
                 }
             }
             if (pendientePorPagar==0.0){
+                this.pagoRepository.save(this.mapearDtoAEntidad(pagoRequestDto));
                 return true;
             }else{
                 return false;
@@ -56,4 +64,16 @@ public class PagoService {
         }
         return false;
     }
+
+
+    private Pago mapearDtoAEntidad(PagoRequestDto pagoRequestDto) {
+        Pago pago = new Pago();
+        pago.setUserId(pagoRequestDto.getUserId());
+        pago.setMonto(pagoRequestDto.getMonto());
+        pago.setViajeId(pagoRequestDto.getViajeId());
+        pago.setFechaEmitido(LocalDate.now());
+        return pago;
+    }
+
+
 }

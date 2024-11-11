@@ -5,32 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9714064e-1399-4df4-affd-db1d8e41d3b1" name="Changes" comment="Cree logica para saber donde se encuentra un monopatin al iniciar un viaje">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gestion/HELP.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gestion/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gestion/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gestion/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gestion/src/main/java/org/example/gestion/GestionApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gestion/src/main/java/org/example/gestion/controller/GestionController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gestion/src/main/java/org/example/gestion/repository/GestionRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gestion/src/main/java/org/example/gestion/service/GestionService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gestion/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gestion/src/test/java/org/example/gestion/GestionApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gestion/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gestion/target/classes/org/example/gestion/GestionApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gestion/target/classes/org/example/gestion/controller/GestionController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gestion/target/classes/org/example/gestion/repository/GestionRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gestion/target/classes/org/example/gestion/service/GestionService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gestion/target/test-classes/org/example/gestion/GestionApplicationTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mantenimiento/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Mantenimiento/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parada/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Parada/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Usuario/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pago/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pago/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pago/src/main/java/org/example/pago/DTO/PagoRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Pago/src/main/java/org/example/pago/DTO/PagoRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pago/src/main/java/org/example/pago/controller/PagoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Pago/src/main/java/org/example/pago/controller/PagoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pago/src/main/java/org/example/pago/repository/PagoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Pago/src/main/java/org/example/pago/repository/PagoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pago/src/main/java/org/example/pago/service/PagoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Pago/src/main/java/org/example/pago/service/PagoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/repository/ViajeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/repository/ViajeRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,8 +24,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package-info" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -143,7 +123,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.PagoApplication">
+  <component name="RunManager" selected="Spring Boot.UsuarioApplication">
     <configuration name="GestionApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="Gestion" />
@@ -276,7 +256,8 @@
       <workItem from="1731319809446" duration="4625000" />
       <workItem from="1731338118757" duration="4180000" />
       <workItem from="1731345764143" duration="49000" />
-      <workItem from="1731347579108" duration="1190000" />
+      <workItem from="1731347579108" duration="3484000" />
+      <workItem from="1731351423613" duration="872000" />
     </task>
     <task id="LOCAL-00001" summary="Configure el clientsMonopatin, ajuste puertos de los microservicios">
       <option name="closed" value="true" />
