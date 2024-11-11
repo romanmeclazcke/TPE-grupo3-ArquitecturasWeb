@@ -35,8 +35,8 @@ public class MapsService {
                 throw new RuntimeException("Una o ambas paradas no fueron encontradas");
             }
 
-            Random random = new Random();
-            Double distancia = (double) (random.nextInt(100) + 1); // Genera un número entre 1 y 100
+
+            Double distancia= Math.sqrt(Math.pow(paradaDestino.getX() - paradaOrigen.getX(), 2) + Math.pow(paradaDestino.getY() - paradaOrigen.getY(), 2));
             DistanciasResponseDto responseDto = new DistanciasResponseDto();
             responseDto.setIdParadaOrigen(idOrigen);
             responseDto.setIdParadaDestino(idDestino);

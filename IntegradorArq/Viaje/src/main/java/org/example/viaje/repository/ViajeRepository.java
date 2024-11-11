@@ -23,7 +23,4 @@ public interface ViajeRepository extends JpaRepository<Viaje, Long> {
 
     @Query("SELECT new org.example.viaje.DTO.ViajeResumenMesesDTO(YEAR(v.fecha_inicio),SUM(t.tarifa), :mesAnterior, :mesPosterior) FROM Viaje v JOIN v.tarifa t  WHERE YEAR(v.fecha_inicio) = :anio AND MONTH(v.fecha_inicio) BETWEEN :mesAnterior AND :mesPosterior GROUP BY MONTH(v.fecha_inicio)")
     List<ViajeResumenMesesDTO> getTotalFacturadoEntre(@Param("anio") int anio, @Param("mesAnterior") int mesAnterior, @Param("mesPosterior") int mesPosterior);
-
-
-
 }

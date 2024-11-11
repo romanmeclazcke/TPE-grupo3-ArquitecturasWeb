@@ -6,12 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="9714064e-1399-4df4-affd-db1d8e41d3b1" name="Changes" comment="Cree logica para saber donde se encuentra un monopatin al iniciar un viaje">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/DTO/MonopatinRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/DTO/MonopatinRequestDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/service/MonopatinServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/service/MonopatinServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mapa/src/main/java/org/example/mapa/Model/Parada.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mapa/src/main/java/org/example/mapa/Model/Parada.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mapa/src/main/java/org/example/mapa/feignClients/ParadaFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mapa/src/main/java/org/example/mapa/feignClients/ParadaFeignClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mapa/src/main/java/org/example/mapa/service/MapsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mapa/src/main/java/org/example/mapa/service/MapsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monopatin/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/service/MonopatinServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/service/MonopatinServices.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/controller/ViajeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/controller/ViajeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/repository/ViajeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/repository/ViajeRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/service/ViajeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/service/ViajeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Viaje/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/target/classes/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/controller/ViajeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/controller/ViajeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/repository/ViajeRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/repository/ViajeRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/service/ViajeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/target/classes/org/example/viaje/service/ViajeService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -192,8 +196,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.20224.419" />
-        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-IU-242.20224.419" />
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
       </set>
     </attachedChunks>
   </component>
@@ -247,6 +251,7 @@
       <workItem from="1731280463127" duration="3732000" />
       <workItem from="1731284266144" duration="1879000" />
       <workItem from="1731286173105" duration="1114000" />
+      <workItem from="1731319809446" duration="4274000" />
     </task>
     <task id="LOCAL-00001" summary="Configure el clientsMonopatin, ajuste puertos de los microservicios">
       <option name="closed" value="true" />

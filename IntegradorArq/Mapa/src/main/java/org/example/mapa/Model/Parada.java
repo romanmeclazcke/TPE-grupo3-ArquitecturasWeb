@@ -12,5 +12,7 @@ import java.util.List;
 public class Parada {
     private Long idParada;
     private List<Long> monopatines;
+    private Integer x;
+    private Integer y;
 
 }

@@ -77,4 +77,15 @@ public class ViajeController {
         }
     }
 
+
+
+    @PostMapping("/cerrar/{viajeId}")
+    public ResponseEntity<?> cerrarViaje(@PathVariable("viajeId") Long viajeId) {
+        try {
+            this.viajeService.endViaje(viajeId);
+            return ResponseEntity.status(HttpStatus.OK).body("Viaje cerrado");
+        } catch (Exception e){
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
+        }
+    }
 }

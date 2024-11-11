@@ -1,20 +1,19 @@
 package org.example.viaje.service;
 
-//import org.example.monopatin.entity.Monopatin;
-import org.example.viaje.DTO.ViajeResumenMesesDTO;
+import org.example.viaje.DTO.*;
+import org.example.viaje.Model.Distancia;
 import org.example.viaje.Model.Parada;
-import org.example.viaje.DTO.ViajeRequestDTO;
-import org.example.viaje.DTO.ViajeResponseDTO;
+import org.example.viaje.entity.Tarifa;
 import org.example.viaje.entity.Viaje;
-//import org.example.viaje.feignClients.MonopatinFeignClient;
-//import org.example.viaje.feignClients.UsuarioFeignClient;
+import org.example.viaje.feignClients.MapaFeignClient;
 import org.example.viaje.feignClients.ParadaFeignClient;
 import org.example.viaje.repository.ViajeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cglib.core.Local;
+import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -30,11 +29,19 @@ public class ViajeService {
     @Autowired
     ParadaFeignClient paradaFeignClient;
 
+    @Autowired
+    MapaFeignClient mapaFeignClient;
+
+    @Autowired
+    PausaService pausaService;
+
+    @Autowired
+    TarifaService tarifaService;
+
     @Transactional
     public ViajeResponseDTO save(Long monopatinId, Long usuarioId, Long paradaDestinoId) {
 
         Parada p = this.paradaFeignClient.getParadaQueContieneMonopatin(monopatinId);
-        System.out.println("Parada"+p);
         Viaje viaje = new Viaje();
         viaje.setId_monopatin(monopatinId);
         viaje.setId_usuario(usuarioId);
@@ -50,23 +57,38 @@ public class ViajeService {
     }
 
     @Transactional
-    public void endViaje(Long idMonopatin, Long idUsuario) {
-        List<Viaje> viajes = viajeRepository.findAllByIds(idMonopatin, idUsuario);
+    public void endViaje(Long idViaje) throws Exception {
+        Viaje viaje = this.viajeRepository.findById(idViaje)
+                .orElseThrow(ChangeSetPersister.NotFoundException::new);
 
-        Viaje activo = null;
-        int i = 0;
-        while (activo == null) {
-            if (viajes.get(i).getFecha_fin() == null)
-                activo = viajes.get(i);
-            i++;
+        Distancia distancia = this.mapaFeignClient.getDistanciaEntreParada(viaje.getId_parada_origen(), viaje.getId_parada_destino());
+        viaje.setFecha_fin(LocalDate.now());
+        viaje.setHora_fin(LocalDateTime.now());
+        viaje.setKm(distancia.getDistancia());
+        viajeRepository.save(viaje);
+
+        List<PausaResponseDto> pausas = this.pausaService.getPausasPorViaje(idViaje);
+        List<Long> minutosPausados = new ArrayList<>();
+        boolean cobrarTarifaExtra = false;
+
+        for (PausaResponseDto pausa : pausas) {
+            if (pausa.getHora_inicio() != null && pausa.getHora_frin() != null) {
+                Duration duracionPausa = Duration.between(pausa.getHora_inicio(), pausa.getHora_frin());
+                if (duracionPausa.toMinutes() < 15) {
+                    minutosPausados.add(duracionPausa.toMinutes());
+                } else {
+                    cobrarTarifaExtra = true;
+                }
+            } else {
+                // Manejar el caso donde alguna de las horas es null
+                throw new IllegalArgumentException("Las horas de inicio o fin de la pausa son null");
+            }
         }
 
-        activo.setFecha_inicio(LocalDate.now());
-        viajeRepository.save(activo);
 
-        /*Monopatin monopatin = monopatinFeignClient.getMonopatinById(idMonopatin);
-        monopatin.setDisponible(true);
-        monopatinFeignClient.updateMonopatin(idMonopatin, monopatin);*/
+        TarifaResponseDto tarifa = this.tarifaService.getTarifaEnPlazoValido();
+        double totalViaje = distancia.getDistancia() * tarifa.getTarifa();
+
     }
 
 
