@@ -1,6 +1,8 @@
 package org.example.parada.service;
 
+import org.example.monopatin.DTO.MonopatinRequestDto;
 import org.example.monopatin.entity.Monopatin;
+import org.example.parada.DTO.ParadaRequestDto;
 import org.example.parada.DTO.ParadaResponseDto;
 import org.example.parada.entity.Parada;
 import org.example.parada.feignClients.MonopatinFeignClient;
@@ -63,14 +65,11 @@ public class ParadaService {
         }
     }
 
-    public ParadaResponseDto save() throws Exception {
+    public ParadaResponseDto save(ParadaRequestDto paradaRequestDto) throws Exception {
         try {
-            Parada parada = new Parada();
+            Parada parada = mapearDtoAEntidad(paradaRequestDto);
             this.paradaRepository.save(parada);
-            ParadaResponseDto paradaResponseDto = this.mapearEntidadADto(parada);
-            paradaResponseDto.setExito(true);
-            paradaResponseDto.setMensaje("Parada creada con exito");
-            return paradaResponseDto;
+            return this.mapearEntidadADto(parada);
         } catch (Exception e) {
             throw new Exception(e.getMessage());
         }
@@ -120,6 +119,14 @@ public class ParadaService {
         }
     }
 
+
+    private Parada mapearDtoAEntidad(ParadaRequestDto ParadaRequestDto) throws Exception {
+        Parada parada = new Parada();
+        parada.setId(ParadaRequestDto.getId());
+        parada.setY(ParadaRequestDto.getY());
+        parada.setX(ParadaRequestDto.getX());
+        return parada;
+    }
 
     private ParadaResponseDto mapearEntidadADto(Parada parada) {
         ParadaResponseDto responseDto = new ParadaResponseDto();

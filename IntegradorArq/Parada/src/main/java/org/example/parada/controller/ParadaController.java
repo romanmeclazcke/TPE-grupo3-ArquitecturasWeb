@@ -1,5 +1,6 @@
 package org.example.parada.controller;
 
+import org.example.parada.DTO.ParadaRequestDto;
 import org.example.parada.service.ParadaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -13,9 +14,9 @@ public class ParadaController {
     ParadaService paradaService;
 
     @PostMapping("")
-    public ResponseEntity<?> registrarParada() {
+    public ResponseEntity<?> registrarParada(@RequestBody ParadaRequestDto paradaRequestDto) {
         try {
-            return ResponseEntity.status(HttpStatus.CREATED).body(paradaService.save());
+            return ResponseEntity.status(HttpStatus.CREATED).body(paradaService.save(paradaRequestDto));
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
         }
@@ -32,7 +33,7 @@ public class ParadaController {
     }
 
 
-    @PostMapping("/{idParada}/estacionar/monopatin/{idMonopatin}")
+        @PostMapping("/{idParada}/estacionar/monopatin/{idMonopatin}")
     public ResponseEntity<?> estacionarMonopatinEnParada(@PathVariable Long idParada, @PathVariable Long idMonopatin){
         try{
             return ResponseEntity.status(HttpStatus.OK).body(this.paradaService.ubicarMonopatinEnParada(idParada, idMonopatin));

@@ -21,6 +21,9 @@ public interface ViajeRepository extends JpaRepository<Viaje, Long> {
     @Query("SELECT v.id_monopatin FROM Viaje v WHERE FUNCTION('YEAR', v.fecha_inicio) = :anio GROUP BY v.id_monopatin HAVING COUNT(v) > :viajes")
     List<Long> getMonopatinesConMasDeXViajes(@Param("anio") int anio, @Param("viajes") int viajes);
 
+    @Query("SELECT SUM(t.tarifa) FROM Viaje v JOIN v.tarifa t  WHERE YEAR(v.fecha_inicio) = :anio AND MONTH(v.hora_inicio) = :mesAnterior AND MONTH(v.fecha_inicio) = :mesPosterior")
+    Double getTotalFacturadoEntre(@Param("anio") int anio, @Param("mesAnterior") int mesAnterior, @Param("mesPosterior") int mesPosterior);
+
 
 
 }

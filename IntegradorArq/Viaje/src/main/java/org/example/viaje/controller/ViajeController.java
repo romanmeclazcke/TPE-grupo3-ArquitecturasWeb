@@ -1,15 +1,12 @@
 package org.example.viaje.controller;
 
 
-import org.example.viaje.DTO.ViajeRequestDTO;
 import org.example.viaje.feignClients.ParadaFeignClient;
 import org.example.viaje.service.ViajeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import jakarta.validation.Valid;
 
 import java.util.List;
 
@@ -66,6 +63,15 @@ public class ViajeController {
         try {
             List<Long> monopatines = viajeService.getMonopatinesConMasDeXViajes(anio, cant);
             return ResponseEntity.status(HttpStatus.OK).body(monopatines);
+        } catch (Exception e){
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
+        }
+    }
+
+    @GetMapping("/anio/{anio}/entre/{mesAnterior}/{mesPosterior}")
+    public ResponseEntity<?> getTotalFacturadoEntre(@PathVariable("anio") int anio,@PathVariable("mesAnterior") int mesAnterior, @PathVariable("mesPosterior") int mesPosterior) {
+        try{
+            return ResponseEntity.status(HttpStatus.OK).body(viajeService.getTotalFacturadoEntre(anio,mesAnterior,mesPosterior));
         } catch (Exception e){
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
         }
