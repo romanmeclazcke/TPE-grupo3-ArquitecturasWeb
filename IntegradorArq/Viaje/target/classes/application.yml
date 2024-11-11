@@ -5,7 +5,7 @@ spring:
     name: Viaje
 
   datasource:
-    url: jdbc:mysql://localhost:3307/viaje
+    url: jdbc:mysql://localhost:3306/viaje?createDatabaseIfNotExist=true
     username: root
     password:
     driver-class-name: com.mysql.cj.jdbc.Driver

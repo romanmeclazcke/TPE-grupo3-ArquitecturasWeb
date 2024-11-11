@@ -15,7 +15,6 @@
     <name>IntegradorArq</name>
     <description>IntegradorArq</description>
     <modules>
-        <module>Gestion</module>
         <module>Mantenimiento</module>
         <module>Monopatin</module>
         <module>Parada</module>
@@ -23,7 +22,7 @@
         <module>Usuario</module>
         <module>Viaje</module>
         <module>Mapa</module>
-        <module>pago</module>
+        <module>Pago</module>
     </modules>
     <url/>
     <licenses>
