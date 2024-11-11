@@ -1,6 +1,7 @@
 package org.example.viaje.service;
 
 //import org.example.monopatin.entity.Monopatin;
+import org.example.viaje.DTO.ViajeResumenMesesDTO;
 import org.example.viaje.Model.Parada;
 import org.example.viaje.DTO.ViajeRequestDTO;
 import org.example.viaje.DTO.ViajeResponseDTO;
@@ -82,7 +83,7 @@ public class ViajeService {
         }
     }
 
-    public Double getTotalFacturadoEntre(int anio,int mesAnterior, int mesPosterior) throws Exception {
+    public List<ViajeResumenMesesDTO> getTotalFacturadoEntre(int anio, int mesAnterior, int mesPosterior) throws Exception {
         try {
             return this.viajeRepository.getTotalFacturadoEntre(anio,mesAnterior,mesPosterior);
         } catch (Exception e) {

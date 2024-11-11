@@ -26,4 +26,9 @@ public class MonopatinRequestDto {
     @NotNull(message = "La disponibilidad del monopatin es obligatoria")
     private boolean disponible;
 
+    @NotNull
+    private Integer x;
+    @NotNull
+    private Integer y;
+
 }

@@ -178,11 +178,13 @@ public class MonopatinServices {
         }
     }
 
-    private Monopatin mapearDtoAEntidad(MonopatinRequestDto MonopatinRequesDto) {
+    private Monopatin mapearDtoAEntidad(MonopatinRequestDto monopatinRequestDto) {
         Monopatin monopatin = new Monopatin();
-        monopatin.setTiempo_uso(MonopatinRequesDto.getTiempo_uso());
-        monopatin.setKilometros(MonopatinRequesDto.getKilometros());
-        monopatin.setDisponible(MonopatinRequesDto.isDisponible());
+        monopatin.setTiempo_uso(monopatinRequestDto.getTiempo_uso());
+        monopatin.setKilometros(monopatinRequestDto.getKilometros());
+        monopatin.setDisponible(monopatinRequestDto.isDisponible());
+        monopatin.setY(monopatinRequestDto.getY());
+        monopatin.setX(monopatinRequestDto.getX());
         return monopatin;
     }
 
