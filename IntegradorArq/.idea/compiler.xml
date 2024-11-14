@@ -12,6 +12,7 @@
         <module name="Parada" />
         <module name="Usuario" />
         <module name="Viaje" />
+        <module name="Gateway" />
         <module name="Reporte" />
         <module name="Pago" />
         <module name="Mantenimiento" />
@@ -20,10 +21,12 @@
     <bytecodeTargetLevel>
       <module name="Gestion" target="17" />
       <module name="Maps" target="17" />
+      <module name="pago" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Gateway" options="-parameters" />
       <module name="Gestion" options="-parameters" />
       <module name="Mantenimiento" options="-parameters" />
       <module name="Mapa" options="-parameters" />

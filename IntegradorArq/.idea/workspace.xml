@@ -5,14 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9714064e-1399-4df4-affd-db1d8e41d3b1" name="Changes" comment="Cree logica para saber donde se encuentra un monopatin al iniciar un viaje">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pago/src/main/java/org/example/pago/controller/PagoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Pago/src/main/java/org/example/pago/controller/PagoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pago/src/main/java/org/example/pago/repository/PagoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Pago/src/main/java/org/example/pago/repository/PagoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pago/src/main/java/org/example/pago/service/PagoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Pago/src/main/java/org/example/pago/service/PagoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/DTO/ViajeResumenMesesDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/controller/ViajeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/controller/ViajeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/repository/ViajeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/repository/ViajeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/service/ViajeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/service/ViajeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuario/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuario/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +34,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="ciclo-bug" />
+        <entry key="$PROJECT_DIR$/.." value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -66,43 +66,47 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.GestionApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.MantenimientoApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.MapaApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.MonopatinApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.PagoApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.ParadaApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.ReporteApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.UsuarioApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.ViajeApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/maiam/OneDrive/Documentos/TUDAI/2° año/Arquitecturas Web/IdeaProjects/TPE-grupo3-ArquitecturasWeb/IntegradorArq&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.39770114&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.GatewayApplication.executor": "Run",
+    "Spring Boot.GestionApplication.executor": "Run",
+    "Spring Boot.MantenimientoApplication.executor": "Run",
+    "Spring Boot.MapaApplication.executor": "Run",
+    "Spring Boot.MonopatinApplication.executor": "Run",
+    "Spring Boot.PagoApplication.executor": "Run",
+    "Spring Boot.ParadaApplication.executor": "Run",
+    "Spring Boot.ReporteApplication.executor": "Run",
+    "Spring Boot.UsuarioApplication.executor": "Run",
+    "Spring Boot.ViajeApplication.executor": "Run",
+    "git-widget-placeholder": "integrador-entrega-2",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/Acer/Desktop/TPE-grupo3-ArquitecturasWeb/IntegradorArq",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.39770114",
+    "run.configurations.included.in.services": "true",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;JAVA&quot;
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "JAVA"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Maps/src/main/resources" />
       <recent name="C:\Users\maiam\OneDrive\Documentos\TUDAI\2° año\Arquitecturas Web\IdeaProjects\TPE-grupo3-ArquitecturasWeb\IntegradorArq\Monopatin\src\main\resources" />
@@ -125,11 +129,11 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ReporteApplication">
-    <configuration name="GestionApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+  <component name="RunManager" selected="Spring Boot.GatewayApplication">
+    <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
-      <module name="Gestion" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.gestion.GestionApplication" />
+      <module name="Gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="micro.example.gateway.GatewayApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -200,8 +204,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.20224.419" />
-        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-IU-242.20224.419" />
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
       </set>
     </attachedChunks>
   </component>
@@ -261,6 +265,7 @@
       <workItem from="1731347579108" duration="3484000" />
       <workItem from="1731351423613" duration="872000" />
       <workItem from="1731355072213" duration="2353000" />
+      <workItem from="1731602136132" duration="5015000" />
     </task>
     <task id="LOCAL-00001" summary="Configure el clientsMonopatin, ajuste puertos de los microservicios">
       <option name="closed" value="true" />
@@ -371,6 +376,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Configure el clientsMonopatin, ajuste puertos de los microservicios" />
