@@ -101,7 +101,7 @@ public class MonopatinController {
 
     @Operation(summary = "Endpoint para obtener todos los monopatines")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "El monopatin fue eliminado correctamente", content = {@Content( mediaType = "applicatin/json", schema = @Schema(implementation = MonopatinResponseDto.class))}),
+            @ApiResponse(responseCode = "200", description = "El monopatin fue eliminado correctamente", content = {@Content( mediaType = "application/json", schema = @Schema(implementation = MonopatinResponseDto.class))}),
             @ApiResponse(responseCode = "404", description = "No se encontraron monopatines", content = @Content),
     })
     @GetMapping("")
@@ -115,7 +115,7 @@ public class MonopatinController {
 
     @Operation(summary = "Endpoint para obtener un monopatin por id")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "El monopatin fue encontrado", content = {@Content( mediaType = "applicatin/json", schema = @Schema(implementation = MonopatinResponseDto.class))}),
+            @ApiResponse(responseCode = "200", description = "El monopatin fue encontrado", content = {@Content( mediaType = "application/json", schema = @Schema(implementation = MonopatinResponseDto.class))}),
             @ApiResponse(responseCode = "404", description = "No se encontraron monopatines", content = @Content),
     })
     @GetMapping("/{monopatinId}")
