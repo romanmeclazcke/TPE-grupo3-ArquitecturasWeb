@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9714064e-1399-4df4-affd-db1d8e41d3b1" name="Changes" comment="Cree logica para saber donde se encuentra un monopatin al iniciar un viaje" />
+    <list default="true" id="9714064e-1399-4df4-affd-db1d8e41d3b1" name="Changes" comment="Cree logica para saber donde se encuentra un monopatin al iniciar un viaje">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gateway/src/main/java/micro/example/gateway/Controller/JwtController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gateway/src/main/java/micro/example/gateway/Controller/JwtController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gateway/src/main/java/micro/example/gateway/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gateway/src/main/java/micro/example/gateway/config/SecurityConfig.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -76,7 +80,7 @@
     &quot;Spring Boot.ViajeApplication.executor&quot;: &quot;Run&quot;,
     &quot;git-widget-placeholder&quot;: &quot;integrador-entrega-2&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/Acer/Desktop/TPE-grupo3-ArquitecturasWeb/IntegradorArq/Pago/src/main/java/org/example/pago/docker&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/Acer/Desktop/TPE-grupo3-ArquitecturasWeb/IntegradorArq/Mapa/src/main/java/org/example/mapa&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -97,6 +101,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Mapa/src/main/java/org/example/mapa" />
+      <recent name="$PROJECT_DIR$/Parada/src/main/java/org/example/parada" />
       <recent name="$PROJECT_DIR$/Pago/src/main/java/org/example/pago/docker" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -122,7 +128,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ViajeApplication">
+  <component name="RunManager" selected="Spring Boot.MonopatinApplication">
     <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="Gateway" />
@@ -261,6 +267,8 @@
       <workItem from="1731602136132" duration="5015000" />
       <workItem from="1731668562168" duration="4794000" />
       <workItem from="1731675381805" duration="3868000" />
+      <workItem from="1731685100629" duration="3966000" />
+      <workItem from="1731698584437" duration="1700000" />
     </task>
     <task id="LOCAL-00001" summary="Configure el clientsMonopatin, ajuste puertos de los microservicios">
       <option name="closed" value="true" />
