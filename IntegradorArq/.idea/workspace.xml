@@ -5,20 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9714064e-1399-4df4-affd-db1d8e41d3b1" name="Changes" comment="Cree logica para saber donde se encuentra un monopatin al iniciar un viaje">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gateway/src/main/java/micro/example/gateway/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gateway/src/main/java/micro/example/gateway/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mantenimiento/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Mantenimiento/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pago/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Pago/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pago/src/main/java/org/example/pago/DTO/ResumenPagosDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Pago/src/main/java/org/example/pago/DTO/ResumenPagosDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pago/src/main/java/org/example/pago/entity/Pago.java" beforeDir="false" afterPath="$PROJECT_DIR$/Pago/src/main/java/org/example/pago/entity/Pago.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pago/src/main/java/org/example/pago/repository/PagoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Pago/src/main/java/org/example/pago/repository/PagoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pago/src/main/java/org/example/pago/repository/PagoRepositoryCustom.java" beforeDir="false" afterPath="$PROJECT_DIR$/Pago/src/main/java/org/example/pago/repository/PagoRepositoryCustom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pago/src/main/java/org/example/pago/service/PagoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Pago/src/main/java/org/example/pago/service/PagoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pago/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Pago/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parada/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Parada/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monopatin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/DTO/MonopatinDisponibilidadDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/DTO/MonopatinDisponibilidadDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/DTO/MonopatinRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/DTO/MonopatinRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/DTO/MonopatinResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/DTO/MonopatinResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/DTO/MonopatinSumaKilometrosDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/DTO/MonopatinSumaKilometrosDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/controller/MonopatinController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/controller/MonopatinController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monopatin/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/DTO/MonopatinDisponibilidadDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/DTO/MonopatinDisponibilidadDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/DTO/MonopatinRequestDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/DTO/MonopatinRequestDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/DTO/MonopatinResponseDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/DTO/MonopatinResponseDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/DTO/MonopatinSumaKilometrosDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/DTO/MonopatinSumaKilometrosDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/controller/MonopatinController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/controller/MonopatinController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Viaje/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/target/classes/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,6 +101,7 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.39770114",
     "run.configurations.included.in.services": "true",
+    "service.view.auto.scroll.to.source": "true",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -136,7 +137,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.GatewayApplication">
+  <component name="RunManager" selected="Spring Boot.MonopatinApplication">
     <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="Gateway" />
@@ -274,6 +275,7 @@
       <workItem from="1731355072213" duration="2353000" />
       <workItem from="1731602136132" duration="5015000" />
       <workItem from="1731668562168" duration="4794000" />
+      <workItem from="1731675381805" duration="3868000" />
     </task>
     <task id="LOCAL-00001" summary="Configure el clientsMonopatin, ajuste puertos de los microservicios">
       <option name="closed" value="true" />
