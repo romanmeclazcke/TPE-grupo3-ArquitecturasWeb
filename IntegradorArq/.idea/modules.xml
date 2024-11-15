@@ -5,7 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/Gestion/Gestion.iml" filepath="$PROJECT_DIR$/Gestion/Gestion.iml" />
       <module fileurl="file://$PROJECT_DIR$/Usuario/Usuario.iml" filepath="$PROJECT_DIR$/Usuario/Usuario.iml" />
       <module fileurl="file://$PROJECT_DIR$/Viaje/Viaje.iml" filepath="$PROJECT_DIR$/Viaje/Viaje.iml" />
-      <module fileurl="file://$PROJECT_DIR$/pago/pago.iml" filepath="$PROJECT_DIR$/pago/pago.iml" />
     </modules>
   </component>
 </project>

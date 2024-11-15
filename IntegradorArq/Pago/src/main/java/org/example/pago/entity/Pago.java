@@ -1,26 +1,23 @@
 package org.example.pago.entity;
 
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDate;
 
-@Entity
-@Table(name="pago")
+@Document(collection = "pago")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class Pago {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-    @Column(nullable = false)
+    private String id;
     private Long viajeId;
     private Long userId;
     private Double monto;
     private LocalDate fechaEmitido;
-
 }

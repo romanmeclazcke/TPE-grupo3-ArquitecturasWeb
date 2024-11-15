@@ -42,7 +42,8 @@ public class SecurityConfig {
         http
             .securityMatcher("/**")
             .authorizeHttpRequests( authz -> authz
-                    .requestMatchers(HttpMethod.POST, "/authenticate").permitAll()
+                    .requestMatchers(HttpMethod.POST, "/api/authenticate").permitAll()
+                    .requestMatchers(HttpMethod.POST, "/api/usuarios").permitAll()
                     .requestMatchers(HttpMethod.GET, "/monopatines").permitAll()
                     .requestMatchers(HttpMethod.GET, "/usuarios").permitAll()
                     .anyRequest().authenticated()

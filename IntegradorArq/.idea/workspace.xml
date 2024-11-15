@@ -5,14 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9714064e-1399-4df4-affd-db1d8e41d3b1" name="Changes" comment="Cree logica para saber donde se encuentra un monopatin al iniciar un viaje">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Usuario/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Usuario/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gateway/src/main/java/micro/example/gateway/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gateway/src/main/java/micro/example/gateway/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mantenimiento/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Mantenimiento/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pago/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Pago/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pago/src/main/java/org/example/pago/DTO/ResumenPagosDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Pago/src/main/java/org/example/pago/DTO/ResumenPagosDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pago/src/main/java/org/example/pago/entity/Pago.java" beforeDir="false" afterPath="$PROJECT_DIR$/Pago/src/main/java/org/example/pago/entity/Pago.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pago/src/main/java/org/example/pago/repository/PagoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Pago/src/main/java/org/example/pago/repository/PagoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pago/src/main/java/org/example/pago/repository/PagoRepositoryCustom.java" beforeDir="false" afterPath="$PROJECT_DIR$/Pago/src/main/java/org/example/pago/repository/PagoRepositoryCustom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pago/src/main/java/org/example/pago/service/PagoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Pago/src/main/java/org/example/pago/service/PagoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pago/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Pago/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Parada/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Parada/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Viaje/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +91,7 @@
     "Spring Boot.ViajeApplication.executor": "Run",
     "git-widget-placeholder": "integrador-entrega-2",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/Acer/Desktop/TPE-grupo3-ArquitecturasWeb/IntegradorArq",
+    "last_opened_file_path": "/Users/Acer/Desktop/TPE-grupo3-ArquitecturasWeb/IntegradorArq/Pago/src/main/java/org/example/pago/docker",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -105,6 +111,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Pago/src/main/java/org/example/pago/docker" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -266,6 +273,7 @@
       <workItem from="1731351423613" duration="872000" />
       <workItem from="1731355072213" duration="2353000" />
       <workItem from="1731602136132" duration="5015000" />
+      <workItem from="1731668562168" duration="4794000" />
     </task>
     <task id="LOCAL-00001" summary="Configure el clientsMonopatin, ajuste puertos de los microservicios">
       <option name="closed" value="true" />
