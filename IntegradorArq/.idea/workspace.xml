@@ -7,18 +7,10 @@
     <list default="true" id="9714064e-1399-4df4-affd-db1d8e41d3b1" name="Changes" comment="Cree logica para saber donde se encuentra un monopatin al iniciar un viaje">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Monopatin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/DTO/MonopatinDisponibilidadDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/DTO/MonopatinDisponibilidadDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/DTO/MonopatinRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/DTO/MonopatinRequestDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/DTO/MonopatinResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/DTO/MonopatinResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/DTO/MonopatinSumaKilometrosDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/DTO/MonopatinSumaKilometrosDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/controller/MonopatinController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/src/main/java/org/example/monopatin/controller/MonopatinController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Monopatin/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/DTO/MonopatinDisponibilidadDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/DTO/MonopatinDisponibilidadDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/DTO/MonopatinRequestDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/DTO/MonopatinRequestDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/DTO/MonopatinResponseDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/DTO/MonopatinResponseDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/DTO/MonopatinSumaKilometrosDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/DTO/MonopatinSumaKilometrosDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/controller/MonopatinController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Monopatin/target/classes/org/example/monopatin/controller/MonopatinController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Parada/src/main/java/org/example/parada/DTO/ParadaRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parada/src/main/java/org/example/parada/DTO/ParadaRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Parada/src/main/java/org/example/parada/DTO/ParadaResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parada/src/main/java/org/example/parada/DTO/ParadaResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Parada/src/main/java/org/example/parada/controller/ParadaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parada/src/main/java/org/example/parada/controller/ParadaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +83,7 @@
     "Spring Boot.ViajeApplication.executor": "Run",
     "git-widget-placeholder": "integrador-entrega-2",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/Acer/Desktop/TPE-grupo3-ArquitecturasWeb/IntegradorArq/Pago/src/main/java/org/example/pago/docker",
+    "last_opened_file_path": "/Users/Acer/Desktop/TPE-grupo3-ArquitecturasWeb/IntegradorArq/Parada/src/main/java/org/example/parada",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -112,6 +104,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Parada/src/main/java/org/example/parada" />
       <recent name="$PROJECT_DIR$/Pago/src/main/java/org/example/pago/docker" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -276,6 +269,7 @@
       <workItem from="1731602136132" duration="5015000" />
       <workItem from="1731668562168" duration="4794000" />
       <workItem from="1731675381805" duration="3868000" />
+      <workItem from="1731685100629" duration="2184000" />
     </task>
     <task id="LOCAL-00001" summary="Configure el clientsMonopatin, ajuste puertos de los microservicios">
       <option name="closed" value="true" />
