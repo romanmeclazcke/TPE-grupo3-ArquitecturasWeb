@@ -6,12 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9714064e-1399-4df4-affd-db1d8e41d3b1" name="Changes" comment="Cree logica para saber donde se encuentra un monopatin al iniciar un viaje">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/DTO/PagoRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/DTO/PagoRequestDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/DTO/PausaResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/DTO/PausaResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/DTO/TarifaRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/DTO/TarifaRequestDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/DTO/TarifaResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/DTO/TarifaResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/DTO/ViajeRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/DTO/ViajeRequestDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/DTO/ViajeResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/DTO/ViajeResponseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/controller/PausaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/controller/PausaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/controller/TarifaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/controller/TarifaController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
