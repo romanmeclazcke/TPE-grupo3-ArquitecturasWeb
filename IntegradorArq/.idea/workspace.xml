@@ -6,8 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="9714064e-1399-4df4-affd-db1d8e41d3b1" name="Changes" comment="Cree logica para saber donde se encuentra un monopatin al iniciar un viaje">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gateway/src/main/java/micro/example/gateway/Controller/JwtController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gateway/src/main/java/micro/example/gateway/Controller/JwtController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gateway/src/main/java/micro/example/gateway/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gateway/src/main/java/micro/example/gateway/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pago/src/main/java/org/example/pago/DTO/PagoRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Pago/src/main/java/org/example/pago/DTO/PagoRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pago/src/main/java/org/example/pago/controller/PagoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Pago/src/main/java/org/example/pago/controller/PagoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reporte/src/main/java/org/example/reporte/DTO/ReporteResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reporte/src/main/java/org/example/reporte/DTO/ReporteResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reporte/src/main/java/org/example/reporte/controller/ReporteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reporte/src/main/java/org/example/reporte/controller/ReporteController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,50 +63,52 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.GatewayApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.GestionApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.MantenimientoApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.MapaApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.MonopatinApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.PagoApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.ParadaApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.ReporteApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.UsuarioApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.ViajeApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;integrador-entrega-2&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/Acer/Desktop/TPE-grupo3-ArquitecturasWeb/IntegradorArq/Mapa/src/main/java/org/example/mapa&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.39770114&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;service.view.auto.scroll.to.source&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.All in Reporte.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.GatewayApplication.executor": "Run",
+    "Spring Boot.GestionApplication.executor": "Run",
+    "Spring Boot.MantenimientoApplication.executor": "Run",
+    "Spring Boot.MapaApplication.executor": "Run",
+    "Spring Boot.MonopatinApplication.executor": "Run",
+    "Spring Boot.PagoApplication.executor": "Run",
+    "Spring Boot.ParadaApplication.executor": "Run",
+    "Spring Boot.ReporteApplication.executor": "Run",
+    "Spring Boot.UsuarioApplication.executor": "Run",
+    "Spring Boot.ViajeApplication.executor": "Run",
+    "git-widget-placeholder": "integrador-entrega-2",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/Acer/Desktop/TPE-grupo3-ArquitecturasWeb/IntegradorArq/Pago/src/main/java/org/example/pago",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.39770114",
+    "run.configurations.included.in.services": "true",
+    "service.view.auto.scroll.to.source": "true",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;JAVA&quot;
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "JAVA"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Pago/src/main/java/org/example/pago" />
+      <recent name="$PROJECT_DIR$/Reporte/src/main/java/org/example/reporte" />
       <recent name="$PROJECT_DIR$/Mapa/src/main/java/org/example/mapa" />
       <recent name="$PROJECT_DIR$/Parada/src/main/java/org/example/parada" />
       <recent name="$PROJECT_DIR$/Pago/src/main/java/org/example/pago/docker" />
-      <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Maps/src/main/resources" />
@@ -128,7 +132,15 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.MonopatinApplication">
+  <component name="RunManager" selected="Spring Boot.PagoApplication">
+    <configuration name="All in Reporte" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Reporte" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="Gateway" />
@@ -199,6 +211,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.All in Reporte" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -269,6 +286,7 @@
       <workItem from="1731675381805" duration="3868000" />
       <workItem from="1731685100629" duration="3966000" />
       <workItem from="1731698584437" duration="1700000" />
+      <workItem from="1731768244419" duration="2001000" />
     </task>
     <task id="LOCAL-00001" summary="Configure el clientsMonopatin, ajuste puertos de los microservicios">
       <option name="closed" value="true" />
