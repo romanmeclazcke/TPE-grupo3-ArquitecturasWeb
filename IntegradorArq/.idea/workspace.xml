@@ -31,6 +31,8 @@
       <change beforePath="$PROJECT_DIR$/Viaje/target/classes/application.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Viaje/target/classes/application.yml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/controller/PausaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/controller/PausaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/controller/TarifaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/controller/TarifaController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,6 +137,38 @@
     "run.configurations.included.in.services": "true",
     "service.view.auto.scroll.to.source": "true",
     "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.All in Reporte.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.GatewayApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.GestionApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.MantenimientoApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.MapaApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.MonopatinApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.PagoApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ParadaApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ReporteApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.UsuarioApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ViajeApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;integrador-entrega-2&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/Acer/Desktop/TPE-grupo3-ArquitecturasWeb/IntegradorArq/Pago/src/main/java/org/example/pago&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.39770114&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;service.view.auto.scroll.to.source&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   "keyToStringList": {
     "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
@@ -147,10 +181,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Pago/src/main/java/org/example/pago" />
+      <recent name="$PROJECT_DIR$/Reporte/src/main/java/org/example/reporte" />
       <recent name="$PROJECT_DIR$/Mapa/src/main/java/org/example/mapa" />
       <recent name="$PROJECT_DIR$/Parada/src/main/java/org/example/parada" />
       <recent name="$PROJECT_DIR$/Pago/src/main/java/org/example/pago/docker" />
-      <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Maps/src/main/resources" />
@@ -174,6 +209,15 @@
       </set>
     </option>
   </component>
+  <component name="RunManager" selected="Spring Boot.PagoApplication">
+    <configuration name="All in Reporte" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Reporte" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   <component name="RunManager" selected="JUnit.ViajeServiceTest.TEST_endViajeExitoso">
     <configuration name="PausaServiceTest.TEST_getPausasPorViaje" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Viaje" />
@@ -297,6 +341,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in Reporte" />
+      </list>
+    </recent_temporary>
+    <recent_temporary>
+      <list>
         <item itemvalue="JUnit.ViajeServiceTest.TEST_endViajeExitoso" />
         <item itemvalue="JUnit.PausaServiceTest.TEST_getPausasPorViaje" />
         <item itemvalue="JUnit.PausaServiceTest.testCrearPausaExito" />
@@ -375,6 +424,7 @@
       <workItem from="1731685100629" duration="3966000" />
       <workItem from="1731698584437" duration="1700000" />
       <workItem from="1731852999807" duration="5358000" />
+      <workItem from="1731768244419" duration="2001000" />
     </task>
     <task id="LOCAL-00001" summary="Configure el clientsMonopatin, ajuste puertos de los microservicios">
       <option name="closed" value="true" />
