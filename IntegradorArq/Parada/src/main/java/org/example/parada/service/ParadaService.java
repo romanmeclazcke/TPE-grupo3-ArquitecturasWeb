@@ -28,21 +28,17 @@ public class ParadaService {
 
     @Transactional
     public ParadaResponseDto ubicarMonopatinEnParada(Long idParada, Long idMonopatin) {
-        try {
-            Monopatin monopatin = this.monopatinFeignClient.getMonopatinById(idMonopatin);
-            if (monopatin == null) {
-                throw new NotFoundException("monopatin con id" + idMonopatin + "no encontrado");
-            }
-
-            Parada parada = this.paradaRepository.findById(idParada).orElseThrow(() -> new NotFoundException("Parada no encontrada"));
-
-
-            parada.getId_monopatines().add(idMonopatin);
-            this.paradaRepository.save(parada);
-            return this.mapearEntidadADto(parada);
-        } catch (Exception e) {
-            throw new RuntimeException(e.getMessage());
+        Monopatin monopatin = this.monopatinFeignClient.getMonopatinById(idMonopatin);
+        if (monopatin == null) {
+            throw new NotFoundException("monopatin con id" + idMonopatin + "no encontrado");
         }
+
+        Parada parada = this.paradaRepository.findById(idParada).orElseThrow(() -> new NotFoundException("Parada no encontrada"));
+
+
+        parada.getId_monopatines().add(idMonopatin);
+        this.paradaRepository.save(parada);
+        return this.mapearEntidadADto(parada);
     }
 
     public ParadaResponseDto retirarMonopatinDeParada(Long idParada, Long idMonopatin) {

@@ -16,12 +16,12 @@
         <module name="Reporte" />
         <module name="Pago" />
         <module name="Mantenimiento" />
+        <module name="pago" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Gestion" target="17" />
       <module name="Maps" target="17" />
-      <module name="pago" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -37,6 +37,7 @@
       <module name="Reporte" options="-parameters" />
       <module name="Usuario" options="-parameters" />
       <module name="Viaje" options="-parameters" />
+      <module name="pago" options="-parameters" />
     </option>
   </component>
 </project>
