@@ -1,6 +1,7 @@
 package org.example.usuario.controller;
 
 import jakarta.validation.Valid;
+import lombok.extern.slf4j.Slf4j;
 import org.example.usuario.DTO.UsuarioRequestDto;
 import org.example.usuario.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+@Slf4j
 @RestController
 @RequestMapping("/usuarios")
 public class UsuarioController {
@@ -38,6 +40,7 @@ public class UsuarioController {
     @PostMapping("")
     public ResponseEntity<?> crearUsuario(@RequestBody @Valid UsuarioRequestDto UsuarioRequestDto){
         try {
+            System.out.println(UsuarioRequestDto);
             return ResponseEntity.status(HttpStatus.CREATED).body(usuarioService.save(UsuarioRequestDto));
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("{\"error\":\"Error. No se pudo ingresar e;l usuario, revise los campos e intente nuevamente.\"}");
@@ -75,12 +78,12 @@ public class UsuarioController {
         }
     }
 
-//    @GetMapping("/cercanos")
-//    public ResponseEntity<?> getMonopatinesCercanos() {
-//        try {
-//            return ResponseEntity.status(HttpStatus.OK).body(usuarioService.getMonopatinesCercanos());
-//        } catch (Exception e) {
-//            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
-//        }
-//    }
+    @GetMapping("/email/{userEmail}")
+    public ResponseEntity<?> getUserByEmail(@PathVariable String userEmail) {
+        try {
+            return ResponseEntity.status(HttpStatus.OK).body(usuarioService.getUsuarioByEmail(userEmail));
+        }catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("{\"error\":\"Error. No se pudo obtener todos los usuarios.\"}");
+        }
+    }
 }

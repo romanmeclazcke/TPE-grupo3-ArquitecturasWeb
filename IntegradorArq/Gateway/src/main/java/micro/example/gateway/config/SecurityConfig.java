@@ -59,7 +59,7 @@ public class SecurityConfig {
                     .requestMatchers(HttpMethod.GET, "/pago/anio/{anio}/entre/{mesAnterior}/{mesPosterior}").hasAuthority(AuthotityConstant._ADMINISTRADOR)//ANDA
                     .requestMatchers(HttpMethod.GET, "/monopatines/order/disponibilidad").hasAuthority(AuthotityConstant._ADMINISTRADOR)//anda
                     .requestMatchers(HttpMethod.POST, "/tarifa").hasAuthority(AuthotityConstant._ADMINISTRADOR)//no anda
-                    .anyRequest().hasAuthority(AuthotityConstant._USUARIO)
+                    .anyRequest().permitAll()
             )
             .httpBasic( Customizer.withDefaults() )
             .addFilterBefore( new JwtFilter( this.tokenProvider ), UsernamePasswordAuthenticationFilter.class );

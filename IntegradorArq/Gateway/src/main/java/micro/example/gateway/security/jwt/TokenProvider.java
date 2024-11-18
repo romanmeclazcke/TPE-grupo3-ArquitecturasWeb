@@ -45,14 +45,7 @@ public class TokenProvider {
 
         long now = ( new Date() ).getTime();
         Date validity = new Date( now + this.tokenValidityInMilliseconds );
-        System.out.println("Create token"+ Jwts
-                .builder()
-                .subject( authentication.getName() )
-                .claim( AUTHORITIES_KEY, authorities )
-                .signWith( key )
-                .expiration(validity)
-                .issuedAt( new Date() )
-                .compact());
+
         return Jwts
                 .builder()
                 .subject( authentication.getName() )

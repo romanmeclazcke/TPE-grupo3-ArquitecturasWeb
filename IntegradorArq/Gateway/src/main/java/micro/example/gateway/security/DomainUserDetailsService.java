@@ -1,12 +1,12 @@
 package micro.example.gateway.security;
 
-import micro.example.gateway.entity.Authority;
-import micro.example.gateway.entity.User;
-import micro.example.gateway.repository.UserRepository;
+import micro.example.gateway.DTO.UsuarioResponseDto;
+import micro.example.gateway.FeignClient.UsuarioFeignClient;
+import micro.example.gateway.Model.Usuario;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -20,31 +20,39 @@ public class DomainUserDetailsService implements UserDetailsService {
 
     private final Logger log = LoggerFactory.getLogger(DomainUserDetailsService.class);
 
-    private final UserRepository userRepository;
+    private final UsuarioFeignClient usuarioFeignClient;
 
-    public DomainUserDetailsService( UserRepository userRepository ) {
-        this.userRepository = userRepository;
+    public DomainUserDetailsService(UsuarioFeignClient usuarioFeignClient) {
+        this.usuarioFeignClient = usuarioFeignClient;
     }
 
     @Override
     @Transactional(readOnly = true)
-    public UserDetails loadUserByUsername(final String username ) {
+    public UserDetails loadUserByUsername(final String username) {
         log.debug("Authenticating {}", username);
 
-        return userRepository
-            .findOneWithAuthoritiesByUsernameIgnoreCase( username.toLowerCase() )
-            .map( this::createSpringSecurityUser )
-            .orElseThrow( () -> new UsernameNotFoundException( "El usuario " + username + " no existe" ) );
+        // Usa el Feign Client para obtener los detalles del usuario desde otro microservicio
+        UsuarioResponseDto user = usuarioFeignClient.getUserByUsername(username.toLowerCase());
+        System.out.println(user);
+
+        if (user == null) {
+            throw new UsernameNotFoundException("El usuario " + username + " no existe");
+        }
+        Usuario u = new Usuario();
+        u.setId(user.getId());
+        u.setNombre(user.getNombre());
+        u.setApellido(user.getApellido());
+        u.setEmail(user.getEmail());
+        u.setPassword(user.getPassword());
+        u.setRol(user.getRol());
+        return createSpringSecurityUser(u);
     }
 
-    private UserDetails createSpringSecurityUser( User user ) {
+    private UserDetails createSpringSecurityUser(Usuario user) {
         List<GrantedAuthority> grantedAuthorities = user
                 .getAuthorities()
                 .stream()
-                .map( Authority::getName )
-                .map( SimpleGrantedAuthority::new )
-                .collect( Collectors.toList() );
-        return new org.springframework.security.core.userdetails.User( user.getUsername(), user.getPassword(), grantedAuthorities );
+                .collect(Collectors.toList());
+        return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), grantedAuthorities);
     }
-
 }

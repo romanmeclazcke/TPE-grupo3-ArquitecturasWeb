@@ -1,9 +1,9 @@
-package org.example.usuario.DTO;
+package micro.example.gateway.DTO;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.example.usuario.entity.Rol;
+import micro.example.gateway.Model.Rol;
 
 
 @Data
