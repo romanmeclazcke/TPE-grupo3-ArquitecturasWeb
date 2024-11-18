@@ -5,32 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9714064e-1399-4df4-affd-db1d8e41d3b1" name="Changes" comment="Cree logica para saber donde se encuentra un monopatin al iniciar un viaje">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mantenimiento/src/test/java/org/example/mantenimiento/MantenimientoApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mantenimiento/target/test-classes/org/example/mantenimiento/MantenimientoApplicationTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mapa/src/test/java/org/example/mapa/MapaApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Monopatin/src/test/java/org/example/monopatin/MonopatinApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Monopatin/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Monopatin/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Monopatin/target/test-classes/org/example/monopatin/MonopatinApplicationTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pago/src/test/java/org/example/pago/PagoApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parada/src/main/java/org/example/parada/service/ParadaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parada/src/main/java/org/example/parada/service/ParadaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parada/src/test/java/org/example/parada/ParadaApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parada/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parada/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parada/target/classes/org/example/parada/service/ParadaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/Parada/target/classes/org/example/parada/service/ParadaService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reporte/src/test/java/org/example/reporte/ReporteApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reporte/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reporte/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reporte/target/classes/org/example/reporte/service/ReporteService.class" beforeDir="false" afterPath="$PROJECT_DIR$/Reporte/target/classes/org/example/reporte/service/ReporteService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Usuario/src/test/java/org/example/usuario/UsuarioApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Usuario/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Usuario/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/src/test/java/org/example/viaje/ViajeApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/controller/PausaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/controller/PausaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/controller/TarifaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/controller/TarifaController.java" afterDir="false" />
     </list>
@@ -86,57 +61,6 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.CuentaServiceTest.TEST_anularCuenta.executor": "Run",
-    "JUnit.CuentaServiceTest.TEST_anularCuentaNoEncontrada.executor": "Run",
-    "JUnit.CuentaServiceTest.TEST_cargarSaldo.executor": "Run",
-    "JUnit.MantenimientoServiceTest.TEST_saveMonopatinEnMantenimiento.executor": "Run",
-    "JUnit.MantenimientoServiceTest.TEST_saveMonopatinInexistente.executor": "Run",
-    "JUnit.MonopatinServiceTest.TEST_activarMonopatinNoDisponible.executor": "Run",
-    "JUnit.MonopatinServiceTest.TEST_sumarKilometros.executor": "Run",
-    "JUnit.PagoServiceTest.TEST_creditoInsuficiente.executor": "Run",
-    "JUnit.PagoServiceTest.TEST_getTotalFacturado.executor": "Run",
-    "JUnit.ParadaServiceTest.TEST_ubicarMonopatinEnParadaInexistente.executor": "Run",
-    "JUnit.PausaServiceTest.TEST_getPausasPorViaje.executor": "Run",
-    "JUnit.PausaServiceTest.testCrearPausaExito.executor": "Run",
-    "JUnit.ReporteServiceTest.TEST_reporteKilometros.executor": "Run",
-    "JUnit.ReporteServiceTest.TEST_reporteTiempoConPausas.executor": "Run",
-    "JUnit.ReporteServiceTest.TEST_reporteTiempoSinConPausas.executor": "Run",
-    "JUnit.UsuarioServiceTest.TEST_agregarCuenta.executor": "Run",
-    "JUnit.UsuarioServiceTest.TEST_agregarCuentaInexistente.executor": "Run",
-    "JUnit.UsuarioServiceTest.TEST_agregarCuenta_UsuarioNoExiste.executor": "Run",
-    "JUnit.UsuarioServiceTest.TEST_editarUsuario.executor": "Run",
-    "JUnit.ViajeServiceTest.TEST_endViajeExitoso.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.GatewayApplication.executor": "Run",
-    "Spring Boot.GestionApplication.executor": "Run",
-    "Spring Boot.MantenimientoApplication.executor": "Run",
-    "Spring Boot.MapaApplication.executor": "Run",
-    "Spring Boot.MonopatinApplication.executor": "Run",
-    "Spring Boot.PagoApplication.executor": "Run",
-    "Spring Boot.ParadaApplication.executor": "Run",
-    "Spring Boot.ReporteApplication.executor": "Run",
-    "Spring Boot.UsuarioApplication.executor": "Run",
-    "Spring Boot.ViajeApplication.executor": "Run",
-    "git-widget-placeholder": "integrador-entrega-2",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/Acer/Desktop/TPE-grupo3-ArquitecturasWeb/IntegradorArq/Mapa/src/main/java/org/example/mapa",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.39770114",
-    "run.configurations.included.in.services": "true",
-    "service.view.auto.scroll.to.source": "true",
-    "vue.rearranger.settings.migration": "true"
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;JUnit.All in Reporte.executor&quot;: &quot;Run&quot;,
@@ -170,15 +94,12 @@
     &quot;service.view.auto.scroll.to.source&quot;: &quot;true&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "JAVA"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;JAVA&quot;
     ]
   }
-}]]></component>
-  <component name="ReactorSettings">
-    <option name="notificationShown" value="true" />
-  </component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Pago/src/main/java/org/example/pago" />
@@ -218,57 +139,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-  <component name="RunManager" selected="JUnit.ViajeServiceTest.TEST_endViajeExitoso">
-    <configuration name="PausaServiceTest.TEST_getPausasPorViaje" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Viaje" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PausaServiceTest" />
-      <option name="METHOD_NAME" value="TEST_getPausasPorViaje" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PausaServiceTest.testCrearPausaExito" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Viaje" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PausaServiceTest" />
-      <option name="METHOD_NAME" value="testCrearPausaExito" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UsuarioServiceTest.TEST_agregarCuenta" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Usuario" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="UsuarioServiceTest" />
-      <option name="METHOD_NAME" value="TEST_agregarCuenta" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UsuarioServiceTest.TEST_agregarCuentaInexistente" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Usuario" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="UsuarioServiceTest" />
-      <option name="METHOD_NAME" value="TEST_agregarCuentaInexistente" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ViajeServiceTest.TEST_endViajeExitoso" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Viaje" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ViajeServiceTest" />
-      <option name="METHOD_NAME" value="TEST_endViajeExitoso" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="Gateway" />
@@ -301,7 +171,7 @@
       </method>
     </configuration>
     <configuration name="PagoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="pago" />
+      <module name="Pago" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.pago.PagoApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -342,15 +212,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in Reporte" />
-      </list>
-    </recent_temporary>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.ViajeServiceTest.TEST_endViajeExitoso" />
-        <item itemvalue="JUnit.PausaServiceTest.TEST_getPausasPorViaje" />
-        <item itemvalue="JUnit.PausaServiceTest.testCrearPausaExito" />
-        <item itemvalue="JUnit.UsuarioServiceTest.TEST_agregarCuenta" />
-        <item itemvalue="JUnit.UsuarioServiceTest.TEST_agregarCuentaInexistente" />
       </list>
     </recent_temporary>
   </component>
@@ -423,7 +284,6 @@
       <workItem from="1731675381805" duration="3868000" />
       <workItem from="1731685100629" duration="3966000" />
       <workItem from="1731698584437" duration="1700000" />
-      <workItem from="1731852999807" duration="5358000" />
       <workItem from="1731768244419" duration="2001000" />
     </task>
     <task id="LOCAL-00001" summary="Configure el clientsMonopatin, ajuste puertos de los microservicios">

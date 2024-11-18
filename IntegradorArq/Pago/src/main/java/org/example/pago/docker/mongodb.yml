@@ -3,10 +3,10 @@ services:
     container_name: mongo
     image: mongo:7.0.11
     command:
-      - --auth  # Habilita la autenticación
+      - --auth
     environment:
-      MONGO_INITDB_ROOT_USERNAME: appuser  # Usuario root para administración
-      MONGO_INITDB_ROOT_PASSWORD: appuserpassword  # Contraseña para el usuario root
-      MONGO_INITDB_DATABASE: pago  # Base de datos inicial
+      MONGO_INITDB_ROOT_USERNAME: appuser
+      MONGO_INITDB_ROOT_PASSWORD: appuserpassword
+      MONGO_INITDB_DATABASE: pago
     ports:
-      - "127.0.0.1:27017:27017"  # Exponemos el puerto 27017
+      - "127.0.0.1:27017:27017"
