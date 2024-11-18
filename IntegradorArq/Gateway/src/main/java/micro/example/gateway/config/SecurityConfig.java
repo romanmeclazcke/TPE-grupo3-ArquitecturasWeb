@@ -53,14 +53,13 @@ public class SecurityConfig {
             .authorizeHttpRequests( authz -> authz
                     .requestMatchers(HttpMethod.POST, "/api/authenticate").permitAll()
                     .requestMatchers(HttpMethod.POST, "/api/usuarios").permitAll()
-                    .requestMatchers(HttpMethod.GET, "/monopatines").hasAuthority(AuthotityConstant._MANTENIMIENTO)
-                    .requestMatchers("/viaje/**").authenticated()
-                    .requestMatchers("/reporte/**").authenticated()
-                    .requestMatchers("/parada/**").authenticated()
-                    .requestMatchers("/pago/**").authenticated()
-                    .requestMatchers("/mapa/**").authenticated()
-                    .requestMatchers("/pago/**").authenticated()
-                    .anyRequest().authenticated()
+                    .requestMatchers("/reporte/**").hasAuthority(AuthotityConstant._MANTENIMIENTO)//anda
+                    .requestMatchers(HttpMethod.PUT, "/cuenta/{id}/anular").hasAuthority("ADMINISTRADOR")//no anda
+                    .requestMatchers(HttpMethod.GET, "/viaje/monopatines/viajes/{cant}/anio/{anio}").hasAuthority(AuthotityConstant._ADMINISTRADOR)//anda
+                    .requestMatchers(HttpMethod.GET, "/pago/anio/{anio}/entre/{mesAnterior}/{mesPosterior}").hasAuthority(AuthotityConstant._ADMINISTRADOR)
+                    .requestMatchers(HttpMethod.GET, "/monopatines/order/disponibilidad").hasAuthority(AuthotityConstant._ADMINISTRADOR)//anda
+                    .requestMatchers(HttpMethod.POST, "/tarifa").hasAuthority(AuthotityConstant._ADMINISTRADOR)//no anda
+                    .anyRequest().hasAuthority(AuthotityConstant._USUARIO)
             )
             .httpBasic( Customizer.withDefaults() )
             .addFilterBefore( new JwtFilter( this.tokenProvider ), UsernamePasswordAuthenticationFilter.class );

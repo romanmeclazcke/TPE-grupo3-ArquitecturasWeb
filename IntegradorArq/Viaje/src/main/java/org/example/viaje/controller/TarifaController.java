@@ -17,7 +17,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("tarifa")
+@RequestMapping("/tarifa")
 public class TarifaController {
 
     @Autowired
@@ -117,7 +117,7 @@ public class TarifaController {
                     content = @Content( mediaType =  "application/json" )
             )
     })
-    @PostMapping("/")
+    @PostMapping("")
     public ResponseEntity<?> crateTarifa(@Parameter(
             description = "DTO con la información necesaria para crear una tarifa",
             required = true,
