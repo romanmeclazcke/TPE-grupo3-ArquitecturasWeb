@@ -18,7 +18,7 @@ public class MonopatinRequestDto {
     @Schema(description = "ID del monopatín", example = "1", required = false)
     private long id;
 
-    @NotNull(message = "El tiempo de uso es un campo obligatorio")
+    //@NotNull(message = "El tiempo de uso es un campo obligatorio")
     @Schema(description = "Duración del tiempo de uso del monopatín", example = "PT1H30M", required = true)
     private Duration tiempo_uso;
 

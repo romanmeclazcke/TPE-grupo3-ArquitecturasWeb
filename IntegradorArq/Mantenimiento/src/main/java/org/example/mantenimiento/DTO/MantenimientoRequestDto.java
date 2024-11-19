@@ -14,7 +14,7 @@ import java.util.List;
 @NoArgsConstructor
 public class MantenimientoRequestDto {
     @NotNull(message = "La fecha de inicio es un campo obligatorio")
-    @NotEmpty(message = "La fecha de inicio no puede estar vacía")
+    //@NotEmpty(message = "La fecha de inicio no puede estar vacía")
     private LocalDate fecha_inicio;
     private List<String> acciones;
 }
