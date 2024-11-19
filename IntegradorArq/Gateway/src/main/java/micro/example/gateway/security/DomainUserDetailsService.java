@@ -29,11 +29,8 @@ public class DomainUserDetailsService implements UserDetailsService {
     @Override
     @Transactional(readOnly = true)
     public UserDetails loadUserByUsername(final String username) {
-        log.debug("Authenticating {}", username);
 
-        // Usa el Feign Client para obtener los detalles del usuario desde otro microservicio
         UsuarioResponseDto user = usuarioFeignClient.getUserByUsername(username.toLowerCase());
-        System.out.println(user);
 
         if (user == null) {
             throw new UsernameNotFoundException("El usuario " + username + " no existe");

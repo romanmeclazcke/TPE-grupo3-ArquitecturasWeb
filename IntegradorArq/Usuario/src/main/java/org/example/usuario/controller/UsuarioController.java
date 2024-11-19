@@ -40,7 +40,6 @@ public class UsuarioController {
     @PostMapping("")
     public ResponseEntity<?> crearUsuario(@RequestBody @Valid UsuarioRequestDto UsuarioRequestDto){
         try {
-            System.out.println(UsuarioRequestDto);
             return ResponseEntity.status(HttpStatus.CREATED).body(usuarioService.save(UsuarioRequestDto));
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("{\"error\":\"Error. No se pudo ingresar e;l usuario, revise los campos e intente nuevamente.\"}");

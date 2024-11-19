@@ -6,15 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="9714064e-1399-4df4-affd-db1d8e41d3b1" name="Changes" comment="Cree logica para saber donde se encuentra un monopatin al iniciar un viaje">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Gateway/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/entity/Cuenta.java" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/entity/Cuenta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/entity/Rol.java" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/entity/Rol.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/repository/UsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/repository/UsuarioRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gateway/src/main/java/micro/example/gateway/security/DomainUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gateway/src/main/java/micro/example/gateway/security/DomainUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pago/src/main/java/org/example/pago/service/PagoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Pago/src/main/java/org/example/pago/service/PagoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/controller/UsuarioController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/service/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/service/UsuarioService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Usuario/target/classes/org/example/usuario/entity/Cuenta.class" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/target/classes/org/example/usuario/entity/Cuenta.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Usuario/target/classes/org/example/usuario/entity/Rol.class" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/target/classes/org/example/usuario/entity/Rol.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Usuario/target/classes/org/example/usuario/repository/UsuarioRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/target/classes/org/example/usuario/repository/UsuarioRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Usuario/target/classes/org/example/usuario/service/UsuarioService.class" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/target/classes/org/example/usuario/service/UsuarioService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -322,7 +317,7 @@
       <workItem from="1731698584437" duration="1700000" />
       <workItem from="1731768244419" duration="2001000" />
       <workItem from="1731960384537" duration="9276000" />
-      <workItem from="1732011215720" duration="2011000" />
+      <workItem from="1732011215720" duration="2412000" />
     </task>
     <task id="LOCAL-00001" summary="Configure el clientsMonopatin, ajuste puertos de los microservicios">
       <option name="closed" value="true" />

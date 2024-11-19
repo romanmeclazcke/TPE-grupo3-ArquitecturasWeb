@@ -131,14 +131,7 @@ public class UsuarioService {
             throw new Exception(e.getMessage());
         }
     }
-//    public UsuarioResponseDto getUsuarioByEmail(String userEmail) {
-//        Usuario usuario = this.usuarioRepository.getUsuarioByEmail(userEmail);
-//        System.out.println("Service" + usuario);
-//        if (usuario == null) {
-//            throw new RuntimeException("Usuario no encontrado con el email: " + userEmail);
-//        }
-//        return this.mapearEntididadADto(usuario);
-//    }
+
 
     public UsuarioResponseDto getUsuarioByEmail(String email) throws ChangeSetPersister.NotFoundException {
         Optional<Usuario> usuarioOptional = usuarioRepository.findByEmail(email);
@@ -153,7 +146,6 @@ public class UsuarioService {
         Hibernate.initialize(usuario.getRol());
         Hibernate.initialize(usuario.getCuentas());
 
-        // Mapear Usuario a UsuarioResponseDto
         UsuarioResponseDto responseDto = mapearEntididadADto(usuario);
         responseDto.setMensaje("Usuario encontrado con éxito.");
         responseDto.setExito(true);
