@@ -48,6 +48,19 @@ public class PausaService {
         }
     }
 
+    public List<PausaResponseDto> getPausasPorIdMonopatin(Long idMonopatin){
+        try {
+            List<Pausa> pausasPorMonopatin = this.pausaRepository.getPausasPorMonopatin(idMonopatin);
+            List<PausaResponseDto> pausasDto = new ArrayList<>();
+            for(Pausa p :pausasPorMonopatin){
+                pausasDto.add(this.mapearDeEntidadADto(p));
+            }
+            return pausasDto;
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 
     public List<PausaResponseDto> getPausasPorViaje(Long idViaje){
         try {
