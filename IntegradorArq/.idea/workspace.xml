@@ -6,12 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="9714064e-1399-4df4-affd-db1d8e41d3b1" name="Changes" comment="Cree logica para saber donde se encuentra un monopatin al iniciar un viaje">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mantenimiento/src/main/java/org/example/mantenimiento/DTO/MantenimientoRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mantenimiento/src/main/java/org/example/mantenimiento/DTO/MantenimientoRequestDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mantenimiento/src/main/java/org/example/mantenimiento/DTO/MantenimientoResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mantenimiento/src/main/java/org/example/mantenimiento/DTO/MantenimientoResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mantenimiento/src/main/java/org/example/mantenimiento/DTO/MonopatinEnMantenimientoResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mantenimiento/src/main/java/org/example/mantenimiento/DTO/MonopatinEnMantenimientoResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mantenimiento/src/main/java/org/example/mantenimiento/controller/MantenimientoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mantenimiento/src/main/java/org/example/mantenimiento/controller/MantenimientoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/DTO/CuentaCargarSaldoDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/DTO/CuentaCargarSaldoDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/controller/CuentaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/controller/CuentaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/controller/RolController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/controller/RolController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/controller/UsuarioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/controller/ViajeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/controller/ViajeController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -293,7 +291,7 @@
       <workItem from="1731685100629" duration="3966000" />
       <workItem from="1731698584437" duration="1700000" />
       <workItem from="1731768244419" duration="2001000" />
-      <workItem from="1732026735280" duration="1964000" />
+      <workItem from="1732026735280" duration="4907000" />
     </task>
     <task id="LOCAL-00001" summary="Configure el clientsMonopatin, ajuste puertos de los microservicios">
       <option name="closed" value="true" />
