@@ -211,7 +211,7 @@ public class MonopatinController {
     @GetMapping("/order/tiempo-uso/con-pausa")
     public ResponseEntity<?> getMonopatinesConTiempoPausa() throws Exception {
         try {
-            return ResponseEntity.status(HttpStatus.OK).body(monopatinServices.getMonopatinesPorKilometros());
+            return ResponseEntity.status(HttpStatus.OK).body(monopatinServices.getMonopatinesconTiempoPausa());
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
         }
