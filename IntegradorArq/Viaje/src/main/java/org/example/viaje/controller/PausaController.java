@@ -78,4 +78,13 @@ public class PausaController {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
         }
     }
+
+    @GetMapping("/monopatin/{idMonopatin}")
+    public ResponseEntity<?> getPausasPorIdMonopatin(@Parameter(description = "El id del monopatin al cual se obtendran las pausas", example = "3") @PathVariable Long idMonopatin){
+        try {
+            return ResponseEntity.status(HttpStatus.OK).body(pausaService.getPausasPorIdMonopatin(idMonopatin));
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
+        }
+    }
 }

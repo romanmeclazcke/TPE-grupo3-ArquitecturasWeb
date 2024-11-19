@@ -30,7 +30,6 @@ public class ReporteService {
 
     public List<ReporteResponseDto> obtenerReporteTiempo(boolean pausas) {
         List<org.example.reporte.Model.Monopatin> monopatines;
-
         if (pausas) {
             monopatines = this.monopatinFeignClient.getMonopatinesConTiempoPausa();
         } else {
