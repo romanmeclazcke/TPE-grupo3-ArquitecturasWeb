@@ -79,6 +79,17 @@ public class PausaController {
         }
     }
 
+    @Operation(
+            summary = "Endpoint para obtener las pausas asociadas a un monopatin",
+            requestBody = @io.swagger.v3.oas.annotations.parameters.RequestBody(
+                    description = "Información requerida para obtener las pausas de un viaje: idViaje",
+                    required = true,
+                    content = @Content(
+                            mediaType = "application/json",
+                            schema = @Schema(implementation = PausaResponseDto.class)
+                    )
+            )
+    )
     @GetMapping("/monopatin/{idMonopatin}")
     public ResponseEntity<?> getPausasPorIdMonopatin(@Parameter(description = "El id del monopatin al cual se obtendran las pausas", example = "3") @PathVariable Long idMonopatin){
         try {
