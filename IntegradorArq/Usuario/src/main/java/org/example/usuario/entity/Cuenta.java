@@ -26,8 +26,9 @@ public class Cuenta {
     private Double credito;
     private boolean activa;
 
-    @ManyToMany(mappedBy = "cuentas")
+    @ManyToMany(mappedBy = "cuentas", fetch = FetchType.LAZY)
     @ToString.Exclude
+    @JsonIgnore
     private List<Usuario> usuarios;
 
 

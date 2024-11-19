@@ -39,7 +39,7 @@ spring:
             predicates:
               - Path=/reporte/**
           - id: usuario
-            uri: http://localhost:8081
+            uri: http://localhost:8081/usuarios
             predicates:
               - Path=/usuarios/**
           - id: viaje

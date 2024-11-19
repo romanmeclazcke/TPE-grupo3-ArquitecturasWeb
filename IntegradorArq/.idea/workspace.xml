@@ -6,33 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="9714064e-1399-4df4-affd-db1d8e41d3b1" name="Changes" comment="Cree logica para saber donde se encuentra un monopatin al iniciar un viaje">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gateway/src/main/java/micro/example/gateway/Controller/JwtController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gateway/src/main/java/micro/example/gateway/Controller/JwtController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gateway/src/main/java/micro/example/gateway/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gateway/src/main/java/micro/example/gateway/Controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gateway/src/main/java/micro/example/gateway/GatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gateway/src/main/java/micro/example/gateway/GatewayApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gateway/src/main/java/micro/example/gateway/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gateway/src/main/java/micro/example/gateway/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gateway/src/main/java/micro/example/gateway/entity/Authority.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gateway/src/main/java/micro/example/gateway/entity/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gateway/src/main/java/micro/example/gateway/repository/AuthorityRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gateway/src/main/java/micro/example/gateway/repository/UserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gateway/src/main/java/micro/example/gateway/security/DomainUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gateway/src/main/java/micro/example/gateway/security/DomainUserDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gateway/src/main/java/micro/example/gateway/security/jwt/TokenProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gateway/src/main/java/micro/example/gateway/security/jwt/TokenProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gateway/src/main/java/micro/example/gateway/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gateway/src/main/java/micro/example/gateway/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gateway/src/main/java/micro/example/gateway/service/dto/login/LoginDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gateway/src/main/java/micro/example/gateway/service/dto/login/LoginDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gateway/src/main/java/micro/example/gateway/service/dto/user/UserDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Usuario/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/DTO/UsuarioRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/DTO/UsuarioRequestDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/DTO/UsuarioResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/DTO/UsuarioResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/controller/UsuarioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Gateway/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/entity/Cuenta.java" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/entity/Cuenta.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/entity/Rol.java" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/entity/Rol.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/entity/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/entity/Usuario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/repository/UsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/repository/UsuarioRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/service/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/service/UsuarioService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Usuario/target/classes/org/example/usuario/controller/UsuarioController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/target/classes/org/example/usuario/controller/UsuarioController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuario/target/classes/org/example/usuario/entity/Cuenta.class" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/target/classes/org/example/usuario/entity/Cuenta.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuario/target/classes/org/example/usuario/entity/Rol.class" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/target/classes/org/example/usuario/entity/Rol.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Usuario/target/classes/org/example/usuario/repository/UsuarioRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/target/classes/org/example/usuario/repository/UsuarioRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Usuario/target/classes/org/example/usuario/service/UsuarioService.class" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/target/classes/org/example/usuario/service/UsuarioService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Viaje/target/test-classes/PausaServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Viaje/target/test-classes/PausaServiceTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +87,7 @@
     &quot;Spring Boot.ReporteApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.UsuarioApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.ViajeApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;integrador-entrega-2&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;integrador-entrega-2-comunicacion-micro-usuarios&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/Acer/Desktop/TPE-grupo3-ArquitecturasWeb/IntegradorArq/Pago/src/main/java/org/example/pago&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -339,7 +321,8 @@
       <workItem from="1731685100629" duration="3966000" />
       <workItem from="1731698584437" duration="1700000" />
       <workItem from="1731768244419" duration="2001000" />
-      <workItem from="1731960384537" duration="8407000" />
+      <workItem from="1731960384537" duration="9276000" />
+      <workItem from="1732011215720" duration="2011000" />
     </task>
     <task id="LOCAL-00001" summary="Configure el clientsMonopatin, ajuste puertos de los microservicios">
       <option name="closed" value="true" />
@@ -504,9 +487,13 @@
           <line>171</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Gateway/src/main/java/micro/example/gateway/FeignConfig.java</url>
-          <line>16</line>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/Gateway/src/main/java/micro/example/gateway/Controller/JwtController.java</url>
+          <line>29</line>
+          <properties class="micro.example.gateway.Controller.JwtController" method="authorize">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>

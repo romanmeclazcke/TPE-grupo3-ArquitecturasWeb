@@ -1,5 +1,6 @@
 package org.example.usuario.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -23,6 +24,7 @@ public class Rol {
 
     @OneToMany(mappedBy = "rol", fetch = FetchType.LAZY)
     @ToString.Exclude
+    @JsonIgnore
     private List<Usuario> usuarios;
 
     @Override
