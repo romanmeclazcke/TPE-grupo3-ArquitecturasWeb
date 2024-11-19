@@ -28,7 +28,6 @@ public class PagoService {
 
     public boolean pagar(PagoRequestDto pagoRequestDto) throws Exception {
         try{
-            System.out.println(pagoRequestDto);
             List<Cuenta> cuentas = this.usuarioFeignClient.getCuentasByUser(pagoRequestDto.getUserId());
             if(cuentas.size()==0){
                 throw  new Exception("No posees cuentas");
@@ -49,7 +48,6 @@ public class PagoService {
                 if(creditoCuenta>pendientePorPagar){
                     pendientePorPagar=0.0;
                     CuentaRequestDto cuentaDto = new CuentaRequestDto(cuenta.getCredito()-pagoRequestDto.getMonto());
-                    System.out.println(cuenta);
                     this.usuarioFeignClient.updateCuenta(cuenta.getId(), cuentaDto);
                 }else{
                     pendientePorPagar-=cuenta.getCredito();

@@ -1,16 +1,15 @@
-package org.example.usuario.DTO;
+package micro.example.gateway.DTO;
 
-
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import jakarta.validation.constraints.NotEmpty;
-import jakarta.validation.constraints.NotNull;
-import org.example.usuario.entity.Rol;
+
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 public class UsuarioRequestDto {
     private Long id; // Número identificatorio
 
@@ -32,5 +31,4 @@ public class UsuarioRequestDto {
     private Long id_rol;
 
     private String password;
-
 }

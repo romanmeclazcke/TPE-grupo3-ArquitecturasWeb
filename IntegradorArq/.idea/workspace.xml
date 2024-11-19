@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9714064e-1399-4df4-affd-db1d8e41d3b1" name="Changes" comment="Cree logica para saber donde se encuentra un monopatin al iniciar un viaje">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/DTO/CuentaCargarSaldoDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/DTO/CuentaCargarSaldoDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/controller/CuentaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/controller/CuentaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/controller/RolController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/controller/RolController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/src/main/java/org/example/usuario/controller/UsuarioController.java" afterDir="false" />
-    </list>
+    <list default="true" id="9714064e-1399-4df4-affd-db1d8e41d3b1" name="Changes" comment="Cree logica para saber donde se encuentra un monopatin al iniciar un viaje" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,6 +19,7 @@
         <option value="package-info" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Dockerfile" />
       </list>
     </option>
   </component>
@@ -66,6 +61,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;JUnit.All in Reporte.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PausaServiceTest.TEST_getPausasPorViaje.executor&quot;: &quot;Run&quot;,
     &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
     &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
     &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
@@ -81,7 +77,7 @@
     &quot;Spring Boot.ReporteApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.UsuarioApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.ViajeApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;integrador-entrega-2&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;integrador-entrega-2-comunicacion-micro-usuarios&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/Acer/Desktop/TPE-grupo3-ArquitecturasWeb/IntegradorArq/Pago/src/main/java/org/example/pago&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -141,6 +137,16 @@
       <module name="Reporte" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PausaServiceTest.TEST_getPausasPorViaje" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Viaje" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PausaServiceTest" />
+      <option name="METHOD_NAME" value="TEST_getPausasPorViaje" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -215,8 +221,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.All in Reporte" />
+      <item itemvalue="JUnit.PausaServiceTest.TEST_getPausasPorViaje" />
+      <item itemvalue="Spring Boot.GatewayApplication" />
+      <item itemvalue="Spring Boot.MantenimientoApplication" />
+      <item itemvalue="Spring Boot.MapaApplication" />
+      <item itemvalue="Spring Boot.MonopatinApplication" />
+      <item itemvalue="Spring Boot.PagoApplication" />
+      <item itemvalue="Spring Boot.ParadaApplication" />
+      <item itemvalue="Spring Boot.ReporteApplication" />
+      <item itemvalue="Spring Boot.UsuarioApplication" />
+      <item itemvalue="Spring Boot.ViajeApplication" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PausaServiceTest.TEST_getPausasPorViaje" />
         <item itemvalue="JUnit.All in Reporte" />
       </list>
     </recent_temporary>
@@ -224,8 +244,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.20224.419" />
-        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-IU-242.20224.419" />
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
       </set>
     </attachedChunks>
   </component>
@@ -291,7 +311,8 @@
       <workItem from="1731685100629" duration="3966000" />
       <workItem from="1731698584437" duration="1700000" />
       <workItem from="1731768244419" duration="2001000" />
-      <workItem from="1732026735280" duration="4907000" />
+      <workItem from="1731960384537" duration="9276000" />
+      <workItem from="1732011215720" duration="2412000" />
     </task>
     <task id="LOCAL-00001" summary="Configure el clientsMonopatin, ajuste puertos de los microservicios">
       <option name="closed" value="true" />
@@ -397,7 +418,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731007589692</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="cambie texto por constante">
+      <option name="closed" value="true" />
+      <created>1731950242161</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1731950242161</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -427,6 +456,37 @@
     <MESSAGE value="Cambie path del metodo crear viaje" />
     <MESSAGE value="Cree logica para obtener los monopatines en un radio de 1 kilometro" />
     <MESSAGE value="Cree logica para saber donde se encuentra un monopatin al iniciar un viaje" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cree logica para saber donde se encuentra un monopatin al iniciar un viaje" />
+    <MESSAGE value="cambie texto por constante" />
+    <option name="LAST_COMMIT_MESSAGE" value="cambie texto por constante" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Reporte/src/main/java/org/example/reporte/controller/ReporteController.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/controller/ViajeController.java</url>
+          <line>118</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Viaje/src/main/java/org/example/viaje/controller/ViajeController.java</url>
+          <line>171</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/Gateway/src/main/java/micro/example/gateway/Controller/JwtController.java</url>
+          <line>29</line>
+          <properties class="micro.example.gateway.Controller.JwtController" method="authorize">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

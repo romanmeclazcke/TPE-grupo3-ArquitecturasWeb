@@ -1,9 +1,11 @@
 package org.example.usuario.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.util.List;
 
@@ -20,6 +22,16 @@ public class Rol {
     @Column
     private String tipo_rol;
 
-    @OneToMany(mappedBy = "rol")
+    @OneToMany(mappedBy = "rol", fetch = FetchType.LAZY)
+    @ToString.Exclude
+    @JsonIgnore
     private List<Usuario> usuarios;
+
+    @Override
+    public String toString() {
+        return "Rol{" +
+                "id=" + id +
+                ", tipo_rol='" + tipo_rol + '\'' +
+                '}';
+    }
 }
