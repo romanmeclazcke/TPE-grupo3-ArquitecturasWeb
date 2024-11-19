@@ -31,15 +31,7 @@ public class ViajeController {
 
     @Operation(
             summary = "Crear un nuevo viaje",
-            description = "Endpoint para crear un nuevo viaje a partir de un monopatin, usuario y una parada",
-            requestBody = @io.swagger.v3.oas.annotations.parameters.RequestBody(
-                    description = "Información requerida para crear el viaje: monopatinId , usuarioId, paradaId",
-                    required = true,
-                    content = @Content(
-                            mediaType = "application/json",
-                            schema = @Schema(implementation = ViajeRequestDTO.class)
-                    )
-            )
+            description = "Endpoint para crear un nuevo viaje a partir de un monopatin, usuario y una parada"
     )
     @ApiResponses( value = {
             @ApiResponse(
