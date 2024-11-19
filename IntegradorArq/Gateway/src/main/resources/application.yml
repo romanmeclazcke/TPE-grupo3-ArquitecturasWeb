@@ -42,10 +42,26 @@ spring:
             uri: http://localhost:8081/usuarios
             predicates:
               - Path=/usuarios/**
+          - id: cuentas
+            uri: http://localhost:8081
+            predicates:
+              - Path=/cuenta/**
+          - id: roles
+            uri: http://localhost:8081
+            predicates:
+              - Path=/roles/**
           - id: viaje
             uri: http://localhost:8084
             predicates:
               - Path=/viaje/**
+          - id: tarifa
+            uri: http://localhost:8084
+            predicates:
+              - Path=/tarifa/**
+          - id: pausa
+            uri: http://localhost:8084
+            predicates:
+              - Path=/pausa/**
 logging:
   level:
     org.springframework.cloud.gateway: DEBUG

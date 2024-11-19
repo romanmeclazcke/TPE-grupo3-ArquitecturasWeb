@@ -53,12 +53,12 @@ public class SecurityConfig {
             .authorizeHttpRequests( authz -> authz
                     .requestMatchers(HttpMethod.POST, "/api/authenticate").permitAll()
                     .requestMatchers(HttpMethod.POST, "/api/usuarios").permitAll()
-                    .requestMatchers("/reporte/**").hasAuthority(AuthotityConstant._MANTENIMIENTO)//anda
-                    .requestMatchers(HttpMethod.PUT, "/cuenta/{id}/anular").hasAuthority(AuthotityConstant._ADMINISTRADOR)//no anda
-                    .requestMatchers(HttpMethod.GET, "/viaje/monopatines/viajes/{cant}/anio/{anio}").hasAuthority(AuthotityConstant._ADMINISTRADOR)//anda
-                    .requestMatchers(HttpMethod.GET, "/pago/anio/{anio}/entre/{mesAnterior}/{mesPosterior}").hasAuthority(AuthotityConstant._ADMINISTRADOR)//ANDA
-                    .requestMatchers(HttpMethod.GET, "/monopatines/order/disponibilidad").hasAuthority(AuthotityConstant._ADMINISTRADOR)//anda
-                    .requestMatchers(HttpMethod.POST, "/tarifa").hasAuthority(AuthotityConstant._ADMINISTRADOR)//no anda
+                    .requestMatchers("/reporte/**").hasAuthority(AuthotityConstant._MANTENIMIENTO)
+                    .requestMatchers(HttpMethod.PUT, "/cuenta/{id}/anular").hasAuthority(AuthotityConstant._ADMINISTRADOR)
+                    .requestMatchers(HttpMethod.GET, "/viaje/monopatines/viajes/{cant}/anio/{anio}").hasAuthority(AuthotityConstant._ADMINISTRADOR)
+                    .requestMatchers(HttpMethod.GET, "/pago/anio/{anio}/entre/{mesAnterior}/{mesPosterior}").hasAuthority(AuthotityConstant._ADMINISTRADOR)
+                    .requestMatchers(HttpMethod.GET, "/monopatines/order/disponibilidad").hasAuthority(AuthotityConstant._ADMINISTRADOR)
+                    .requestMatchers(HttpMethod.POST, "/tarifa").hasAuthority(AuthotityConstant._ADMINISTRADOR)
                     .anyRequest().permitAll()
             )
             .httpBasic( Customizer.withDefaults() )
