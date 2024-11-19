@@ -1,5 +1,6 @@
 package org.example.usuario.controller;
 
+import io.swagger.v3.oas.annotations.Operation;
 import jakarta.validation.Valid;
 import org.example.usuario.DTO.UsuarioRequestDto;
 import org.example.usuario.service.UsuarioService;
