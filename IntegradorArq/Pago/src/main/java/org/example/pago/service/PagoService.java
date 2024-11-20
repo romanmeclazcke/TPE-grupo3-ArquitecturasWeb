@@ -7,11 +7,11 @@ import org.example.pago.FeignClient.UsuarioFeignClient;
 import org.example.pago.Model.Cuenta;
 import org.example.pago.entity.Pago;
 import org.example.pago.repository.PagoRepository;
+import org.example.pago.repository.PagoRepositoryCustom;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.List;
 
 @Service
@@ -23,9 +23,11 @@ public class PagoService {
     @Autowired
     PagoRepository pagoRepository;
 
+    @Autowired
+    PagoRepositoryCustom pagoRepositoryCustom;
+
     public boolean pagar(PagoRequestDto pagoRequestDto) throws Exception {
         try{
-            System.out.println(pagoRequestDto);
             List<Cuenta> cuentas = this.usuarioFeignClient.getCuentasByUser(pagoRequestDto.getUserId());
             if(cuentas.size()==0){
                 throw  new Exception("No posees cuentas");
@@ -46,7 +48,6 @@ public class PagoService {
                 if(creditoCuenta>pendientePorPagar){
                     pendientePorPagar=0.0;
                     CuentaRequestDto cuentaDto = new CuentaRequestDto(cuenta.getCredito()-pagoRequestDto.getMonto());
-                    System.out.println(cuenta);
                     this.usuarioFeignClient.updateCuenta(cuenta.getId(), cuentaDto);
                 }else{
                     pendientePorPagar-=cuenta.getCredito();
@@ -68,7 +69,10 @@ public class PagoService {
 
     public ResumenPagosDTO getTotalFacturadoEntre(int anio, int mesAnterior, int mesPosterior) throws Exception {
         try {
-            return this.pagoRepository.getTotalFacturadoEntre(anio,mesAnterior,mesPosterior);
+            LocalDate fechaInicio = LocalDate.of(anio, mesAnterior, 1);
+            LocalDate fechaFin = LocalDate.of(anio, mesPosterior, 1);
+            Double totalFacturado = this.pagoRepositoryCustom.getTotalFacturadoEntre(fechaInicio, fechaFin);
+            return new ResumenPagosDTO(totalFacturado);
         } catch (Exception e) {
             throw new Exception(e.getMessage());
         }

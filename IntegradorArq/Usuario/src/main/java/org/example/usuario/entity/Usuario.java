@@ -1,9 +1,11 @@
 package org.example.usuario.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.util.List;
 
@@ -13,7 +15,6 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Usuario {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -23,12 +24,15 @@ public class Usuario {
     private String apellido;
     private String email;
     private Long telefono;
+    private String password;
 
-    @ManyToMany()
+    @ManyToMany(fetch = FetchType.LAZY)
+    @ToString.Exclude
     private List<Cuenta> cuentas;
 
-    @ManyToOne()
+    @ManyToOne(fetch = FetchType.LAZY)
     private Rol rol;
+
 
 
 }

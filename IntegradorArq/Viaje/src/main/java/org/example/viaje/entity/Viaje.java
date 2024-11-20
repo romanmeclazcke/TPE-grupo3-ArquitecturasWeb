@@ -1,10 +1,12 @@
 package org.example.viaje.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.sql.Time;
 import java.time.LocalDate;
@@ -39,6 +41,8 @@ public class Viaje {
     private Tarifa tarifa;
 
     @OneToMany(mappedBy = "viaje", cascade = CascadeType.ALL)
+    @ToString.Exclude
+    @JsonIgnore
     private List<Pausa> pausas;
 
 }

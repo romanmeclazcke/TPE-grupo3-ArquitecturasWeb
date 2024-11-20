@@ -1,10 +1,12 @@
 package org.example.viaje.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.sql.Time;
 import java.time.LocalDateTime;
@@ -33,6 +35,8 @@ public class Pausa {
 
     @ManyToOne
     @JoinColumn(name = "id_viaje")
+    @ToString.Exclude
+    @JsonIgnore
     private Viaje viaje;
 
 

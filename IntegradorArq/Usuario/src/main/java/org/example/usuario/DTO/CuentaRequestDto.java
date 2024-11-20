@@ -1,6 +1,7 @@
 package org.example.usuario.DTO;
 
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.Column;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
@@ -16,6 +17,7 @@ import java.util.Date;
 @NoArgsConstructor
 public class CuentaRequestDto {
 
+    @Schema(description = "Credito a cargar", example = "200.00")
     @NotNull( message = "El credito es Obligatorio para editar una cuenta")
     private Double credito;
 

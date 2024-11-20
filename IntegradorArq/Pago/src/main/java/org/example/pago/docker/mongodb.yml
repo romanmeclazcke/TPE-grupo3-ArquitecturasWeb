@@ -1,0 +1,12 @@
+services:
+  db-mongo:
+    container_name: mongo
+    image: mongo:7.0.11
+    command:
+      - --auth
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: appuser
+      MONGO_INITDB_ROOT_PASSWORD: appuserpassword
+      MONGO_INITDB_DATABASE: pago
+    ports:
+      - "127.0.0.1:27017:27017"

@@ -1,21 +1,16 @@
 package org.example.pago.repository;
 
-import org.example.pago.DTO.ResumenPagosDTO;
 import org.example.pago.entity.Pago;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
+import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.data.mongodb.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Repository
-public interface PagoRepository extends JpaRepository<Pago,Long> {
+public interface PagoRepository extends MongoRepository<Pago, String> {
 
-    @Query("SELECT new org.example.pago.DTO.ResumenPagosDTO(YEAR(p.fechaEmitido),SUM(p.monto), :mesAnterior, :mesPosterior) " +
-            "FROM Pago p " +
-            "WHERE YEAR(p.fechaEmitido) = :anio AND MONTH(p.fechaEmitido) BETWEEN :mesAnterior AND :mesPosterior GROUP BY YEAR(p.fechaEmitido)")
-    ResumenPagosDTO getTotalFacturadoEntre(@Param("anio") int anio, @Param("mesAnterior") int mesAnterior, @Param("mesPosterior") int mesPosterior);
-
-
+    @Query("{ 'fechaEmitido': { $gte: ?0, $lt: ?1 } }")
+    Double getTotalFacturadoEntre(LocalDate fechaInicio, LocalDate fechaFin);
 }

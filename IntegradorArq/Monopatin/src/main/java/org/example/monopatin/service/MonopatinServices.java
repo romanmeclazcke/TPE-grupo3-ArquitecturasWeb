@@ -4,6 +4,7 @@ import org.example.monopatin.DTO.MonopatinDisponibilidadDTO;
 import org.example.monopatin.DTO.MonopatinRequestDto;
 import org.example.monopatin.DTO.MonopatinResponseDto;
 import org.example.monopatin.DTO.MonopatinSumaKilometrosDto;
+import org.example.monopatin.Model.Pausa;
 import org.example.monopatin.entity.Monopatin;
 import org.example.monopatin.feignClient.ViajeFeignClient;
 import org.example.monopatin.repository.MonopatinRepository;
@@ -12,6 +13,9 @@ import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
 
+import java.time.Duration;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -141,18 +145,44 @@ public class MonopatinServices {
 
 
     public List<MonopatinResponseDto> getMonopatinesconTiempoPausa() throws Exception {
-        try{
-            List<Monopatin> monopatines= this.monopatinRepository.getMonopatinesPorKilometros();
+        try {
+            List<Monopatin> monopatines = this.monopatinRepository.getMonopatinesPorKilometros();
             List<MonopatinResponseDto> respuesta = new ArrayList<>();
             for (Monopatin monopatin : monopatines) {
-                respuesta.add(this.mapearEntidadADto(monopatin));
+                List<Pausa> pausasMonopatin = this.viajeFeignClient.getPausasIdMonopatin(monopatin.getId());
+
+                Duration tiempoTotalPausa = calcularTiempoTotalPausa(pausasMonopatin);
+
+                Duration tiempoDeUso = monopatin.getTiempo_uso() != null ? monopatin.getTiempo_uso() : Duration.ZERO;
+
+                Duration tiempoTotalUso = tiempoTotalPausa.plus(tiempoDeUso);
+
+                MonopatinResponseDto dto = this.mapearEntidadADto(monopatin);
+                dto.setTiempo_uso(tiempoTotalUso);
+
+                respuesta.add(dto);
             }
+
             return respuesta;
         } catch (Exception e) {
-            throw new Exception(e.getMessage());
+            throw new Exception("Error al obtener los monopatines con tiempo de pausa: " + e.getMessage(), e);
         }
     }
 
+
+    private Duration calcularTiempoTotalPausa(List<Pausa> pausas) {
+        return pausas.stream()
+                .map(pausa -> {
+                    LocalDateTime inicio = pausa.getHora_inicio();
+                    LocalDateTime fin = pausa.getHora_fin();
+                    if (inicio != null && fin != null) {
+                        return Duration.between(inicio, fin);
+                    } else {
+                        return Duration.ZERO;
+                    }
+                })
+                .reduce(Duration.ZERO, Duration::plus);
+    }
 
     public List<MonopatinResponseDto> getMonopatinesSinTiempoPausa() throws Exception {
         try{
@@ -166,6 +196,7 @@ public class MonopatinServices {
             throw new Exception(e.getMessage());
         }
     }
+
 
     public MonopatinDisponibilidadDTO getDisponibilidad() throws Exception{
         try {

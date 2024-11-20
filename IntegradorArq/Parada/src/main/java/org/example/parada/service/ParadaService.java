@@ -28,31 +28,28 @@ public class ParadaService {
 
     @Transactional
     public ParadaResponseDto ubicarMonopatinEnParada(Long idParada, Long idMonopatin) {
-        try{
-            Monopatin monopatin = this.monopatinFeignClient.getMonopatinById(idMonopatin);
-            if(monopatin==null){
-                throw new NotFoundException("monopatin con id" +idMonopatin+"no encontrado");
-            }
-
-            Parada parada = this.paradaRepository.findById(idParada).orElseThrow(() -> new NotFoundException("Parada no encontrada"));
-
-
-            parada.getId_monopatines().add(idMonopatin);
-            this.paradaRepository.save(parada);
-            return this.mapearEntidadADto(parada);
-        } catch (Exception e) {
-            throw new RuntimeException(e.getMessage());
+        Monopatin monopatin = this.monopatinFeignClient.getMonopatinById(idMonopatin);
+        if (monopatin == null) {
+            throw new NotFoundException("monopatin con id" + idMonopatin + "no encontrado");
         }
+
+        Parada parada = this.paradaRepository.findById(idParada).orElseThrow(() -> new NotFoundException("Parada no encontrada"));
+
+
+        parada.getId_monopatines().add(idMonopatin);
+        this.paradaRepository.save(parada);
+        return this.mapearEntidadADto(parada);
     }
+
     public ParadaResponseDto retirarMonopatinDeParada(Long idParada, Long idMonopatin) {
-        try{
+        try {
             ParadaResponseDto paradaResponseDto = new ParadaResponseDto();
-            Parada parada = this.paradaRepository.findById(idParada).orElseThrow(()-> new NotFoundException("Parada no encontrada"));
-            Boolean eliminado =parada.getId_monopatines().remove(idMonopatin);
+            Parada parada = this.paradaRepository.findById(idParada).orElseThrow(() -> new NotFoundException("Parada no encontrada"));
+            Boolean eliminado = parada.getId_monopatines().remove(idMonopatin);
             this.paradaRepository.save(parada);
-            if(!eliminado){
-                 paradaResponseDto.setMensaje("Monopatin no encontado en la parada");
-                 paradaResponseDto.setExito(false);
+            if (!eliminado) {
+                paradaResponseDto.setMensaje("Monopatin no encontado en la parada");
+                paradaResponseDto.setExito(false);
                 return paradaResponseDto;
             }
             paradaResponseDto.setMensaje("Monopatin eliminado");
@@ -110,11 +107,11 @@ public class ParadaService {
     }
 
 
-    public ParadaResponseDto getParadaContieneMonopatin(Long idMonopatin)throws  Exception{
-        try{
-            Parada p =this.paradaRepository.getParadaContieneMonopatin(idMonopatin);
+    public ParadaResponseDto getParadaContieneMonopatin(Long idMonopatin) throws Exception {
+        try {
+            Parada p = this.paradaRepository.getParadaContieneMonopatin(idMonopatin);
             return this.mapearEntidadADto(p);
-        }catch (Exception e){
+        } catch (Exception e) {
             throw new Exception(e.getMessage());
         }
     }

@@ -15,6 +15,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CuentaResponseDto {
+
     private Long id;
     private Double credito;
     private Date fecha_alta;

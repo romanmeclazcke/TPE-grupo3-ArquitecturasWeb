@@ -1,9 +1,11 @@
 package org.example.usuario.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.util.Date;
 import java.util.List;
@@ -24,8 +26,11 @@ public class Cuenta {
     private Double credito;
     private boolean activa;
 
-    @ManyToMany(mappedBy = "cuentas")
+    @ManyToMany(mappedBy = "cuentas", fetch = FetchType.LAZY)
+    @ToString.Exclude
+    @JsonIgnore
     private List<Usuario> usuarios;
+
 
 
 }
