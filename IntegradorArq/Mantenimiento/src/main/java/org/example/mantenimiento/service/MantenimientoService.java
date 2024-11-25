@@ -57,10 +57,10 @@ public class MantenimientoService {
 
         //Registro el mantenimiento
         Mantenimiento mantenimiento = this.mapearDtoAEntidad(mantenimientoRequestDto, idMonopatin);
-        mantenimientoRepository.save(mantenimiento);
+        this.mantenimientoRepository.save(mantenimiento);
 
         monopatin.setDisponible(false); //Lo marco como no disponible para su uso
-        monopatinFeignClient.updateMonopatin(idMonopatin, monopatin);
+        this.monopatinFeignClient.updateMonopatin(idMonopatin, monopatin);
 
         //Preparo respuesta exitosa
         responseDto = mapToResponseDTO(mantenimiento);
@@ -70,8 +70,7 @@ public class MantenimientoService {
     @Transactional
     public MantenimientoResponseDto endMantenimiento(Long idMonopatin)throws Exception {
         try{
-            Mantenimiento mantenimiento= this.mantenimientoRepository.getultimoMantenimiento(idMonopatin).orElseThrow(()-> new NotFoundException("El monopatin no se encuentra en mantenimiento"));
-
+            Mantenimiento mantenimiento= this.mantenimientoRepository.getUltimoMantenimiento(idMonopatin).orElseThrow(()-> new NotFoundException("El monopatin no se encuentra en mantenimiento"));
             mantenimiento.setFecha_fin(LocalDate.now());
             mantenimientoRepository.save(mantenimiento);
             return this.mapearEntidadADto(mantenimiento);

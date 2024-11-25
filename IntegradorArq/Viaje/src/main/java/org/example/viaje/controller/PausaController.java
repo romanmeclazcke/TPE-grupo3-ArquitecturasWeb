@@ -60,6 +60,39 @@ public class PausaController {
     }
 
     @Operation(
+            summary = "Endpoint para finalizar una parada",
+            description = "Este endpoint te permite finalizar una pausa apartir de un id"
+    )
+    @ApiResponses(value = {
+            @ApiResponse(
+                    responseCode = "200",
+                    description = "Se ha finalizado la pausa",
+                    content = @Content(
+                            mediaType = "application/json",
+                            schema = @Schema(implementation = PausaResponseDto.class)
+                    )
+            ),
+            @ApiResponse(
+                    responseCode = "400",
+                    description = "Revise los campos e intente nuevamente",
+                    content = @Content(mediaType = "application/json")
+            ),
+            @ApiResponse(
+                    responseCode = "404",
+                    description = "Pausa no encontrada",
+                    content = @Content(mediaType = "application/json")
+            )
+    })
+    @PatchMapping("/finalizar/{idPausa}")
+    public ResponseEntity<?> finalizarPausa(@Parameter(description = "El id de la pausa al cual se  busca finalizar", example = "3") @PathVariable Long idPausa){
+        try {
+            return ResponseEntity.status(HttpStatus.OK).body(pausaService.cerrarPausa(idPausa));
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
+        }
+    }
+
+    @Operation(
             summary = "Endpoint para obtener las pausas asociadas a un viaje",
             requestBody = @io.swagger.v3.oas.annotations.parameters.RequestBody(
                     description = "Información requerida para obtener las pausas de un viaje: idViaje",

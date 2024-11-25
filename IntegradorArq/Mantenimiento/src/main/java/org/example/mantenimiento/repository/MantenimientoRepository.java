@@ -11,7 +11,7 @@ import java.util.Optional;
 
 @Repository
 public interface MantenimientoRepository extends JpaRepository<Mantenimiento, Long> {
-    Mantenimiento save(Mantenimiento nuevo);
+
 
     @Query("SELECT m FROM Mantenimiento m WHERE m.id_monopatin = :idMonopatin")
     List<Mantenimiento> findAllByIdMonopatin(@Param("idMonopatin") Long idMonopatin);
@@ -25,6 +25,7 @@ public interface MantenimientoRepository extends JpaRepository<Mantenimiento, Lo
 
 
 
-    @Query("SELECT m from Mantenimiento  m where m.id_monopatin=: idMonopatin AND m.fecha_fin = null order by m.fecha_inicio desc ")
-    Optional<Mantenimiento> getultimoMantenimiento(@Param("idMonopatin") Long idMonopatin);
+    @Query("SELECT m FROM Mantenimiento m WHERE m.id_monopatin = :idMonopatin AND m.fecha_fin IS NULL ORDER BY m.fecha_inicio DESC")
+    Optional<Mantenimiento> getUltimoMantenimiento(@Param("idMonopatin") Long idMonopatin);
+
 }
