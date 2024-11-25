@@ -11,7 +11,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Parada {
-    private Long idParada;
+    private Long id;
     private List<Long> monopatines;
 
 }

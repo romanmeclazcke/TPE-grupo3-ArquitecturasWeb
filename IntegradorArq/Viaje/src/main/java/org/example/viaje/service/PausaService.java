@@ -6,6 +6,7 @@ import org.example.viaje.entity.Viaje;
 import org.example.viaje.repository.PausaRepository;
 import org.example.viaje.repository.ViajeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.stereotype.Service;
 
 import java.sql.Time;
@@ -40,8 +41,23 @@ public class PausaService {
             Pausa p = new Pausa();
             p.setViaje(viaje);
             p.setHora_inicio(LocalDateTime.now());
+            p.setFecha_inicio( new Date());
             this.pausaRepository.save(p);
 
+            return this.mapearDeEntidadADto(p);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public PausaResponseDto cerrarPausa(Long idPausa){
+        try {
+            Optional<Pausa> pausa = Optional.ofNullable(this.pausaRepository.findById(idPausa).orElseThrow(() -> new ChangeSetPersister.NotFoundException()));
+
+            Pausa p = pausa.get();
+            p.setFecha_fin(new Date());
+            p.setHora_fin(LocalDateTime.now());
+            this.pausaRepository.save(p);
             return this.mapearDeEntidadADto(p);
         } catch (Exception e) {
             throw new RuntimeException(e);

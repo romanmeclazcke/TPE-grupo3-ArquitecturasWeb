@@ -50,7 +50,7 @@ public class ViajeService {
         Viaje viaje = new Viaje();
         viaje.setId_monopatin(monopatinId);
         viaje.setId_usuario(usuarioId);
-        viaje.setId_parada_origen(p.getIdParada());
+        viaje.setId_parada_origen(p.getId());
         viaje.setHora_inicio(LocalDateTime.now());
         viaje.setId_parada_destino(paradaDestinoId);
         viaje.setFecha_inicio(LocalDate.now());
@@ -66,7 +66,6 @@ public class ViajeService {
         try{
             Viaje viaje = this.viajeRepository.findById(idViaje)
                     .orElseThrow(ChangeSetPersister.NotFoundException::new);
-
             Distancia distancia = this.mapaFeignClient.getDistanciaEntreParada(viaje.getId_parada_origen(), viaje.getId_parada_destino());
             viaje.setFecha_fin(LocalDate.now());
             viaje.setHora_fin(LocalDateTime.now());
